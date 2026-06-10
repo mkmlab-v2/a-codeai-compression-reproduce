@@ -1,6 +1,6 @@
 {
   "schema": "a_codeai_public_reproduce_bundle_v1",
-  "generated_at_utc": "2026-06-10T17:16:14Z",
+  "generated_at_utc": "2026-06-10T17:27:56Z",
   "git_head": "6f09dcc8e225",
   "send_gate": "HOLD",
   "ready_for_external_send": false,
@@ -13,7 +13,7 @@
       "corpus_sha256": "a56f8d4e18dddd14e6c5bd77ae7cabf2066741abc5134e03587416a79ae24330",
       "metrics": {
         "report_path": "reports/customer_compression_stateless_poc_open_structured_v1_latest.json",
-        "generated_at_utc": "2026-06-10T17:16:11Z",
+        "generated_at_utc": "2026-06-10T17:27:53Z",
         "case_count": 128,
         "cases_passed_jaccard_floor": 128,
         "mean_token_saving_rate_proxy": 0.0,
@@ -28,7 +28,7 @@
       "corpus_sha256": "c9dab78892227b2912adfe8a86e425a3a118c58cef1c00572daa62e12e3ec9d2",
       "metrics": {
         "report_path": "reports/customer_compression_stateless_poc_open_structured_long_v1_latest.json",
-        "generated_at_utc": "2026-06-10T17:16:12Z",
+        "generated_at_utc": "2026-06-10T17:27:54Z",
         "case_count": 48,
         "cases_passed_jaccard_floor": 48,
         "mean_token_saving_rate_proxy": 0.0,
@@ -43,7 +43,7 @@
       "corpus_sha256": "b933a560d6b3e1b2fd735b84ea4968edc9bfca4f3f282e01c4bbe9580a89ab01",
       "metrics": {
         "report_path": "reports/customer_compression_stateless_poc_golden40_public_safe_v1_latest.json",
-        "generated_at_utc": "2026-06-10T17:16:14Z",
+        "generated_at_utc": "2026-06-10T17:27:56Z",
         "case_count": 40,
         "cases_passed_jaccard_floor": 10,
         "mean_token_saving_rate_proxy": 0.0,
