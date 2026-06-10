@@ -1,0 +1,33 @@
+{
+  "schema": "compression_b2b_prospect_poc_corpus_intake_v1",
+  "version": "1",
+  "status": "TEMPLATE — copy to reports/compression_b2b_prospect_poc_corpus_<tenant_slug>_v1.json",
+  "labels": ["DRAFT", "research_only", "publish_allowed=false"],
+  "send_gate": "HOLD",
+  "tenant_id": "prospect-tenant-example",
+  "corpus_requirements": {
+    "min_cases": 20,
+    "max_cases": 50,
+    "format": "jsonl",
+    "required_fields": ["text"],
+    "masking": "PII removed by customer; no secrets in repo"
+  },
+  "metering": {
+    "tenant_id": "prospect-tenant-example",
+    "log_path": "reports/constitution/btrack_pilot/track_a_metering_log_<tenant>_v1.jsonl",
+    "appendix_builder": "scripts/build_compression_b2b_pilot_metering_appendix_v1.py"
+  },
+  "roi_fields_awaiting_measurement": {
+    "customer_dollar_roi": null,
+    "customer_krw_roi": null,
+    "mean_token_saving_rate_proxy": null,
+    "measurement_window_days": 28
+  },
+  "boundary_ack": "Pilot ROI requires measured corpus + metering audit — cannot be synthesized",
+  "recommended_workflow": "docs/final/artifacts/compression_b2b_recommended_workflow_v1.json",
+  "recommended_commands": {
+    "activate_tenant": "py scripts/run_compression_pilot_roi_chain_v1.py --tenant-id <TENANT_SLUG>",
+    "verify_completion": "py scripts/run_compression_proof_completion_chain_v1.py",
+    "legal_send_after_counsel": "py scripts/apply_compression_b2b_legal_send_signoff_v1.py --commander-acknowledge --counsel-acknowledge"
+  }
+}

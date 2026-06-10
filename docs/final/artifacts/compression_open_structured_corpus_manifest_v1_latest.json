@@ -1,0 +1,26 @@
+{
+  "schema": "compression_open_structured_corpus_manifest_v1",
+  "generated_at_utc": "2026-06-10T17:16:09Z",
+  "research_only": true,
+  "corpora": [
+    {
+      "path": "data/compression/stateless_poc_open_structured_v1.jsonl",
+      "ok": true,
+      "sha256": "a56f8d4e18dddd14e6c5bd77ae7cabf2066741abc5134e03587416a79ae24330",
+      "line_count": 128
+    },
+    {
+      "path": "data/compression/stateless_poc_open_structured_long_v1.jsonl",
+      "ok": true,
+      "sha256": "c9dab78892227b2912adfe8a86e425a3a118c58cef1c00572daa62e12e3ec9d2",
+      "line_count": 48
+    },
+    {
+      "path": "data/compression/stateless_poc_golden40_public_safe_v1.jsonl",
+      "ok": true,
+      "sha256": "b933a560d6b3e1b2fd735b84ea4968edc9bfca4f3f282e01c4bbe9580a89ab01",
+      "line_count": 40
+    }
+  ],
+  "ok": true
+}

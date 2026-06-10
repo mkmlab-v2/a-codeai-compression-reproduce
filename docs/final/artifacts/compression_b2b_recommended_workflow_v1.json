@@ -1,0 +1,76 @@
+{
+  "schema": "compression_b2b_recommended_workflow_v1",
+  "generated_at_utc": "2026-06-10T15:25:09Z",
+  "send_gate": "HOLD",
+  "ready_for_external_send": false,
+  "labels": [
+    "DRAFT",
+    "internal_only",
+    "research_only",
+    "publish_allowed=false"
+  ],
+  "external_one_liner": {
+    "ko": "내부 리허설에서 파이프라인 무결성은 확인했고, 고객 실측·법무 승인 전까지 외부 성과 주장은 하지 않습니다.",
+    "en": "Internal rehearsal verified pipeline integrity; no external performance claims until customer measurement and counsel sign-off."
+  },
+  "product_model": {
+    "summary_ko": "고객 마스킹 JSONL을 받아 공용 압축 API(stateless + shared codebook)로 요청 시 압축·측정 — 고객 전용 사전 오프라인 빌드·Track A 47% 보장은 아님.",
+    "summary_en": "Masked customer JSONL compressed on-demand via shared API; not per-tenant offline codebook build or universal 47% warranty.",
+    "not_this": [
+      "Track A ~47% as customer SLA",
+      "Handoff 99.47% as compression API headline",
+      "Prospect rehearsal 97.6% as named customer case study"
+    ]
+  },
+  "sku_separation": [
+    {
+      "sku": "track_a_universal_bench",
+      "metric": "~47% / ~0.89 J",
+      "role": "internal_regression_ssot"
+    },
+    {
+      "sku": "prospect_pilot_poc",
+      "metric": "97.6% saving proxy (25-case rehearsal)",
+      "role": "per_tenant_jsonl_measurement",
+      "artifact": "docs/final/artifacts/compression_b2b_pilot_roi_report_v1_latest.json"
+    },
+    {
+      "sku": "handoff_governance",
+      "metric": "99.47% token reduction top-N slices",
+      "role": "ops_memory_index_only"
+    }
+  ],
+  "recommended_commands": {
+    "verify_all": "py scripts/run_compression_proof_completion_chain_v1.py",
+    "customer_corpus": "py scripts/run_compression_pilot_roi_chain_v1.py --tenant-id <TENANT_SLUG>",
+    "corpus_calibration_pack": "py scripts/run_compression_calibration_pack_v1.py --tenant-id <TENANT_SLUG>",
+    "must_keep_overlay": "py scripts/extract_tenant_must_keep_from_corpus_v1.py --tenant-id <TENANT_SLUG> --input-jsonl data/compression/stateless_poc_prospect_<TENANT_SLUG>_v1.jsonl",
+    "hydrate_compare": "py scripts/run_compression_pilot_hydrate_compare_v1.py --tenant-id <TENANT_SLUG> --input-jsonl data/compression/stateless_poc_prospect_<TENANT_SLUG>_v1.jsonl --overlay-json docs/final/artifacts/tenant_<TENANT_SLUG>_must_keep_overlay_v1.json",
+    "dollar_roi_customer": "py scripts/build_compression_pilot_dollar_roi_v1.py --tenant-id <TENANT_SLUG> --poc-json reports/customer_compression_stateless_poc_<TENANT_SLUG>_v1_latest.json",
+    "legal_send_after_counsel": "py scripts/apply_compression_b2b_legal_send_signoff_v1.py --commander-acknowledge --counsel-acknowledge",
+    "readiness_gate": "py scripts/check_compression_enterprise_summary_readiness_v1.py"
+  },
+  "corpus_calibration_pack": {
+    "name": "Corpus Calibration Pack",
+    "day_scope": "Day 8~30",
+    "not_this": "per-tenant 41k offline rebuild",
+    "artifact_glob": "reports/compression_calibration_pack_<TENANT>_v1_latest.json"
+  },
+  "human_gates": [
+    {
+      "id": "customer_masked_jsonl_20_50",
+      "status": "pending",
+      "unlocks": "customer_dollar_roi / customer_krw_roi"
+    },
+    {
+      "id": "counsel_signoff",
+      "status": "pending",
+      "unlocks": "ready_for_external_send"
+    }
+  ],
+  "fact_lock_pointers": [
+    "docs/final/artifacts/compression_b2b_legal_send_signoff_v1_latest.json",
+    "docs/final/artifacts/compression_public_reproduce_pack_v1_latest.json",
+    "docs/final/COMPRESSION_SLA_POLICY_V1.md"
+  ]
+}

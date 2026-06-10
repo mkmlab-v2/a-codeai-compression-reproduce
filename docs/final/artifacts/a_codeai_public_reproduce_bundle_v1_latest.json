@@ -1,0 +1,95 @@
+{
+  "schema": "a_codeai_public_reproduce_bundle_v1",
+  "generated_at_utc": "2026-06-10T17:16:14Z",
+  "git_head": "6f09dcc8e225",
+  "send_gate": "HOLD",
+  "ready_for_external_send": false,
+  "launch_decision": "READY_FOR_PUBLIC_OPEN_BENCH",
+  "launch_pass_count": 8,
+  "one_command_reproduce": "py scripts/run_compression_evidence_lv1_chain_v1.py",
+  "reproduce_pack": {
+    "compression_api_open_structured": {
+      "corpus_path": "data/compression/stateless_poc_open_structured_v1.jsonl",
+      "corpus_sha256": "a56f8d4e18dddd14e6c5bd77ae7cabf2066741abc5134e03587416a79ae24330",
+      "metrics": {
+        "report_path": "reports/customer_compression_stateless_poc_open_structured_v1_latest.json",
+        "generated_at_utc": "2026-06-10T17:16:11Z",
+        "case_count": 128,
+        "cases_passed_jaccard_floor": 128,
+        "mean_token_saving_rate_proxy": 0.0,
+        "mean_jaccard_proxy": 1.0,
+        "exit_ok": true
+      },
+      "allowed_headline": "Open JSONL 128-case structured API/log shapes — per-corpus measured proxy only",
+      "forbidden_headline": "Global enterprise savings guarantee"
+    },
+    "compression_api_open_structured_long": {
+      "corpus_path": "data/compression/stateless_poc_open_structured_long_v1.jsonl",
+      "corpus_sha256": "c9dab78892227b2912adfe8a86e425a3a118c58cef1c00572daa62e12e3ec9d2",
+      "metrics": {
+        "report_path": "reports/customer_compression_stateless_poc_open_structured_long_v1_latest.json",
+        "generated_at_utc": "2026-06-10T17:16:12Z",
+        "case_count": 48,
+        "cases_passed_jaccard_floor": 48,
+        "mean_token_saving_rate_proxy": 0.0,
+        "mean_jaccard_proxy": 1.0,
+        "exit_ok": true
+      },
+      "allowed_headline": "Open JSONL 48-case long structured batches — per-corpus measured proxy only",
+      "forbidden_headline": "Marketing % without corpus+profile citation"
+    },
+    "compression_api_golden40_public_safe": {
+      "corpus_path": "data/compression/stateless_poc_golden40_public_safe_v1.jsonl",
+      "corpus_sha256": "b933a560d6b3e1b2fd735b84ea4968edc9bfca4f3f282e01c4bbe9580a89ab01",
+      "metrics": {
+        "report_path": "reports/customer_compression_stateless_poc_golden40_public_safe_v1_latest.json",
+        "generated_at_utc": "2026-06-10T17:16:14Z",
+        "case_count": 40,
+        "cases_passed_jaccard_floor": 10,
+        "mean_token_saving_rate_proxy": 0.0,
+        "mean_jaccard_proxy": 1.0,
+        "exit_ok": true
+      },
+      "source_eval": "docs/final/artifacts/MULTILENS_PERFORMANCE_EVAL_INPUT_V2.json",
+      "role": "public_safe_reproduce_subset",
+      "allowed_headline": "40-case EN ops eval excerpt — per-corpus measured proxy only",
+      "forbidden_headline": "Equate to customer SLA or global 47% guarantee"
+    },
+    "compression_api_track_a_reference": {
+      "report_path": "docs/final/artifacts/MULTILENS_ULTRA_COMPRESSION_ACTIVE_REPORT_V1.json",
+      "global_token_saving_rate": 0.47116736990154706,
+      "avg_jaccard": 0.8893218363593751,
+      "role": "internal_regression_ssot_only",
+      "forbidden_headline": "Customer SLA or press guarantee"
+    },
+    "handoff_governance": {
+      "bench_path": "reports/mkm_ops_memory_index_token_bench_v1_latest.json",
+      "full_anchor_tokens_top_n": null,
+      "inject_off_tokens": null,
+      "reduction_percent_vs_full": null,
+      "comparison_scope": null,
+      "forbidden_headline": "General lossless 99% compression for arbitrary text"
+    },
+    "pilot_roi": {
+      "customer_dollar_roi": null,
+      "customer_krw_roi": null,
+      "prospect_corpus_cases": 25,
+      "status": "rehearsal_measured_not_customer_dollar",
+      "report_path": "docs/final/artifacts/compression_b2b_pilot_roi_report_v1_latest.json",
+      "measured_proxy": {
+        "case_count": 25,
+        "mean_token_saving_rate_proxy": 0.976265,
+        "mean_jaccard_proxy": 1.0,
+        "metering_global_saving_rate": 0.47619,
+        "events_in_band_40_50": 3
+      },
+      "intake_template": "docs/final/artifacts/compression_b2b_prospect_poc_corpus_intake_v1.template.json"
+    }
+  },
+  "reproduce_commands": [
+    "py scripts/run_compression_evidence_lv1_chain_v1.py",
+    "py scripts/run_compression_proof_completion_chain_v1.py"
+  ],
+  "deploy_note": "Technical open-bench READY (8/8) — public HTML deploy is human-gated; SEND_GATE remains HOLD until legal sign-off.",
+  "boundary_ack": "FAIL-COMP-004 — do not merge SKU metrics in one headline."
+}

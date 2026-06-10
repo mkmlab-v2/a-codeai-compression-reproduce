@@ -1,0 +1,13 @@
+{
+  "schema": "compression_b2b_legal_send_signoff_v1",
+  "generated_at_utc": "2026-06-10T14:15:03Z",
+  "commander_signoff": true,
+  "counsel_signoff": false,
+  "rq009_alignment": "counsel_required_for_external_send",
+  "send_gate": "HOLD",
+  "ready_for_external_send": false,
+  "ready_for_internal_rehearsal_materials": true,
+  "pilot_roi_report": "docs/final/artifacts/compression_b2b_pilot_roi_report_v1_latest.json",
+  "note": "commander ordered sequential completion 2026-06-10",
+  "boundary_ack": "Commander chat pre-approval does not replace counsel for press/case-study SEND. Dollar/KRW ROI remains null until customer-masked corpus + audit."
+}

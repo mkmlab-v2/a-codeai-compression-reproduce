@@ -1,0 +1,6 @@
+fastapi>=0.100
+starlette>=0.27
+pydantic>=2.0
+httpx>=0.24
+tiktoken>=0.5
+jsonschema>=4.0
