@@ -89,6 +89,7 @@ def main(argv: list[str] | None = None) -> int:
         )
     )
     steps.append(_run("dual_report", "build_compression_open_bench_dual_report_v1.py"))
+    steps.append(_run("persuasion_deck", "build_compression_open_bench_persuasion_deck_v1.py"))
 
     if not args.skip_evidence_tail:
         steps.append(_run("reproduce_pack", "build_compression_public_reproduce_pack_v1.py"))

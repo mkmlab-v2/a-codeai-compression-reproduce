@@ -1,10 +1,11 @@
 {
   "schema": "customer_compression_stateless_poc_v1",
-  "generated_at_utc": "2026-06-11T02:48:40Z",
+  "generated_at_utc": "2026-06-11T03:14:34Z",
   "research_only": true,
   "boundary_ack": "Per-customer JSONL only; not Golden 40 or Track A 47.5% claim.",
   "input_jsonl": "C:/workspace/exports/a-codeai-public-reproduce-v2/data/compression/stateless_poc_open_structured_v1.jsonl",
   "loss_profile": "semantic_general",
+  "compression_profile": "economy",
   "case_count": 128,
   "cases_passed": 128,
   "cases_passed_jaccard_floor": 128,
@@ -12,7 +13,18 @@
   "pass_criterion": "jaccard_floor",
   "aggregate": {
     "mean_token_saving_rate_proxy": 0.0,
-    "mean_jaccard_proxy": 1.0
+    "mean_jaccard_proxy": 1.0,
+    "mean_token_saving_rate_proxy_all_cases": 0.0,
+    "mean_jaccard_proxy_all_cases": 1.0
+  },
+  "must_keep_overlay": {
+    "applied": false,
+    "term_count": 0,
+    "overlay_path": null
+  },
+  "short_context_policy": {
+    "token_threshold": null,
+    "max_saving_rate": null
   },
   "parse_or_api_failures": 0,
   "relax_pass_gate": false,

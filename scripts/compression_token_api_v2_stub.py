@@ -103,6 +103,25 @@ class CompressRequestV2(BaseModel):
     routing_profile: RoutingProfile = "track_a_promoted"
     stateless_packet: bool = False
     forced_shard_id: str | None = None
+    must_keep_overlay_terms: list[str] | None = Field(
+        default=None,
+        description="Tenant/B2B overlay terms merged into evaluate_report must_keep (research_only).",
+    )
+    short_context_token_threshold: int | None = Field(
+        default=None,
+        ge=1,
+        description="When token_in_proxy <= threshold, apply short_context_max_saving_rate and optional floor disable.",
+    )
+    short_context_max_saving_rate: float | None = Field(
+        default=None,
+        ge=0.0,
+        le=1.0,
+        description="Cap max saving for short inputs (research B2B PoC).",
+    )
+    short_context_disable_min_saving_floor: bool = Field(
+        default=True,
+        description="When short-context policy applies, set domain min_saving_floor override to 0.",
+    )
 
 
 class CompressionPacket(BaseModel):
@@ -249,6 +268,10 @@ def _run_evaluate_for_packet(
     routing_profile: RoutingProfile = "track_a_promoted",
     compression_profile: CompressionProfile = "economy",
     force_shard_id: str | None = None,
+    extra_must_keep: set[str] | None = None,
+    short_context_token_threshold: int | None = None,
+    short_context_max_saving_rate: float | None = None,
+    short_context_disable_min_saving_floor: bool = True,
 ) -> dict[str, Any]:
     """Run evaluate_report and return payload for Trust Packet fields."""
     prof_kw = profile_evaluate_report_kwargs_v2(
@@ -260,6 +283,20 @@ def _run_evaluate_for_packet(
     general_cap = prof_kw.get("general_max_saving_rate")
     sensitive_cap = prof_kw.get("sensitive_max_saving_rate")
     hangul_cap = prof_kw.get("hangul_max_saving_rate")
+    domain_floor_overrides: dict[str, float] | None = None
+    token_in = _token_count_proxy(text)
+    if (
+        short_context_token_threshold is not None
+        and token_in <= short_context_token_threshold
+    ):
+        if short_context_max_saving_rate is not None:
+            general_cap = sensitive_cap = hangul_cap = short_context_max_saving_rate
+        if short_context_disable_min_saving_floor:
+            try:
+                route_pre = _resolve_router_route(text, str(force_shard_id).strip() or None)
+                domain_floor_overrides = {route_pre.domain: 0.0}
+            except ValueError:
+                domain_floor_overrides = {"ssot": 0.0}
     case_id = resolve_v2_case_id(client_request_id)
     t0 = perf_counter()
     doc = {
@@ -285,13 +322,16 @@ def _run_evaluate_for_packet(
         inf = build_wire_influence_for_text(text, case_id=case_id)
         if inf:
             case_wire = {case_id: inf}
+    must_keep_base = {"사상의학", "체질", "sasang", "myeongri", "bible"}
+    if extra_must_keep:
+        must_keep_base = must_keep_base | {str(t).strip() for t in extra_must_keep if str(t).strip()}
     report = evaluate_report(
         doc,
         source_input="api:v2_trust_packet",
         mode="experimental",
         strategy=strategy,
         intensity=intensity,
-        must_keep={"사상의학", "체질", "sasang", "myeongri", "bible"},
+        must_keep=must_keep_base,
         jaccard_drop_threshold_pp=1.5,
         baseline_avg_jaccard=_baseline_avg_jaccard(),
         general_max_saving_rate=float(general_cap) if general_cap is not None else None,
@@ -307,6 +347,7 @@ def _run_evaluate_for_packet(
         graph_wire_selective_bridge=graph_wire_selective_bridge,
         case_graph_wire_influence=case_wire,
         force_shard_id=str(force_shard_id).strip() or None,
+        domain_min_saving_floor_overrides=domain_floor_overrides,
         **eval_extra,
     )
     elapsed_ms = round((perf_counter() - t0) * 1000.0, 3)
@@ -610,6 +651,11 @@ def compress_v2(body: CompressRequestV2) -> CompressResponseV2:
                 integrity_flags=flags,
             )
 
+        overlay_extra = {
+            str(t).strip()
+            for t in (body.must_keep_overlay_terms or [])
+            if isinstance(t, str) and str(t).strip()
+        }
         ev = _run_evaluate_for_packet(
             body.text,
             body.loss_profile,
@@ -619,7 +665,19 @@ def compress_v2(body: CompressRequestV2) -> CompressResponseV2:
             routing_profile=body.routing_profile,
             compression_profile=body.compression_profile,
             force_shard_id=forced_sid,
+            extra_must_keep=overlay_extra if overlay_extra else None,
+            short_context_token_threshold=body.short_context_token_threshold,
+            short_context_max_saving_rate=body.short_context_max_saving_rate,
+            short_context_disable_min_saving_floor=body.short_context_disable_min_saving_floor,
         )
+        if body.must_keep_overlay_terms:
+            flags["must_keep_overlay_terms_count"] = len(body.must_keep_overlay_terms)
+        if body.short_context_token_threshold is not None:
+            flags["short_context_token_threshold"] = body.short_context_token_threshold
+            flags["short_context_max_saving_rate"] = body.short_context_max_saving_rate
+            flags["short_context_policy_applied"] = (
+                _token_count_proxy(body.text) <= body.short_context_token_threshold
+            )
         flags["evaluate_report_ms"] = ev.get("elapsed_ms")
         flags["routing_profile"] = body.routing_profile
         flags.update(profile_meta(body.compression_profile))

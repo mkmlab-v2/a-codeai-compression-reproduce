@@ -1,11 +1,12 @@
 {
   "schema": "compression_open_bench_dual_report_v1",
-  "generated_at_utc": "2026-06-11T02:39:25Z",
+  "generated_at_utc": "2026-06-11T02:58:39Z",
   "research_only": true,
   "hypothesis_tag": "[HYPO]",
   "send_gate": "HOLD",
   "ready_for_external_send": false,
   "positioning_ref": "docs/final/artifacts/mkm_b2b_compression_positioning_external_v1_latest.json",
+  "persuasion_deck_ref": "docs/final/artifacts/compression_open_bench_persuasion_deck_v1_latest.json",
   "forbidden_headline": [
     "Claim 47.5% on open-bench without citing this corpus label and measured raw %",
     "SKU PoC % as Track A SLA",
@@ -215,5 +216,32 @@
     "reports_non_zero_saving": 5,
     "any_non_zero": true
   },
-  "allowed_headline_template_ko": "공개·마스킹 코퍼스 {label} N={case_count}건 조건에서 raw 절감 {saving_pct}% · Jaccard {jaccard} (Track A 47.5%와 동일 보장 아님)"
+  "allowed_headline_template_ko": "공개·마스킹 코퍼스 {label} N={case_count}건 조건에서 raw 절감 {saving_pct}% · Jaccard {jaccard} (Track A 47.5%와 동일 보장 아님)",
+  "json_corpus_positioning": {
+    "strategy": "short_prose_strength_not_json_failure",
+    "note_ko": "open_structured JSON-heavy 0%는 코퍼스 조건 한계로 보고 — 엔진 실패 단정·Track A SLA 합선 금지"
+  },
+  "illustrative_roi_scenarios_krw": [
+    {
+      "assumption_monthly_llm_spend_krw": 100000000,
+      "applied_saving_rate": 0.093617,
+      "illustrative_monthly_save_krw": 9361700,
+      "illustrative_annual_save_krw": 112340400,
+      "disclaimer_ko": "가정·시나리오 — 실고객 ROI 아님"
+    },
+    {
+      "assumption_monthly_llm_spend_krw": 500000000,
+      "applied_saving_rate": 0.093617,
+      "illustrative_monthly_save_krw": 46808500,
+      "illustrative_annual_save_krw": 561702000,
+      "disclaimer_ko": "가정·시나리오 — 실고객 ROI 아님"
+    },
+    {
+      "assumption_monthly_llm_spend_krw": 1000000000,
+      "applied_saving_rate": 0.093617,
+      "illustrative_monthly_save_krw": 93617000,
+      "illustrative_annual_save_krw": 1123404000,
+      "disclaimer_ko": "가정·시나리오 — 실고객 ROI 아님"
+    }
+  ]
 }

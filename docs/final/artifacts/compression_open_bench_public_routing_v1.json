@@ -26,6 +26,14 @@
       "routed_report": "reports/customer_compression_stateless_poc_open_structured_routed_v1_latest.json"
     }
   ],
+  "corpus_positioning_strategy": {
+    "chosen_path": "short_prose_strength_not_json_failure",
+    "rejected_path": "json_corpus_nonzero_spike_this_cycle",
+    "rationale_ko": (
+      "이번 사이클은 JSON must_keep/codec 스파이크 대신 정직 포지셔닝: "
+      "golden40_routed·산업 SKU PoC로 대외 수치, JSON 0%는 조건 한계로 명시"
+    )
+  },
   "forbidden_headline": [
     "Track A 47.5% on open-bench without corpus-specific measurement",
     "JSON corpus 0%를 엔진 실패로 단정"

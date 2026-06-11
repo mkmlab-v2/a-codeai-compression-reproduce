@@ -99,6 +99,25 @@ def main(argv: list[str] | None = None) -> int:
         "note": "Frozen Track A 40-case bench — NOT a guarantee on open-bench corpora",
     }
 
+    primary_routed = next(
+        (r for r in present if r.get("label") == "golden40_public_safe_routed" and r.get("non_zero_saving")),
+        None,
+    )
+    illustrative_roi: list[dict[str, Any]] = []
+    if primary_routed:
+        rate = float((primary_routed.get("raw") or {}).get("mean_token_saving_rate_proxy") or 0)
+        for spend in (100_000_000, 500_000_000, 1_000_000_000):
+            save = round(spend * rate)
+            illustrative_roi.append(
+                {
+                    "assumption_monthly_llm_spend_krw": spend,
+                    "applied_saving_rate": rate,
+                    "illustrative_monthly_save_krw": save,
+                    "illustrative_annual_save_krw": save * 12,
+                    "disclaimer_ko": "가정·시나리오 — 실고객 ROI 아님",
+                }
+            )
+
     out: dict[str, Any] = {
         "schema": SCHEMA,
         "generated_at_utc": _utc(),
@@ -107,6 +126,7 @@ def main(argv: list[str] | None = None) -> int:
         "send_gate": "HOLD",
         "ready_for_external_send": False,
         "positioning_ref": "docs/final/artifacts/mkm_b2b_compression_positioning_external_v1_latest.json",
+        "persuasion_deck_ref": "docs/final/artifacts/compression_open_bench_persuasion_deck_v1_latest.json",
         "forbidden_headline": [
             "Claim 47.5% on open-bench without citing this corpus label and measured raw %",
             "SKU PoC % as Track A SLA",
@@ -123,6 +143,14 @@ def main(argv: list[str] | None = None) -> int:
             "공개·마스킹 코퍼스 {label} N={case_count}건 조건에서 "
             "raw 절감 {saving_pct}% · Jaccard {jaccard} (Track A 47.5%와 동일 보장 아님)"
         ),
+        "json_corpus_positioning": {
+            "strategy": "short_prose_strength_not_json_failure",
+            "note_ko": (
+                "open_structured JSON-heavy 0%는 코퍼스 조건 한계로 보고 — "
+                "엔진 실패 단정·Track A SLA 합선 금지"
+            ),
+        },
+        "illustrative_roi_scenarios_krw": illustrative_roi,
     }
     out_path = args.output if args.output.is_absolute() else ROOT / args.output
     out_path.parent.mkdir(parents=True, exist_ok=True)

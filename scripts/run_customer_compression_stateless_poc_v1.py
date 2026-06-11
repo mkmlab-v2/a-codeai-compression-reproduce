@@ -51,6 +51,12 @@ def main() -> int:
     )
     ap.add_argument("--max-cases", type=int, default=200)
     ap.add_argument("--loss-profile", default="semantic_general", choices=["semantic_general", "lossless_text", "code_equivalent"])
+    ap.add_argument(
+        "--compression-profile",
+        default="economy",
+        choices=["economy", "fidelity", "literal"],
+        help="V2 compression_profile passed to /v2/compress.",
+    )
     ap.add_argument("--out-json", type=Path, default=DEFAULT_OUT)
     ap.add_argument("--jaccard-floor", type=float, default=V2_JACCARD_FLOOR)
     ap.add_argument(
@@ -80,6 +86,29 @@ def main() -> int:
         action="store_true",
         help="With --sku: metadata only (do not pass forced_shard_id to /v2/compress).",
     )
+    ap.add_argument(
+        "--must-keep-overlay-json",
+        type=Path,
+        default=None,
+        help="Tenant must_keep overlay JSON (hard+soft terms → /v2/compress must_keep_overlay_terms).",
+    )
+    ap.add_argument(
+        "--auto-b2b-overlay",
+        action="store_true",
+        help="With --sku: auto-load docs/final/artifacts/b2b_sku_<slug>_must_keep_overlay_v1.json if present.",
+    )
+    ap.add_argument(
+        "--short-context-token-threshold",
+        type=int,
+        default=None,
+        help="V2 short-context policy: apply cap when token_in_proxy <= threshold.",
+    )
+    ap.add_argument(
+        "--short-context-max-saving-rate",
+        type=float,
+        default=None,
+        help="V2 short-context max saving cap (e.g. 0.35 for B2B industry rows).",
+    )
     args = ap.parse_args()
 
     workspace = args.workspace_root.resolve()
@@ -102,6 +131,24 @@ def main() -> int:
     if not inp.is_file():
         print(f"error: missing input: {inp}", file=sys.stderr)
         return 2
+
+    overlay_terms: list[str] = []
+    overlay_path: Path | None = None
+    if args.must_keep_overlay_json:
+        overlay_path = args.must_keep_overlay_json.resolve()
+    elif args.auto_b2b_overlay and args.sku:
+        from scripts.compression_b2b_must_keep_overlay_v1_lib import overlay_path_for_external_sku
+
+        candidate = overlay_path_for_external_sku(args.sku, workspace_root=workspace)
+        if candidate.is_file():
+            overlay_path = candidate
+    if overlay_path:
+        if not overlay_path.is_file():
+            print(f"error: missing overlay: {overlay_path}", file=sys.stderr)
+            return 2
+        from scripts.compression_b2b_must_keep_overlay_v1_lib import load_overlay_terms
+
+        overlay_terms = load_overlay_terms(overlay_path)
 
     from fastapi.testclient import TestClient
     from scripts.compression_token_api_v2_stub import RESIDUAL_STUB_KEY, app
@@ -128,6 +175,7 @@ def main() -> int:
         compress_body: dict[str, Any] = {
             "text": text,
             "loss_profile": args.loss_profile,
+            "compression_profile": args.compression_profile,
             "client_request_id": f"poc-{row_id}",
             "stateless_packet": True,
         }
@@ -135,6 +183,12 @@ def main() -> int:
             forced = sku_context.get("forced_shard_id") or sku_context.get("override_shard_id")
             if forced:
                 compress_body["forced_shard_id"] = forced
+        if overlay_terms:
+            compress_body["must_keep_overlay_terms"] = overlay_terms
+        if args.short_context_token_threshold is not None:
+            compress_body["short_context_token_threshold"] = args.short_context_token_threshold
+        if args.short_context_max_saving_rate is not None:
+            compress_body["short_context_max_saving_rate"] = args.short_context_max_saving_rate
         cr = client.post("/v2/compress", json=compress_body)
         if cr.status_code != 200:
             failures += 1
@@ -185,8 +239,10 @@ def main() -> int:
 
     n_ok = sum(1 for r in rows if r.get("ok"))
     n = len(rows)
-    avg_saving = sum(r.get("token_saving_rate_proxy", 0.0) for r in rows if r.get("ok")) / max(1, n_ok)
-    avg_jac = sum(r.get("jaccard_proxy", 0.0) for r in rows if r.get("ok")) / max(1, n_ok)
+    avg_saving_pass = sum(r.get("token_saving_rate_proxy", 0.0) for r in rows if r.get("ok")) / max(1, n_ok)
+    avg_jac_pass = sum(r.get("jaccard_proxy", 0.0) for r in rows if r.get("ok")) / max(1, n_ok)
+    avg_saving_all = sum(r.get("token_saving_rate_proxy", 0.0) for r in rows) / max(1, n)
+    avg_jac_all = sum(r.get("jaccard_proxy", 0.0) for r in rows) / max(1, n)
 
     doc = {
         "schema": "customer_compression_stateless_poc_v1",
@@ -195,14 +251,26 @@ def main() -> int:
         "boundary_ack": "Per-customer JSONL only; not Golden 40 or Track A 47.5% claim.",
         "input_jsonl": str(inp).replace("\\", "/"),
         "loss_profile": args.loss_profile,
+        "compression_profile": args.compression_profile,
         "case_count": n,
         "cases_passed": n_ok,
         "cases_passed_jaccard_floor": n_ok,
         "jaccard_floor": args.jaccard_floor,
         "pass_criterion": "exact_restore" if args.loss_profile == "lossless_text" else "jaccard_floor",
         "aggregate": {
-            "mean_token_saving_rate_proxy": round(avg_saving, 6),
-            "mean_jaccard_proxy": round(avg_jac, 6),
+            "mean_token_saving_rate_proxy": round(avg_saving_pass, 6),
+            "mean_jaccard_proxy": round(avg_jac_pass, 6),
+            "mean_token_saving_rate_proxy_all_cases": round(avg_saving_all, 6),
+            "mean_jaccard_proxy_all_cases": round(avg_jac_all, 6),
+        },
+        "must_keep_overlay": {
+            "applied": bool(overlay_terms),
+            "term_count": len(overlay_terms),
+            "overlay_path": str(overlay_path).replace("\\", "/") if overlay_path else None,
+        },
+        "short_context_policy": {
+            "token_threshold": args.short_context_token_threshold,
+            "max_saving_rate": args.short_context_max_saving_rate,
         },
         "parse_or_api_failures": failures,
         "relax_pass_gate": bool(args.relax_pass_gate),
@@ -221,7 +289,9 @@ def main() -> int:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Wrote {out_path}")
-    print(f"cases={n} passed_jaccard={n_ok} mean_saving_proxy={avg_saving:.4f} mean_jaccard={avg_jac:.4f}")
+    print(f"cases={n} passed_jaccard={n_ok} mean_saving_proxy={avg_saving_pass:.4f} mean_jaccard={avg_jac_pass:.4f}")
+    if overlay_terms:
+        print(f"must_keep_overlay_terms={len(overlay_terms)}")
     if args.relax_pass_gate:
         return 0 if n > 0 and failures == 0 and n_ok >= 1 else 1
     return 0 if n > 0 and failures == 0 and n_ok == n else 1
