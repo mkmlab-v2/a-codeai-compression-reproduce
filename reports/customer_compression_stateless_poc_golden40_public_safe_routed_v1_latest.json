@@ -1,10 +1,12 @@
 {
   "schema": "customer_compression_stateless_poc_v1",
-  "generated_at_utc": "2026-06-11T02:39:23Z",
+  "generated_at_utc": "2026-06-11T09:52:52Z",
   "research_only": true,
   "boundary_ack": "Per-customer JSONL only; not Golden 40 or Track A 47.5% claim.",
   "input_jsonl": "C:/workspace/data/compression/stateless_poc_golden40_public_safe_v1.jsonl",
   "loss_profile": "semantic_general",
+  "compression_profile": "economy",
+  "graph_wire_selective_bridge": false,
   "case_count": 40,
   "cases_passed": 10,
   "cases_passed_jaccard_floor": 10,
@@ -12,7 +14,18 @@
   "pass_criterion": "jaccard_floor",
   "aggregate": {
     "mean_token_saving_rate_proxy": 0.093617,
-    "mean_jaccard_proxy": 0.897361
+    "mean_jaccard_proxy": 0.897361,
+    "mean_token_saving_rate_proxy_all_cases": 0.388646,
+    "mean_jaccard_proxy_all_cases": 0.606351
+  },
+  "must_keep_overlay": {
+    "applied": false,
+    "term_count": 0,
+    "overlay_path": null
+  },
+  "short_context_policy": {
+    "token_threshold": null,
+    "max_saving_rate": null
   },
   "parse_or_api_failures": 0,
   "relax_pass_gate": true,

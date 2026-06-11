@@ -1,6 +1,6 @@
 {
   "schema": "compression_b2b_recommended_workflow_v1",
-  "generated_at_utc": "2026-06-11T03:18:32Z",
+  "generated_at_utc": "2026-06-10T15:25:09Z",
   "send_gate": "HOLD",
   "ready_for_external_send": false,
   "labels": [
@@ -19,7 +19,7 @@
     "not_this": [
       "Track A ~47% as customer SLA",
       "Handoff 99.47% as compression API headline",
-      "Prospect rehearsal 0.0% as named customer case study"
+      "Prospect rehearsal 97.6% as named customer case study"
     ]
   },
   "sku_separation": [
@@ -30,7 +30,7 @@
     },
     {
       "sku": "prospect_pilot_poc",
-      "metric": "0.0% saving proxy (40-case rehearsal)",
+      "metric": "97.6% saving proxy (25-case rehearsal)",
       "role": "per_tenant_jsonl_measurement",
       "artifact": "docs/final/artifacts/compression_b2b_pilot_roi_report_v1_latest.json"
     },
@@ -38,22 +38,14 @@
       "sku": "handoff_governance",
       "metric": "99.47% token reduction top-N slices",
       "role": "ops_memory_index_only"
-    },
-    {
-      "sku": "off_the_shelf_b2b_shard",
-      "metric": "per-SKU PoC only (not Track A SLA)",
-      "role": "forced_shard_id_industry_demo",
-      "artifact": "docs/final/artifacts/compression_b2b_off_the_shelf_shard_sku_v1.json",
-      "bundle_report": "reports/compression_b2b_sku_industry_poc_bundle_v1_latest.json",
-      "external_skus": [
-        "MKM-SCM-A1",
-        "MKM-CHAT-D1",
-        "MKM-FIN-E1",
-        "MKM-MED-G1"
-      ]
     }
   ],
   "recommended_commands": {
+    "customer_pilot_one_click": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Run-CompressionCustomerPilotIntake_v1.ps1 -TenantId <TENANT_SLUG> -CustomerJsonl <PATH> -MaxCases 30 -RelaxPassGate",
+    "build_customer_smoke_corpus": "py scripts/build_compression_customer_pilot_smoke_corpus_v1.py --rows 30",
+    "customer_smoke_e2e": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Run-CompressionCustomerPilotIntake_v1.ps1 -TenantId customer-pilot-smoke-v1 -CustomerJsonl data/compression/examples/customer_masked_pilot_smoke_v1.jsonl -MaxCases 30 -RelaxPassGate",
+    "public_open_sandbox": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Run-CompressionPublicOpenPilotIntake_v1.ps1 -MaxCases 30 -RelaxPassGate",
+    "pilot_target_intake_kit": "docs/final/artifacts/compression_pilot_target_intake_kit_v1_latest.json",
     "verify_all": "py scripts/run_compression_proof_completion_chain_v1.py",
     "customer_corpus": "py scripts/run_compression_pilot_roi_chain_v1.py --tenant-id <TENANT_SLUG>",
     "corpus_calibration_pack": "py scripts/run_compression_calibration_pack_v1.py --tenant-id <TENANT_SLUG>",
@@ -61,41 +53,7 @@
     "hydrate_compare": "py scripts/run_compression_pilot_hydrate_compare_v1.py --tenant-id <TENANT_SLUG> --input-jsonl data/compression/stateless_poc_prospect_<TENANT_SLUG>_v1.jsonl --overlay-json docs/final/artifacts/tenant_<TENANT_SLUG>_must_keep_overlay_v1.json",
     "dollar_roi_customer": "py scripts/build_compression_pilot_dollar_roi_v1.py --tenant-id <TENANT_SLUG> --poc-json reports/customer_compression_stateless_poc_<TENANT_SLUG>_v1_latest.json",
     "legal_send_after_counsel": "py scripts/apply_compression_b2b_legal_send_signoff_v1.py --commander-acknowledge --counsel-acknowledge",
-    "readiness_gate": "py scripts/check_compression_enterprise_summary_readiness_v1.py",
-    "off_the_shelf_sku_spec": "docs/final/artifacts/compression_b2b_off_the_shelf_shard_sku_v1.json",
-    "industry_poc_bundle": "py scripts/run_compression_b2b_sku_industry_poc_bundle_v1.py --compression-profile literal --auto-b2b-overlay --rows-per-sku 30",
-    "industry_evidence_v1_chain": "py scripts/run_compression_b2b_evidence_v1_industry_chain_v1.py",
-    "industry_short_cap_ab": "py scripts/run_compression_b2b_short_context_cap_chain_v1.py",
-    "industry_corpus_build": "py scripts/build_compression_b2b_industry_poc_corpus_v1.py --rows-per-sku 30",
-    "single_sku_poc": "py scripts/run_customer_compression_stateless_poc_v1.py --input-jsonl <CORPUS> --sku <MKM-SKU> --compression-profile literal --auto-b2b-overlay --out-json <REPORT>",
-    "open_sandbox_corpus": "py scripts/build_compression_open_sandbox_corpus_v1.py --tenant-id open-sandbox-01",
-    "open_sandbox_pilot": "py scripts/run_compression_pilot_roi_chain_v1.py --tenant-id open-sandbox-01 --input-jsonl data/compression/stateless_poc_golden40_public_safe_v1.jsonl --sandbox-mode --relax-pass-gate --max-cases 40"
-  },
-  "solo_ops_policy": {
-    "signoff": "SOLO_SELF_AUDIT_20260607",
-    "counsel_rail": "deprecated_drawer_only",
-    "ready_for_external_send": false,
-    "send_gate": "HOLD",
-    "note_ko": "1인 R&D — 법무/CTO 송부 워크플로 폐기; 참모부 내부 검증만"
-  },
-  "off_the_shelf_shard": {
-    "spec_path": "docs/final/artifacts/compression_b2b_off_the_shelf_shard_sku_v1.json",
-    "routing": "forced_shard_id via --sku (b2b shards not in auto route(text))",
-    "industry_bundle_ok": true,
-    "industry_bundle_path": "reports/compression_b2b_sku_industry_poc_bundle_v1_latest.json",
-    "industry_profile_policy": {
-      "default_compression_profile": "literal",
-      "must_keep_overlay": true,
-      "rows_per_sku": 30,
-      "short_cap_fallback": null,
-      "evidence_chain_ok": true
-    },
-    "external_skus": [
-      "MKM-SCM-A1",
-      "MKM-CHAT-D1",
-      "MKM-FIN-E1",
-      "MKM-MED-G1"
-    ]
+    "readiness_gate": "py scripts/check_compression_enterprise_summary_readiness_v1.py"
   },
   "corpus_calibration_pack": {
     "name": "Corpus Calibration Pack",
@@ -107,44 +65,16 @@
     {
       "id": "customer_masked_jsonl_20_50",
       "status": "pending",
-      "unlocks": "customer_dollar_roi / customer_krw_roi",
-      "note": "rehearsal corpus does not satisfy this gate — real customer PII-masked JSONL required"
-    },
-    {
-      "id": "rehearsal_corpus_pilot_chain",
-      "status": "measured",
-      "unlocks": "internal_meeting_demo_only",
-      "artifact": "docs/final/artifacts/compression_b2b_pilot_roi_report_v1_latest.json"
+      "unlocks": "customer_dollar_roi / customer_krw_roi"
     },
     {
       "id": "counsel_signoff",
-      "status": "superseded_by_solo_self_audit",
-      "unlocks": "ready_for_external_send",
-      "note": "1인 정책 — counsel 레일 폐기; SOLO_SELF_AUDIT_20260607로 대체"
-    },
-    {
-      "id": "solo_self_audit",
-      "status": "active",
-      "signoff": "SOLO_SELF_AUDIT_20260607",
-      "unlocks": "internal_pipeline_validation_only"
-    },
-    {
-      "id": "industry_masked_corpus_30_50",
-      "status": "measured_rehearsal",
-      "unlocks": "internal_industry_sku_demo_only",
-      "note": "public-safe synthetic industry JSONL — not real customer PII-masked JSONL",
-      "artifact": "reports/compression_b2b_sku_industry_poc_bundle_v1_latest.json"
-    },
-    {
-      "id": "open_sandbox_virtual_tenant",
-      "status": "measured",
-      "tenant_id": "open-sandbox-01",
-      "unlocks": "customer_masked_jsonl_20_50_bypass_for_1p_dev_only"
+      "status": "pending",
+      "unlocks": "ready_for_external_send"
     }
   ],
   "fact_lock_pointers": [
     "docs/final/artifacts/compression_b2b_legal_send_signoff_v1_latest.json",
-    "docs/final/artifacts/compression_b2b_off_the_shelf_shard_sku_v1.json",
     "docs/final/artifacts/compression_public_reproduce_pack_v1_latest.json",
     "docs/final/COMPRESSION_SLA_POLICY_V1.md"
   ]

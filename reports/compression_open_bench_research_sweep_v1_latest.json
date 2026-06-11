@@ -1,6 +1,6 @@
 {
   "schema": "compression_open_bench_research_sweep_v1",
-  "generated_at_utc": "2026-06-11T03:52:16Z",
+  "generated_at_utc": "2026-06-11T09:57:00Z",
   "research_only": true,
   "hypothesis_tag": "[HYPO]",
   "send_gate": "HOLD",
@@ -145,28 +145,27 @@
       "graph_wire_requested": false
     },
     {
-      "variant_id": "routed_economy_corpus_extracted_overlay",
-      "label_ko": "CHAT-D1 + golden40 코퍼스 추출 overlay · economy",
+      "variant_id": "routed_literal_overlay_wire",
+      "label_ko": "CHAT-D1 · literal + overlay + graph_wire",
       "sku": "MKM-CHAT-D1",
-      "overlay_path": "docs/final/artifacts/tenant_golden40_research_must_keep_overlay_v1.json",
-      "report_path": "reports/customer_compression_stateless_poc_golden40_sweep_corpus_overlay_v1_latest.json",
+      "report_path": "reports/customer_compression_stateless_poc_golden40_sweep_routed_literal_overlay_wire_v1_latest.json",
       "exit_code": 0,
       "output_tail": [
-        "Wrote C:\\workspace\\reports\\customer_compression_stateless_poc_golden40_sweep_corpus_overlay_v1_latest.json",
-        "cases=40 passed_jaccard=11 mean_saving_proxy=0.0945 mean_jaccard=0.8969",
-        "must_keep_overlay_terms=11"
+        "Wrote C:\\workspace\\reports\\customer_compression_stateless_poc_golden40_sweep_routed_literal_overlay_wire_v1_latest.json",
+        "cases=40 passed_jaccard=39 mean_saving_proxy=0.1521 mean_jaccard=0.8406",
+        "must_keep_overlay_terms=30"
       ],
       "present": true,
       "case_count": 40,
-      "cases_passed": 11,
+      "cases_passed": 39,
       "raw": {
-        "mean_token_saving_rate_proxy": 0.094454,
-        "saving_pct_display": 9.45,
-        "mean_jaccard_proxy": 0.896888
+        "mean_token_saving_rate_proxy": 0.152058,
+        "saving_pct_display": 15.21,
+        "mean_jaccard_proxy": 0.840645
       },
       "must_keep_overlay_applied": true,
-      "compression_profile": "economy",
-      "graph_wire_requested": false
+      "compression_profile": "literal",
+      "graph_wire_requested": true
     }
   ],
   "ranking_by_raw_saving": [
@@ -186,14 +185,14 @@
       "jaccard": 0.840645
     },
     {
+      "variant_id": "routed_literal_overlay_wire",
+      "saving_pct": 15.21,
+      "jaccard": 0.840645
+    },
+    {
       "variant_id": "routed_economy_graph_wire",
       "saving_pct": 11.27,
       "jaccard": 0.874289
-    },
-    {
-      "variant_id": "routed_economy_corpus_extracted_overlay",
-      "saving_pct": 9.45,
-      "jaccard": 0.896888
     },
     {
       "variant_id": "baseline_routed_economy",

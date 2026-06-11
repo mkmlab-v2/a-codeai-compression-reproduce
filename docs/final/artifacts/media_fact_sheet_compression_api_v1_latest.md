@@ -1,7 +1,7 @@
 ---
 schema: media_fact_sheet_compression_api_v1
 sku_id: compression_api
-generated_at_utc: 2026-06-11T03:57:39Z
+generated_at_utc: 2026-06-11T05:59:47Z
 labels: [DRAFT, internal_only, research_only, publish_allowed=false]
 ready_for_external_send: false
 send_gate: HOLD
@@ -30,7 +30,7 @@ fail_comp_004: true
 | Track A frozen (Golden 40) | saving **~47.1%** · Jaccard **~0.89** | `MULTILENS_ULTRA_COMPRESSION_ACTIVE_REPORT_V1.json` · **내부 회귀 SSOT** |
 | Open long structured | **saving **0.0%** · J **1.0000** (48-case corpus)** | `customer_compression_stateless_poc_open_structured_long_v1_latest.json` · **per-corpus only** |
 | Golden40 public-safe | **saving **0.0%** · J **1.0000** (40-case public-safe)** | `stateless_poc_golden40_public_safe_v1.jsonl` · **not customer SLA** |
-| Prospect pilot rehearsal | **saving **0.0%** · J **1.0000** (40-case)** | `compression_b2b_pilot_roi_report_v1_latest.json` · **shared API PoC — NOT Handoff · NOT Track A** |
+| Prospect pilot rehearsal | **saving **14.4%** · J **0.8426** (30-case)** | `compression_b2b_pilot_roi_report_v1_latest.json` · **shared API PoC — NOT Handoff · NOT Track A** |
 | AB gate reference | **~38.9%** (wire) | Evidence index — **고객 약속 금지** |
 | VPS latency draft | p95 **~665 ms** | `bench_l1_api_load_summary_vps_latest.json` · `research_only` · 동시 50 · ~1k tok |
 | Open bench launch | **READY_FOR_PUBLIC_OPEN_BENCH** | `a_codeai_public_benchmark_launch_checklist_v1.json` · **SEND_GATE still HOLD** |

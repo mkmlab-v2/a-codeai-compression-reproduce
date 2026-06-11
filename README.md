@@ -11,6 +11,12 @@ SEND_GATE: HOLD — do not use as customer case study or merged marketing headli
 - Not equivalent to frozen Track A 47.5% SLA.
 - Stateless golden40 on same corpus may read 0% — cite routing SKU separately.
 
+
+## B-track research (internal scenario only · not external headline)
+
+- CHAT-D1 **literal** on golden40: **15.21%** · Jaccard **0.840645**
+- See `reports/compression_open_bench_research_sweep_v1_latest.json`
+
 ## One command (from repo root)
 
 ```bash
@@ -25,3 +31,7 @@ python3 scripts/run_compression_open_bench_chain_v1.py --skip-expand
 ```
 
 FAIL-COMP-004: per-SKU metrics only; never merge Track A / handoff / prospect %.
+
+## Community contributions (contributor_provided · SEND_GATE HOLD)
+
+See `CONTRIBUTING_OPEN_BENCH.md` — masked JSONL under `data/*/contributions/`; `contributor_provided=true`, `customer_provided=false`; no Track A / 47.5% headline.

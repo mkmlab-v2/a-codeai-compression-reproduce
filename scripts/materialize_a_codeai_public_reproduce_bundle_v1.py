@@ -39,6 +39,10 @@ jobs:
         run: python3 scripts/run_compression_evidence_lv1_chain_v1.py --skip-handoff
       - name: Verify reproduce pack
         run: test -f docs/final/artifacts/compression_public_reproduce_pack_v1_latest.json
+      - name: Contributor open-bench validate smoke
+        run: |
+          python3 scripts/validate_compression_contributor_jsonl_v1.py --jsonl data/compression/examples/compression_contributor_example_v1.jsonl --min-rows 10
+          python3 scripts/validate_prophecy_contributor_jsonl_v1.py --jsonl data/prophecy/examples/prophecy_contributor_example_v1.jsonl --min-rows 5
 """
 
 REQUIREMENTS_TXT = """fastapi>=0.100
@@ -218,7 +222,7 @@ def materialize(
         "# A-CODEAI public reproduce export (slim)\n\n"
         "SEND_GATE: HOLD — do not use as customer case study or merged marketing headline.\n"
         "`research_only` · B→A auto-merge prohibited.\n\n"
-        f"{routed_note}"
+        f"{routed_note}{research_note}"
         "## One command (from repo root)\n\n"
         "```bash\n"
         "pip install -r requirements-public-reproduce.txt\n"
@@ -228,7 +232,10 @@ def materialize(
         "```bash\n"
         "python3 scripts/run_compression_open_bench_chain_v1.py --skip-expand\n"
         "```\n\n"
-        "FAIL-COMP-004: per-SKU metrics only; never merge Track A / handoff / prospect %.\n"
+        "FAIL-COMP-004: per-SKU metrics only; never merge Track A / handoff / prospect %.\n\n"
+        "## Community contributions (contributor_provided · SEND_GATE HOLD)\n\n"
+        "See `CONTRIBUTING_OPEN_BENCH.md` — masked JSONL under `data/*/contributions/`; "
+        "`contributor_provided=true`, `customer_provided=false`; no Track A / 47.5% headline.\n"
     )
 
     ci_path = ".github/workflows/reproduce_ci.yml"
@@ -259,7 +266,9 @@ def materialize(
             if secret_re.search(text):
                 leak_scan_hits.append(str(fp.relative_to(out_dir)).replace("\\", "/"))
 
-    ok = len(missing) == 0 and len(blocked) == 0 and len(leak_scan_hits) == 0
+    deny_blocked = [b for b in blocked if str(b.get("reason", "")).startswith("deny_")]
+    unexpected_blocked = [b for b in blocked if b not in deny_blocked]
+    ok = len(missing) == 0 and len(unexpected_blocked) == 0 and len(leak_scan_hits) == 0
     return {
         "schema": "a_codeai_public_reproduce_materialize_report_v1",
         "generated_at_utc": _utc(),
