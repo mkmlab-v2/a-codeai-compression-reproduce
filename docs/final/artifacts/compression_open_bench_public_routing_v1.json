@@ -26,6 +26,28 @@
       "routed_report": "reports/customer_compression_stateless_poc_open_structured_routed_v1_latest.json"
     }
   ],
+  "btrack_research_sweep_ref": "reports/compression_open_bench_research_sweep_v1_latest.json",
+  "btrack_research_findings_2026_06_11": {
+    "hypothesis_tag": "[HYPO]",
+    "chat_aligned_best": {
+      "variant_id": "routed_literal_b2b_overlay",
+      "sku": "MKM-CHAT-D1",
+      "compression_profile": "literal",
+      "raw_saving_pct": 15.21,
+      "mean_jaccard_proxy": 0.840645,
+      "delta_pp_vs_economy_baseline": 5.85,
+      "note_ko": "동일 golden40 코퍼스 — literal은 Jaccard 하락(0.897→0.841). 대외 헤드라인·Track A 승격 없음."
+    },
+    "economy_graph_wire": {
+      "raw_saving_pct": 11.27,
+      "delta_pp_vs_baseline": 1.91
+    },
+    "cross_sku_not_chat_headline": {
+      "variant_id": "fin_e1_literal_overlay",
+      "raw_saving_pct": 19.79,
+      "note_ko": "FIN shard on golden40 — 교차 SKU 실험만, CHAT 포지셔닝 헤드라인 금지"
+    }
+  },
   "corpus_positioning_strategy": {
     "chosen_path": "short_prose_strength_not_json_failure",
     "rejected_path": "json_corpus_nonzero_spike_this_cycle",

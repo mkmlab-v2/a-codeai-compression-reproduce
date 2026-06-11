@@ -1,0 +1,67 @@
+{
+  "schema": "compression_industry_sku_50_sweep_v1",
+  "generated_at_utc": "2026-06-11T03:55:36Z",
+  "research_only": true,
+  "hypothesis_tag": "[HYPO]",
+  "send_gate": "HOLD",
+  "rows_per_sku": 50,
+  "bundle_summary_path": "reports/compression_b2b_sku_industry_poc_bundle_50_v1_latest.json",
+  "baseline_bundle_path": "reports/compression_b2b_sku_industry_poc_bundle_v1_latest.json",
+  "steps": [
+    {
+      "script": "build_compression_b2b_industry_poc_corpus_v1.py",
+      "exit_code": 0,
+      "output_tail": [
+        "Wrote C:\\workspace\\data\\compression\\stateless_poc_chat_public_safe_v1.jsonl",
+        "Wrote C:\\workspace\\data\\compression\\stateless_poc_finance_public_safe_v1.jsonl",
+        "Wrote C:\\workspace\\data\\compression\\stateless_poc_health_public_safe_v1.jsonl",
+        "count=4"
+      ]
+    },
+    {
+      "script": "run_compression_b2b_sku_industry_poc_bundle_v1.py",
+      "exit_code": 0,
+      "output_tail": [
+        "RUN C:\\Python311\\python.exe C:\\workspace\\scripts\\run_customer_compression_stateless_poc_v1.py --input-jsonl C:\\workspace\\data\\compression\\stateless_poc_chat_public_safe_v1.jsonl --sku MKM-CHAT-D1 --sku-spec-json C:\\workspace\\docs\\final\\artifacts\\compression_b2b_off_the_shelf_shard_sku_v1.json --compression-profile literal --max-cases 50 --out-json C:\\workspace\\reports\\customer_compression_stateless_poc_chat_d1_industry_literal_v1_latest.json --auto-b2b-overlay --relax-pass-gate",
+        "RUN C:\\Python311\\python.exe C:\\workspace\\scripts\\run_customer_compression_stateless_poc_v1.py --input-jsonl C:\\workspace\\data\\compression\\stateless_poc_finance_public_safe_v1.jsonl --sku MKM-FIN-E1 --sku-spec-json C:\\workspace\\docs\\final\\artifacts\\compression_b2b_off_the_shelf_shard_sku_v1.json --compression-profile literal --max-cases 50 --out-json C:\\workspace\\reports\\customer_compression_stateless_poc_fin_e1_industry_literal_v1_latest.json --auto-b2b-overlay --relax-pass-gate",
+        "RUN C:\\Python311\\python.exe C:\\workspace\\scripts\\run_customer_compression_stateless_poc_v1.py --input-jsonl C:\\workspace\\data\\compression\\stateless_poc_health_public_safe_v1.jsonl --sku MKM-MED-G1 --sku-spec-json C:\\workspace\\docs\\final\\artifacts\\compression_b2b_off_the_shelf_shard_sku_v1.json --compression-profile literal --max-cases 50 --out-json C:\\workspace\\reports\\customer_compression_stateless_poc_med_g1_industry_literal_v1_latest.json --auto-b2b-overlay --relax-pass-gate",
+        "Wrote C:\\workspace\\reports\\compression_b2b_sku_industry_poc_bundle_50_v1_latest.json"
+      ]
+    }
+  ],
+  "sku_comparisons": [
+    {
+      "external_sku": "MKM-SCM-A1",
+      "case_count": 50,
+      "raw_saving_pct": 15.73,
+      "mean_jaccard_proxy": 0.835142,
+      "baseline_30_saving_pct": 15.18,
+      "delta_pp_vs_30_row_baseline": 0.54
+    },
+    {
+      "external_sku": "MKM-CHAT-D1",
+      "case_count": 50,
+      "raw_saving_pct": 12.34,
+      "mean_jaccard_proxy": 0.872498,
+      "baseline_30_saving_pct": 11.58,
+      "delta_pp_vs_30_row_baseline": 0.75
+    },
+    {
+      "external_sku": "MKM-FIN-E1",
+      "case_count": 50,
+      "raw_saving_pct": 15.5,
+      "mean_jaccard_proxy": 0.850926,
+      "baseline_30_saving_pct": 14.93,
+      "delta_pp_vs_30_row_baseline": 0.57
+    },
+    {
+      "external_sku": "MKM-MED-G1",
+      "case_count": 50,
+      "raw_saving_pct": 10.98,
+      "mean_jaccard_proxy": 0.860982,
+      "baseline_30_saving_pct": 10.1,
+      "delta_pp_vs_30_row_baseline": 0.87
+    }
+  ],
+  "chain_ok": true
+}

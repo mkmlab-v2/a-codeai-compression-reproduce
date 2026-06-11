@@ -1,0 +1,103 @@
+{
+  "schema": "compression_open_bench_persuasion_deck_v1",
+  "generated_at_utc": "2026-06-11T03:55:29Z",
+  "research_only": true,
+  "hypothesis_tag": "[HYPO]",
+  "send_gate": "HOLD",
+  "ready_for_external_send": false,
+  "lane": "internal_persuasion_deck_only",
+  "evidence_dual_report": "reports/compression_open_bench_dual_report_v1_latest.json",
+  "evidence_research_sweep": "reports/compression_open_bench_research_sweep_v1_latest.json",
+  "measured_anchor": {
+    "corpus_label": "golden40_public_safe_routed",
+    "sku_id": "MKM-CHAT-D1",
+    "forced_shard_id": "zone_d_ssot_b2b_v1",
+    "case_count": 40,
+    "raw": {
+      "mean_token_saving_rate_proxy": 0.093617,
+      "saving_pct_display": 9.36,
+      "mean_jaccard_proxy": 0.897361
+    },
+    "repair_v2_note": "repair_applied_count typically 0 — cite raw; delta=0",
+    "track_a_sla_equivalent": false,
+    "role": "public_open_bench_anchor_economy"
+  },
+  "btrack_research_anchor_literal": {
+    "variant_id": "routed_literal_b2b_overlay",
+    "sku_id": "MKM-CHAT-D1",
+    "compression_profile": "literal",
+    "case_count": 40,
+    "evidence_sweep": "reports/compression_open_bench_research_sweep_v1_latest.json",
+    "raw": {
+      "mean_token_saving_rate_proxy": 0.152058,
+      "saving_pct_display": 15.21,
+      "mean_jaccard_proxy": 0.840645
+    },
+    "jaccard_tradeoff_ko": "literal 프로파일 — economy 대비 절감↑·Jaccard proxy↓. 내부 미팅·[HYPO] 시나리오만; 대외 헤드라인·Track A 승격 없음."
+  },
+  "illustrative_roi_scenarios_krw": [
+    {
+      "assumption_monthly_llm_spend_krw": 100000000,
+      "applied_saving_rate": 0.093617,
+      "illustrative_monthly_save_krw": 9361700,
+      "illustrative_annual_save_krw": 112340400,
+      "disclaimer_ko": "가정·시나리오 전용 — 실고객 invoice·계약 ROI 아님"
+    },
+    {
+      "assumption_monthly_llm_spend_krw": 500000000,
+      "applied_saving_rate": 0.093617,
+      "illustrative_monthly_save_krw": 46808500,
+      "illustrative_annual_save_krw": 561702000,
+      "disclaimer_ko": "가정·시나리오 전용 — 실고객 invoice·계약 ROI 아님"
+    },
+    {
+      "assumption_monthly_llm_spend_krw": 1000000000,
+      "applied_saving_rate": 0.093617,
+      "illustrative_monthly_save_krw": 93617000,
+      "illustrative_annual_save_krw": 1123404000,
+      "disclaimer_ko": "가정·시나리오 전용 — 실고객 invoice·계약 ROI 아님"
+    }
+  ],
+  "illustrative_roi_scenarios_literal_krw": [
+    {
+      "assumption_monthly_llm_spend_krw": 100000000,
+      "applied_saving_rate": 0.152058,
+      "illustrative_monthly_save_krw": 15205800,
+      "illustrative_annual_save_krw": 182469600,
+      "disclaimer_ko": "가정·시나리오 전용 — 실고객 invoice·계약 ROI 아님"
+    },
+    {
+      "assumption_monthly_llm_spend_krw": 500000000,
+      "applied_saving_rate": 0.152058,
+      "illustrative_monthly_save_krw": 76029000,
+      "illustrative_annual_save_krw": 912348000,
+      "disclaimer_ko": "가정·시나리오 전용 — 실고객 invoice·계약 ROI 아님"
+    },
+    {
+      "assumption_monthly_llm_spend_krw": 1000000000,
+      "applied_saving_rate": 0.152058,
+      "illustrative_monthly_save_krw": 152058000,
+      "illustrative_annual_save_krw": 1824696000,
+      "disclaimer_ko": "가정·시나리오 전용 — 실고객 invoice·계약 ROI 아님"
+    }
+  ],
+  "json_corpus_positioning": {
+    "strategy": "short_prose_strength_not_json_failure",
+    "open_structured_measured_saving_pct": 0.0,
+    "note_ko": "JSON-heavy open_structured 0%는 엔진 고장이 아니라 코퍼스·must_keep·라우팅 조건 미충족으로 보고. 대외 수치는 golden40_routed·산업 SKU PoC(8–11%)를 코퍼스별로 분리 인용."
+  },
+  "allowed_internal_headline_ko": "오픈 코퍼스 golden40 N=40 · MKM-CHAT-D1 — economy raw 9.36% (J 0.897361); B-track literal 연구 15.21% (J 0.840645) — 내부만 · Track A SLA 비동일 · SEND_GATE HOLD · illustrative ROI는 가정치",
+  "forbidden_headline_ko": [
+    "연간 12억 순이익 보장",
+    "글로벌 표준 데이터셋 전수 적용",
+    "Jaccard proxy를 엔터프라이즈 보안 무결성 90%로 단정",
+    "Track A 47.5%와 동일 SLA",
+    "언론·광고 송출 준비 완료"
+  ],
+  "tone_ratio": "70/20/10",
+  "structure": {
+    "opening_ko": "결론: 조건부 raw 절감 실측 있음 — 대외 send는 HOLD",
+    "body_ko": "CFO 시나리오는 illustrative만; economy anchor=dual report, literal 15%대=B-track sweep(내부 시나리오)",
+    "closing_ko": "다음 게이트: 실고객 마스킹 JSONL PoC · counsel sign-off"
+  }
+}

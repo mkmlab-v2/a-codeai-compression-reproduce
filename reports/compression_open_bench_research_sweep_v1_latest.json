@@ -1,0 +1,221 @@
+{
+  "schema": "compression_open_bench_research_sweep_v1",
+  "generated_at_utc": "2026-06-11T03:52:16Z",
+  "research_only": true,
+  "hypothesis_tag": "[HYPO]",
+  "send_gate": "HOLD",
+  "ready_for_external_send": false,
+  "corpus": "data/compression/stateless_poc_golden40_public_safe_v1.jsonl",
+  "baseline_variant_id": "baseline_routed_economy",
+  "baseline_saving_pct": 9.36,
+  "variants": [
+    {
+      "variant_id": "baseline_routed_economy",
+      "label_ko": "현행 앵커 — CHAT-D1 routed · economy",
+      "sku": "MKM-CHAT-D1",
+      "report_path": "reports/customer_compression_stateless_poc_golden40_sweep_baseline_routed_economy_v1_latest.json",
+      "exit_code": 0,
+      "output_tail": [
+        "Wrote C:\\workspace\\reports\\customer_compression_stateless_poc_golden40_sweep_baseline_routed_economy_v1_latest.json",
+        "cases=40 passed_jaccard=10 mean_saving_proxy=0.0936 mean_jaccard=0.8974"
+      ],
+      "present": true,
+      "case_count": 40,
+      "cases_passed": 10,
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.093617,
+        "saving_pct_display": 9.36,
+        "mean_jaccard_proxy": 0.897361
+      },
+      "must_keep_overlay_applied": false,
+      "compression_profile": "economy",
+      "graph_wire_requested": false
+    },
+    {
+      "variant_id": "routed_economy_b2b_overlay",
+      "label_ko": "CHAT-D1 + B2B must_keep overlay · economy",
+      "sku": "MKM-CHAT-D1",
+      "report_path": "reports/customer_compression_stateless_poc_golden40_sweep_routed_economy_b2b_overlay_v1_latest.json",
+      "exit_code": 0,
+      "output_tail": [
+        "Wrote C:\\workspace\\reports\\customer_compression_stateless_poc_golden40_sweep_routed_economy_b2b_overlay_v1_latest.json",
+        "cases=40 passed_jaccard=10 mean_saving_proxy=0.0936 mean_jaccard=0.8974",
+        "must_keep_overlay_terms=30"
+      ],
+      "present": true,
+      "case_count": 40,
+      "cases_passed": 10,
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.093617,
+        "saving_pct_display": 9.36,
+        "mean_jaccard_proxy": 0.897361
+      },
+      "must_keep_overlay_applied": true,
+      "compression_profile": "economy",
+      "graph_wire_requested": false
+    },
+    {
+      "variant_id": "routed_literal_b2b_overlay",
+      "label_ko": "CHAT-D1 + overlay · literal (산업 PoC 동일 프로파일)",
+      "sku": "MKM-CHAT-D1",
+      "report_path": "reports/customer_compression_stateless_poc_golden40_sweep_routed_literal_b2b_overlay_v1_latest.json",
+      "exit_code": 0,
+      "output_tail": [
+        "Wrote C:\\workspace\\reports\\customer_compression_stateless_poc_golden40_sweep_routed_literal_b2b_overlay_v1_latest.json",
+        "cases=40 passed_jaccard=39 mean_saving_proxy=0.1521 mean_jaccard=0.8406",
+        "must_keep_overlay_terms=30"
+      ],
+      "present": true,
+      "case_count": 40,
+      "cases_passed": 39,
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.152058,
+        "saving_pct_display": 15.21,
+        "mean_jaccard_proxy": 0.840645
+      },
+      "must_keep_overlay_applied": true,
+      "compression_profile": "literal",
+      "graph_wire_requested": false
+    },
+    {
+      "variant_id": "routed_economy_graph_wire",
+      "label_ko": "CHAT-D1 + graph_wire_selective_bridge · economy",
+      "sku": "MKM-CHAT-D1",
+      "report_path": "reports/customer_compression_stateless_poc_golden40_sweep_routed_economy_graph_wire_v1_latest.json",
+      "exit_code": 0,
+      "output_tail": [
+        "Wrote C:\\workspace\\reports\\customer_compression_stateless_poc_golden40_sweep_routed_economy_graph_wire_v1_latest.json",
+        "cases=40 passed_jaccard=12 mean_saving_proxy=0.1127 mean_jaccard=0.8743"
+      ],
+      "present": true,
+      "case_count": 40,
+      "cases_passed": 12,
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.112698,
+        "saving_pct_display": 11.27,
+        "mean_jaccard_proxy": 0.874289
+      },
+      "must_keep_overlay_applied": false,
+      "compression_profile": "economy",
+      "graph_wire_requested": true
+    },
+    {
+      "variant_id": "routed_literal_no_overlay",
+      "label_ko": "CHAT-D1 · literal (overlay 없음)",
+      "sku": "MKM-CHAT-D1",
+      "report_path": "reports/customer_compression_stateless_poc_golden40_sweep_routed_literal_no_overlay_v1_latest.json",
+      "exit_code": 0,
+      "output_tail": [
+        "Wrote C:\\workspace\\reports\\customer_compression_stateless_poc_golden40_sweep_routed_literal_no_overlay_v1_latest.json",
+        "cases=40 passed_jaccard=39 mean_saving_proxy=0.1521 mean_jaccard=0.8406"
+      ],
+      "present": true,
+      "case_count": 40,
+      "cases_passed": 39,
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.152058,
+        "saving_pct_display": 15.21,
+        "mean_jaccard_proxy": 0.840645
+      },
+      "must_keep_overlay_applied": false,
+      "compression_profile": "literal",
+      "graph_wire_requested": false
+    },
+    {
+      "variant_id": "fin_e1_literal_overlay",
+      "label_ko": "FIN-E1 shard + overlay · literal (교차 SKU)",
+      "sku": "MKM-FIN-E1",
+      "report_path": "reports/customer_compression_stateless_poc_golden40_sweep_fin_e1_literal_overlay_v1_latest.json",
+      "exit_code": 0,
+      "output_tail": [
+        "Wrote C:\\workspace\\reports\\customer_compression_stateless_poc_golden40_sweep_fin_e1_literal_overlay_v1_latest.json",
+        "cases=40 passed_jaccard=40 mean_saving_proxy=0.1979 mean_jaccard=0.7965",
+        "must_keep_overlay_terms=30"
+      ],
+      "present": true,
+      "case_count": 40,
+      "cases_passed": 40,
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.197949,
+        "saving_pct_display": 19.79,
+        "mean_jaccard_proxy": 0.796499
+      },
+      "must_keep_overlay_applied": true,
+      "compression_profile": "literal",
+      "graph_wire_requested": false
+    },
+    {
+      "variant_id": "routed_economy_corpus_extracted_overlay",
+      "label_ko": "CHAT-D1 + golden40 코퍼스 추출 overlay · economy",
+      "sku": "MKM-CHAT-D1",
+      "overlay_path": "docs/final/artifacts/tenant_golden40_research_must_keep_overlay_v1.json",
+      "report_path": "reports/customer_compression_stateless_poc_golden40_sweep_corpus_overlay_v1_latest.json",
+      "exit_code": 0,
+      "output_tail": [
+        "Wrote C:\\workspace\\reports\\customer_compression_stateless_poc_golden40_sweep_corpus_overlay_v1_latest.json",
+        "cases=40 passed_jaccard=11 mean_saving_proxy=0.0945 mean_jaccard=0.8969",
+        "must_keep_overlay_terms=11"
+      ],
+      "present": true,
+      "case_count": 40,
+      "cases_passed": 11,
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.094454,
+        "saving_pct_display": 9.45,
+        "mean_jaccard_proxy": 0.896888
+      },
+      "must_keep_overlay_applied": true,
+      "compression_profile": "economy",
+      "graph_wire_requested": false
+    }
+  ],
+  "ranking_by_raw_saving": [
+    {
+      "variant_id": "fin_e1_literal_overlay",
+      "saving_pct": 19.79,
+      "jaccard": 0.796499
+    },
+    {
+      "variant_id": "routed_literal_b2b_overlay",
+      "saving_pct": 15.21,
+      "jaccard": 0.840645
+    },
+    {
+      "variant_id": "routed_literal_no_overlay",
+      "saving_pct": 15.21,
+      "jaccard": 0.840645
+    },
+    {
+      "variant_id": "routed_economy_graph_wire",
+      "saving_pct": 11.27,
+      "jaccard": 0.874289
+    },
+    {
+      "variant_id": "routed_economy_corpus_extracted_overlay",
+      "saving_pct": 9.45,
+      "jaccard": 0.896888
+    },
+    {
+      "variant_id": "baseline_routed_economy",
+      "saving_pct": 9.36,
+      "jaccard": 0.897361
+    },
+    {
+      "variant_id": "routed_economy_b2b_overlay",
+      "saving_pct": 9.36,
+      "jaccard": 0.897361
+    }
+  ],
+  "best_variant": {
+    "variant_id": "fin_e1_literal_overlay",
+    "saving_pct": 19.79,
+    "delta_pp_vs_baseline": 10.43
+  },
+  "verdict_ko": "최고 변형 fin_e1_literal_overlay raw 19.79% (baseline 대비 +10.43pp) — Track A·대외 헤드라인 자동 승격 없음",
+  "forbidden": [
+    "Track A 47.5% merge",
+    "ready_for_external_send without customer PoC",
+    "repair-only uplift as core proof"
+  ],
+  "chain_ok": true
+}

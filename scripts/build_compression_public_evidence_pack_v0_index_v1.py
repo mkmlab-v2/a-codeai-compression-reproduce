@@ -21,6 +21,8 @@ W0_CORPUS = ROOT / "data/compression/stateless_poc_smoke_v1.jsonl"
 TENANT_CORPUS = ROOT / "data/compression/stateless_poc_enterprise_50_v1.jsonl"
 LAUNCH_CHECKLIST = ROOT / "docs/final/artifacts/a_codeai_public_benchmark_launch_checklist_v1.json"
 REPRODUCE_PACK = ROOT / "docs/final/artifacts/compression_public_reproduce_pack_v1_latest.json"
+INDUSTRY_BUNDLE = ROOT / "reports/compression_b2b_sku_industry_poc_bundle_v1_latest.json"
+INDUSTRY_CHAIN = ROOT / "reports/compression_b2b_evidence_v1_industry_chain_v1_latest.json"
 OPEN_POC = ROOT / "reports/customer_compression_stateless_poc_open_structured_v1_latest.json"
 OPEN_LONG_POC = ROOT / "reports/customer_compression_stateless_poc_open_structured_long_v1_latest.json"
 HANDOFF_BENCH = ROOT / "reports/mkm_ops_memory_index_token_bench_v1_latest.json"
@@ -124,6 +126,25 @@ def build() -> dict[str, Any]:
     open_long_sum = _poc_summary(_load_json(OPEN_LONG_POC))
     handoff = _load_json(HANDOFF_BENCH) or {}
     reproduce = _load_json(REPRODUCE_PACK) or {}
+    industry_bundle = _load_json(INDUSTRY_BUNDLE) or {}
+    industry_chain = _load_json(INDUSTRY_CHAIN) or {}
+
+    lv3_industry = dict(base.get("lv3_industry_b2b") or {})
+    if industry_bundle:
+        lv3_industry.update(
+            {
+                "bundle_ok": industry_bundle.get("bundle_ok"),
+                "compression_profile_default": industry_bundle.get("compression_profile_default"),
+                "rows_per_sku": industry_bundle.get("rows_per_sku"),
+                "must_keep_overlay": industry_bundle.get("must_keep_overlay"),
+                "sku_count": len(industry_bundle.get("steps") or []),
+            }
+        )
+    if industry_chain:
+        lv3_industry["chain_ok"] = industry_chain.get("chain_ok")
+        lv3_industry["chain_path"] = INDUSTRY_CHAIN.relative_to(ROOT).as_posix()
+    if reproduce.get("lv3_industry_b2b"):
+        lv3_industry["reproduce_mount"] = reproduce["lv3_industry_b2b"]
 
     lv1_open = dict(base.get("lv1_open_corpus_bench") or {})
     if open_sum:
@@ -163,6 +184,8 @@ def build() -> dict[str, Any]:
         out["lv1_open_corpus_bench"] = lv1_open
     if lv1_open_long:
         out["lv1_open_corpus_bench_long"] = lv1_open_long
+    if lv3_industry:
+        out["lv3_industry_b2b"] = lv3_industry
     out["lv2_proof_sprint"] = lv2
     out["stage"] = "v0_index_lv3_proof_sprint_mounted"
     out["proof_project_closure"] = (

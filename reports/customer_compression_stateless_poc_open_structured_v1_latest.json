@@ -1,11 +1,12 @@
 {
   "schema": "customer_compression_stateless_poc_v1",
-  "generated_at_utc": "2026-06-11T03:14:34Z",
+  "generated_at_utc": "2026-06-11T03:57:35Z",
   "research_only": true,
   "boundary_ack": "Per-customer JSONL only; not Golden 40 or Track A 47.5% claim.",
   "input_jsonl": "C:/workspace/exports/a-codeai-public-reproduce-v2/data/compression/stateless_poc_open_structured_v1.jsonl",
   "loss_profile": "semantic_general",
   "compression_profile": "economy",
+  "graph_wire_selective_bridge": false,
   "case_count": 128,
   "cases_passed": 128,
   "cases_passed_jaccard_floor": 128,

@@ -1,0 +1,32 @@
+{
+  "schema": "compression_tenant_must_keep_overlay_v1",
+  "tenant_id": "golden40-research",
+  "generated_at_utc": "2026-06-11T03:52:15Z",
+  "source_corpus": "data/compression/stateless_poc_golden40_public_safe_v1.jsonl",
+  "labels": [
+    "DRAFT",
+    "research_only",
+    "tenant_policy_overlay_not_full_codebook"
+  ],
+  "must_keep_hard_terms": [],
+  "must_keep_soft_terms": [
+    "should",
+    "bootstrap",
+    "but",
+    "policy",
+    "direct",
+    "witness",
+    "manual",
+    "review",
+    "evidence",
+    "can",
+    "quality"
+  ],
+  "extraction_stats": {
+    "rows_scanned": 40,
+    "unique_tokens": 112,
+    "min_freq": 2,
+    "max_terms": 48
+  },
+  "boundary_ack": "Overlay join only — not per-tenant 41k offline rebuild."
+}

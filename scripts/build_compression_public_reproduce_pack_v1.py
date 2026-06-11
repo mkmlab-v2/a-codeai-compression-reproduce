@@ -30,6 +30,11 @@ FACT_SHEETS = ROOT / "docs/final/artifacts/media_fact_sheet_index_v1_latest.json
 PILOT_ROI = ROOT / "docs/final/artifacts/compression_b2b_pilot_roi_report_v1_latest.json"
 LEGAL_SIGNOFF = ROOT / "docs/final/artifacts/compression_b2b_legal_send_signoff_v1_latest.json"
 RECOMMENDED = ROOT / "docs/final/artifacts/compression_b2b_recommended_workflow_v1.json"
+INDUSTRY_BUNDLE = ROOT / "reports/compression_b2b_sku_industry_poc_bundle_v1_latest.json"
+INDUSTRY_GAP = ROOT / "reports/compression_b2b_industry_sku_gap_report_v1_latest.json"
+INDUSTRY_FAILURE = ROOT / "reports/compression_b2b_industry_failure_panel_v1_latest.json"
+SHORT_CAP_COMPARE = ROOT / "reports/compression_b2b_short_context_cap_compare_v1_latest.json"
+INDUSTRY_CHAIN = ROOT / "reports/compression_b2b_evidence_v1_industry_chain_v1_latest.json"
 
 
 def _utc() -> str:
@@ -110,6 +115,57 @@ def build() -> dict[str, Any]:
     handoff_full = (handoff.get("full_anchor_slices") or {}).get("tokens")
     handoff_off = (handoff.get("resume_pack_inject_off") or {}).get("tokens")
     handoff_pct = (handoff.get("delta_vs_full_slices") or {}).get("reduction_percent")
+
+    industry_bundle = _load(INDUSTRY_BUNDLE) or {}
+    industry_failure = _load(INDUSTRY_FAILURE) or {}
+    short_cap = _load(SHORT_CAP_COMPARE) or {}
+    industry_chain = _load(INDUSTRY_CHAIN) or {}
+
+    industry_skus: list[dict[str, Any]] = []
+    for step in industry_bundle.get("steps") or []:
+        if step.get("exit_code") != 0:
+            continue
+        industry_skus.append(
+            {
+                "external_sku": step.get("external_sku"),
+                "corpus_path": step.get("corpus_path"),
+                "report_path": step.get("report_path"),
+                "cases_passed_jaccard_floor": step.get("cases_passed_jaccard_floor"),
+                "mean_token_saving_rate_proxy": step.get("mean_token_saving_rate_proxy"),
+                "mean_jaccard_proxy": step.get("mean_jaccard_proxy"),
+                "mean_jaccard_all_cases": step.get("mean_jaccard_all_cases"),
+                "compression_profile": step.get("compression_profile")
+                or industry_bundle.get("compression_profile_default"),
+                "must_keep_overlay_applied": step.get("must_keep_overlay_applied"),
+            }
+        )
+
+    lv3_industry = {
+        "level": "Lv.3_industry_b2b",
+        "research_only": True,
+        "hypothesis_tier": "B",
+        "send_gate": "HOLD",
+        "bundle_ok": industry_bundle.get("bundle_ok"),
+        "compression_profile_default": industry_bundle.get("compression_profile_default", "literal"),
+        "rows_per_sku": industry_bundle.get("rows_per_sku"),
+        "must_keep_overlay": industry_bundle.get("must_keep_overlay"),
+        "sku_summaries": industry_skus,
+        "gap_report_path": INDUSTRY_GAP.relative_to(ROOT).as_posix()
+        if INDUSTRY_GAP.is_file()
+        else None,
+        "failure_panel_path": INDUSTRY_FAILURE.relative_to(ROOT).as_posix()
+        if INDUSTRY_FAILURE.is_file()
+        else None,
+        "short_cap_compare_path": SHORT_CAP_COMPARE.relative_to(ROOT).as_posix()
+        if SHORT_CAP_COMPARE.is_file()
+        else None,
+        "recommended_profile": short_cap.get("recommended_profile"),
+        "failure_panel_high_saving_collapse_count": (
+            industry_failure.get("summary") or {}
+        ).get("high_saving_jaccard_collapse_count"),
+        "chain_script": "scripts/run_compression_b2b_evidence_v1_industry_chain_v1.py",
+        "chain_ok": industry_chain.get("chain_ok"),
+    }
 
     return {
         "schema": "compression_public_reproduce_pack_v1",
@@ -211,9 +267,11 @@ def build() -> dict[str, Any]:
             "decision": (launch.get("summary") or {}).get("decision"),
             "pass_count": (launch.get("summary") or {}).get("pass_count"),
         },
+        "lv3_industry_b2b": lv3_industry,
         "reproduce_commands": [
             "py scripts/run_compression_evidence_lv1_chain_v1.py",
             "py scripts/run_compression_proof_completion_chain_v1.py",
+            "py scripts/run_compression_b2b_evidence_v1_industry_chain_v1.py",
         ],
         "fail_comp_004": [
             "Do not merge open_long % with Track A % with handoff % in one headline",

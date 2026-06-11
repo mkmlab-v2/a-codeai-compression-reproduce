@@ -1,6 +1,6 @@
 {
   "schema": "compression_b2b_recommended_workflow_v1",
-  "generated_at_utc": "2026-06-11T01:52:39Z",
+  "generated_at_utc": "2026-06-11T03:18:32Z",
   "send_gate": "HOLD",
   "ready_for_external_send": false,
   "labels": [
@@ -63,9 +63,11 @@
     "legal_send_after_counsel": "py scripts/apply_compression_b2b_legal_send_signoff_v1.py --commander-acknowledge --counsel-acknowledge",
     "readiness_gate": "py scripts/check_compression_enterprise_summary_readiness_v1.py",
     "off_the_shelf_sku_spec": "docs/final/artifacts/compression_b2b_off_the_shelf_shard_sku_v1.json",
-    "industry_poc_bundle": "py scripts/run_compression_b2b_sku_industry_poc_bundle_v1.py",
-    "industry_corpus_build": "py scripts/build_compression_b2b_industry_poc_corpus_v1.py",
-    "single_sku_poc": "py scripts/run_customer_compression_stateless_poc_v1.py --input-jsonl <CORPUS> --sku <MKM-SKU> --out-json <REPORT>",
+    "industry_poc_bundle": "py scripts/run_compression_b2b_sku_industry_poc_bundle_v1.py --compression-profile literal --auto-b2b-overlay --rows-per-sku 30",
+    "industry_evidence_v1_chain": "py scripts/run_compression_b2b_evidence_v1_industry_chain_v1.py",
+    "industry_short_cap_ab": "py scripts/run_compression_b2b_short_context_cap_chain_v1.py",
+    "industry_corpus_build": "py scripts/build_compression_b2b_industry_poc_corpus_v1.py --rows-per-sku 30",
+    "single_sku_poc": "py scripts/run_customer_compression_stateless_poc_v1.py --input-jsonl <CORPUS> --sku <MKM-SKU> --compression-profile literal --auto-b2b-overlay --out-json <REPORT>",
     "open_sandbox_corpus": "py scripts/build_compression_open_sandbox_corpus_v1.py --tenant-id open-sandbox-01",
     "open_sandbox_pilot": "py scripts/run_compression_pilot_roi_chain_v1.py --tenant-id open-sandbox-01 --input-jsonl data/compression/stateless_poc_golden40_public_safe_v1.jsonl --sandbox-mode --relax-pass-gate --max-cases 40"
   },
@@ -80,7 +82,20 @@
     "spec_path": "docs/final/artifacts/compression_b2b_off_the_shelf_shard_sku_v1.json",
     "routing": "forced_shard_id via --sku (b2b shards not in auto route(text))",
     "industry_bundle_ok": true,
-    "industry_bundle_path": "reports/compression_b2b_sku_industry_poc_bundle_v1_latest.json"
+    "industry_bundle_path": "reports/compression_b2b_sku_industry_poc_bundle_v1_latest.json",
+    "industry_profile_policy": {
+      "default_compression_profile": "literal",
+      "must_keep_overlay": true,
+      "rows_per_sku": 30,
+      "short_cap_fallback": null,
+      "evidence_chain_ok": true
+    },
+    "external_skus": [
+      "MKM-SCM-A1",
+      "MKM-CHAT-D1",
+      "MKM-FIN-E1",
+      "MKM-MED-G1"
+    ]
   },
   "corpus_calibration_pack": {
     "name": "Corpus Calibration Pack",
@@ -112,6 +127,13 @@
       "status": "active",
       "signoff": "SOLO_SELF_AUDIT_20260607",
       "unlocks": "internal_pipeline_validation_only"
+    },
+    {
+      "id": "industry_masked_corpus_30_50",
+      "status": "measured_rehearsal",
+      "unlocks": "internal_industry_sku_demo_only",
+      "note": "public-safe synthetic industry JSONL — not real customer PII-masked JSONL",
+      "artifact": "reports/compression_b2b_sku_industry_poc_bundle_v1_latest.json"
     },
     {
       "id": "open_sandbox_virtual_tenant",

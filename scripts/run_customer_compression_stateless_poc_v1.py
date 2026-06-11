@@ -109,6 +109,11 @@ def main() -> int:
         default=None,
         help="V2 short-context max saving cap (e.g. 0.35 for B2B industry rows).",
     )
+    ap.add_argument(
+        "--graph-wire-selective-bridge",
+        action="store_true",
+        help="[HYPO] B-track: enable graph_wire_selective_bridge on /v2/compress (research_only).",
+    )
     args = ap.parse_args()
 
     workspace = args.workspace_root.resolve()
@@ -189,6 +194,8 @@ def main() -> int:
             compress_body["short_context_token_threshold"] = args.short_context_token_threshold
         if args.short_context_max_saving_rate is not None:
             compress_body["short_context_max_saving_rate"] = args.short_context_max_saving_rate
+        if args.graph_wire_selective_bridge:
+            compress_body["graph_wire_selective_bridge"] = True
         cr = client.post("/v2/compress", json=compress_body)
         if cr.status_code != 200:
             failures += 1
@@ -252,6 +259,7 @@ def main() -> int:
         "input_jsonl": str(inp).replace("\\", "/"),
         "loss_profile": args.loss_profile,
         "compression_profile": args.compression_profile,
+        "graph_wire_selective_bridge": bool(args.graph_wire_selective_bridge),
         "case_count": n,
         "cases_passed": n_ok,
         "cases_passed_jaccard_floor": n_ok,

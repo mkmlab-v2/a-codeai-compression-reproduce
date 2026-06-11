@@ -1,0 +1,121 @@
+{
+  "schema": "compression_b2b_sku_industry_poc_bundle_v1",
+  "generated_at_utc": "2026-06-11T03:55:36Z",
+  "research_only": true,
+  "send_gate": "HOLD",
+  "compression_profile_default": "literal",
+  "rows_per_sku": 50,
+  "must_keep_overlay": true,
+  "spec_path": "C:/workspace/docs/final/artifacts/compression_b2b_off_the_shelf_shard_sku_v1.json",
+  "bundle_ok": true,
+  "steps": [
+    {
+      "external_sku": "MKM-SCM-A1",
+      "corpus_path": "C:/workspace/data/compression/stateless_poc_scm_public_safe_v1.jsonl",
+      "report_path": "C:/workspace/reports/customer_compression_stateless_poc_scm_a1_industry_literal_v1_latest.json",
+      "exit_code": 0,
+      "stdout_tail": [
+        "Wrote C:\\workspace\\reports\\customer_compression_stateless_poc_scm_a1_industry_literal_v1_latest.json",
+        "cases=50 passed_jaccard=50 mean_saving_proxy=0.1573 mean_jaccard=0.8351",
+        "must_keep_overlay_terms=28"
+      ],
+      "stderr_tail": [
+        "  warnings.warn(",
+        "C:\\Python311\\Lib\\site-packages\\pydantic\\_internal\\_fields.py:198: UserWarning: Field name \"schema\" in \"MkmWireReplayResponse\" shadows an attribute in parent \"BaseModel\"",
+        "  warnings.warn("
+      ],
+      "case_count": 50,
+      "cases_passed": 50,
+      "cases_passed_jaccard_floor": 50,
+      "mean_token_saving_rate_proxy": 0.157268,
+      "mean_jaccard_proxy": 0.835142,
+      "mean_jaccard_all_cases": 0.835142,
+      "compression_profile": "literal",
+      "must_keep_overlay_applied": true,
+      "forced_shard_id": "zone_a_scm_b2b_v1",
+      "routing_wiring": "forced_shard_id_v1",
+      "sample_router_shard_id": "zone_a_scm_b2b_v1"
+    },
+    {
+      "external_sku": "MKM-CHAT-D1",
+      "corpus_path": "C:/workspace/data/compression/stateless_poc_chat_public_safe_v1.jsonl",
+      "report_path": "C:/workspace/reports/customer_compression_stateless_poc_chat_d1_industry_literal_v1_latest.json",
+      "exit_code": 0,
+      "stdout_tail": [
+        "Wrote C:\\workspace\\reports\\customer_compression_stateless_poc_chat_d1_industry_literal_v1_latest.json",
+        "cases=50 passed_jaccard=50 mean_saving_proxy=0.1234 mean_jaccard=0.8725",
+        "must_keep_overlay_terms=30"
+      ],
+      "stderr_tail": [
+        "  warnings.warn(",
+        "C:\\Python311\\Lib\\site-packages\\pydantic\\_internal\\_fields.py:198: UserWarning: Field name \"schema\" in \"MkmWireReplayResponse\" shadows an attribute in parent \"BaseModel\"",
+        "  warnings.warn("
+      ],
+      "case_count": 50,
+      "cases_passed": 50,
+      "cases_passed_jaccard_floor": 50,
+      "mean_token_saving_rate_proxy": 0.123353,
+      "mean_jaccard_proxy": 0.872498,
+      "mean_jaccard_all_cases": 0.872498,
+      "compression_profile": "literal",
+      "must_keep_overlay_applied": true,
+      "forced_shard_id": "zone_d_ssot_b2b_v1",
+      "routing_wiring": "forced_shard_id_v1",
+      "sample_router_shard_id": "zone_d_ssot_b2b_v1"
+    },
+    {
+      "external_sku": "MKM-FIN-E1",
+      "corpus_path": "C:/workspace/data/compression/stateless_poc_finance_public_safe_v1.jsonl",
+      "report_path": "C:/workspace/reports/customer_compression_stateless_poc_fin_e1_industry_literal_v1_latest.json",
+      "exit_code": 0,
+      "stdout_tail": [
+        "Wrote C:\\workspace\\reports\\customer_compression_stateless_poc_fin_e1_industry_literal_v1_latest.json",
+        "cases=50 passed_jaccard=50 mean_saving_proxy=0.1550 mean_jaccard=0.8509",
+        "must_keep_overlay_terms=30"
+      ],
+      "stderr_tail": [
+        "  warnings.warn(",
+        "C:\\Python311\\Lib\\site-packages\\pydantic\\_internal\\_fields.py:198: UserWarning: Field name \"schema\" in \"MkmWireReplayResponse\" shadows an attribute in parent \"BaseModel\"",
+        "  warnings.warn("
+      ],
+      "case_count": 50,
+      "cases_passed": 50,
+      "cases_passed_jaccard_floor": 50,
+      "mean_token_saving_rate_proxy": 0.155002,
+      "mean_jaccard_proxy": 0.850926,
+      "mean_jaccard_all_cases": 0.850926,
+      "compression_profile": "literal",
+      "must_keep_overlay_applied": true,
+      "forced_shard_id": "zone_e_finance_b2b_v1",
+      "routing_wiring": "forced_shard_id_v1",
+      "sample_router_shard_id": "zone_e_finance_b2b_v1"
+    },
+    {
+      "external_sku": "MKM-MED-G1",
+      "corpus_path": "C:/workspace/data/compression/stateless_poc_health_public_safe_v1.jsonl",
+      "report_path": "C:/workspace/reports/customer_compression_stateless_poc_med_g1_industry_literal_v1_latest.json",
+      "exit_code": 0,
+      "stdout_tail": [
+        "Wrote C:\\workspace\\reports\\customer_compression_stateless_poc_med_g1_industry_literal_v1_latest.json",
+        "cases=50 passed_jaccard=50 mean_saving_proxy=0.1098 mean_jaccard=0.8610",
+        "must_keep_overlay_terms=31"
+      ],
+      "stderr_tail": [
+        "  warnings.warn(",
+        "C:\\Python311\\Lib\\site-packages\\pydantic\\_internal\\_fields.py:198: UserWarning: Field name \"schema\" in \"MkmWireReplayResponse\" shadows an attribute in parent \"BaseModel\"",
+        "  warnings.warn("
+      ],
+      "case_count": 50,
+      "cases_passed": 50,
+      "cases_passed_jaccard_floor": 50,
+      "mean_token_saving_rate_proxy": 0.109769,
+      "mean_jaccard_proxy": 0.860982,
+      "mean_jaccard_all_cases": 0.860982,
+      "compression_profile": "literal",
+      "must_keep_overlay_applied": true,
+      "forced_shard_id": "zone_g_health_b2b_v1",
+      "routing_wiring": "forced_shard_id_v1",
+      "sample_router_shard_id": "zone_g_health_b2b_v1"
+    }
+  ]
+}

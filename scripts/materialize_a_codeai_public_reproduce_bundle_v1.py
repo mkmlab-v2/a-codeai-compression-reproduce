@@ -197,6 +197,23 @@ def materialize(
         except (json.JSONDecodeError, OSError):
             routed_note = ""
 
+    research_note = ""
+    deck_path = out_dir / "docs/final/artifacts/compression_open_bench_persuasion_deck_v1_latest.json"
+    if deck_path.is_file():
+        try:
+            deck = json.loads(deck_path.read_text(encoding="utf-8"))
+            lit = deck.get("btrack_research_anchor_literal") or {}
+            lit_raw = lit.get("raw") or {}
+            if lit_raw.get("saving_pct_display"):
+                research_note = (
+                    "\n## B-track research (internal scenario only · not external headline)\n\n"
+                    f"- CHAT-D1 **literal** on golden40: **{lit_raw.get('saving_pct_display')}%** · "
+                    f"Jaccard **{lit_raw.get('mean_jaccard_proxy')}**\n"
+                    "- See `reports/compression_open_bench_research_sweep_v1_latest.json`\n\n"
+                )
+        except (json.JSONDecodeError, OSError):
+            research_note = ""
+
     readme = (
         "# A-CODEAI public reproduce export (slim)\n\n"
         "SEND_GATE: HOLD — do not use as customer case study or merged marketing headline.\n"

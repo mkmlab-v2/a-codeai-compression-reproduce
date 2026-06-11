@@ -1,7 +1,7 @@
 {
   "schema": "a_codeai_public_reproduce_bundle_v1",
-  "generated_at_utc": "2026-06-11T03:14:37Z",
-  "git_head": "78d2138494c2",
+  "generated_at_utc": "2026-06-11T03:57:39Z",
+  "git_head": "67a2eaf2c0b9",
   "send_gate": "HOLD",
   "ready_for_external_send": false,
   "launch_decision": "READY_FOR_PUBLIC_OPEN_BENCH",
@@ -13,7 +13,7 @@
       "corpus_sha256": "a56f8d4e18dddd14e6c5bd77ae7cabf2066741abc5134e03587416a79ae24330",
       "metrics": {
         "report_path": "reports/customer_compression_stateless_poc_open_structured_v1_latest.json",
-        "generated_at_utc": "2026-06-11T03:14:34Z",
+        "generated_at_utc": "2026-06-11T03:57:35Z",
         "case_count": 128,
         "cases_passed_jaccard_floor": 128,
         "mean_token_saving_rate_proxy": 0.0,
@@ -28,7 +28,7 @@
       "corpus_sha256": "c9dab78892227b2912adfe8a86e425a3a118c58cef1c00572daa62e12e3ec9d2",
       "metrics": {
         "report_path": "reports/customer_compression_stateless_poc_open_structured_long_v1_latest.json",
-        "generated_at_utc": "2026-06-11T03:14:35Z",
+        "generated_at_utc": "2026-06-11T03:57:37Z",
         "case_count": 48,
         "cases_passed_jaccard_floor": 48,
         "mean_token_saving_rate_proxy": 0.0,
@@ -43,7 +43,7 @@
       "corpus_sha256": "b933a560d6b3e1b2fd735b84ea4968edc9bfca4f3f282e01c4bbe9580a89ab01",
       "metrics": {
         "report_path": "reports/customer_compression_stateless_poc_golden40_public_safe_v1_latest.json",
-        "generated_at_utc": "2026-06-11T03:14:36Z",
+        "generated_at_utc": "2026-06-11T03:57:39Z",
         "case_count": 40,
         "cases_passed_jaccard_floor": 40,
         "mean_token_saving_rate_proxy": 0.0,
@@ -109,7 +109,8 @@
   },
   "reproduce_commands": [
     "py scripts/run_compression_evidence_lv1_chain_v1.py",
-    "py scripts/run_compression_proof_completion_chain_v1.py"
+    "py scripts/run_compression_proof_completion_chain_v1.py",
+    "py scripts/run_compression_b2b_evidence_v1_industry_chain_v1.py"
   ],
   "deploy_note": "Technical open-bench READY (8/8) — public HTML deploy is human-gated; SEND_GATE remains HOLD until legal sign-off.",
   "boundary_ack": "FAIL-COMP-004 — do not merge SKU metrics in one headline."

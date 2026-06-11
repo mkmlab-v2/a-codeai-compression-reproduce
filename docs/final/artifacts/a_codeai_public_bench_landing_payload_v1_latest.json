@@ -1,8 +1,8 @@
 {
   "schema": "a_codeai_public_bench_landing_payload_v1",
-  "generated_at_utc": "2026-06-11T03:14:37Z",
+  "generated_at_utc": "2026-06-11T03:57:40Z",
   "source_bundle": "docs/final/artifacts/a_codeai_public_reproduce_bundle_v1_latest.json",
-  "git_head": "78d2138494c2",
+  "git_head": "67a2eaf2c0b9",
   "send_gate": "HOLD",
   "ready_for_external_send": false,
   "launch_decision": "READY_FOR_PUBLIC_OPEN_BENCH",
@@ -10,7 +10,8 @@
   "one_command_reproduce": "py scripts/run_compression_evidence_lv1_chain_v1.py",
   "reproduce_commands": [
     "py scripts/run_compression_evidence_lv1_chain_v1.py",
-    "py scripts/run_compression_proof_completion_chain_v1.py"
+    "py scripts/run_compression_proof_completion_chain_v1.py",
+    "py scripts/run_compression_b2b_evidence_v1_industry_chain_v1.py"
   ],
   "boundary_ack": "FAIL-COMP-004 — do not merge SKU metrics in one headline.",
   "sections": {
