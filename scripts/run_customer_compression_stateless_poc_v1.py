@@ -58,7 +58,45 @@ def main() -> int:
         action="store_true",
         help="Exit 0 when rows exist and no API/parse failures (research-only corpora).",
     )
+    ap.add_argument(
+        "--sku",
+        default=None,
+        help="B2B external SKU (e.g. MKM-MED-G1) — metadata catalog binding; does not force compress routing yet.",
+    )
+    ap.add_argument(
+        "--sku-spec-json",
+        type=Path,
+        default=ROOT / "docs/final/artifacts/compression_b2b_off_the_shelf_shard_sku_v1.json",
+        help="SKU spec JSON path (default: compression_b2b_off_the_shelf_shard_sku_v1.json).",
+    )
+    ap.add_argument(
+        "--shard-json",
+        type=Path,
+        default=None,
+        help="Optional shard JSON override path (research catalog / ablation).",
+    )
+    ap.add_argument(
+        "--no-force-b2b-shard",
+        action="store_true",
+        help="With --sku: metadata only (do not pass forced_shard_id to /v2/compress).",
+    )
     args = ap.parse_args()
+
+    workspace = args.workspace_root.resolve()
+    sku_context: dict[str, Any] = {}
+    if args.sku or args.shard_json:
+        from scripts.compression_b2b_off_the_shelf_shard_sku_v1_lib import build_sku_context
+
+        try:
+            sku_context = build_sku_context(
+                workspace_root=workspace,
+                spec_path=args.sku_spec_json,
+                external_sku=args.sku,
+                shard_json_override=args.shard_json,
+            )
+        except (FileNotFoundError, KeyError, ValueError) as exc:
+            print(f"error: sku resolution failed: {exc}", file=sys.stderr)
+            return 2
 
     inp = args.input_jsonl.resolve()
     if not inp.is_file():
@@ -87,20 +125,24 @@ def main() -> int:
         if not text:
             continue
         row_id = str(obj.get("id") or f"row_{i}")
-        cr = client.post(
-            "/v2/compress",
-            json={
-                "text": text,
-                "loss_profile": args.loss_profile,
-                "client_request_id": f"poc-{row_id}",
-                "stateless_packet": True,
-            },
-        )
+        compress_body: dict[str, Any] = {
+            "text": text,
+            "loss_profile": args.loss_profile,
+            "client_request_id": f"poc-{row_id}",
+            "stateless_packet": True,
+        }
+        if sku_context and not args.no_force_b2b_shard:
+            forced = sku_context.get("forced_shard_id") or sku_context.get("override_shard_id")
+            if forced:
+                compress_body["forced_shard_id"] = forced
+        cr = client.post("/v2/compress", json=compress_body)
         if cr.status_code != 200:
             failures += 1
             rows.append({"id": row_id, "ok": False, "error": cr.text[:200]})
             continue
-        pkt = cr.json().get("compression_packet") or {}
+        cr_body = cr.json()
+        pkt = cr_body.get("compression_packet") or {}
+        router_meta = pkt.get("router_meta") if isinstance(pkt.get("router_meta"), dict) else {}
         stub = (pkt.get("residual_meta") or {}).get(RESIDUAL_STUB_KEY) or {}
         if "reconstructed_text" in stub:
             failures += 1
@@ -126,18 +168,20 @@ def main() -> int:
             ok = jac >= args.jaccard_floor
         if not ok and not args.relax_pass_gate:
             failures += 1
-        rows.append(
-            {
-                "id": row_id,
-                "ok": ok,
-                "exact_restore": exact_restore,
-                "token_in_proxy": tin,
-                "token_out_proxy": tout,
-                "token_saving_rate_proxy": round(saving, 6),
-                "jaccard_proxy": round(jac, 6),
-                "reassembly": (er.json().get("integrity_flags") or {}).get("reassembly"),
-            }
-        )
+        row_out: dict[str, Any] = {
+            "id": row_id,
+            "ok": ok,
+            "exact_restore": exact_restore,
+            "token_in_proxy": tin,
+            "token_out_proxy": tout,
+            "token_saving_rate_proxy": round(saving, 6),
+            "jaccard_proxy": round(jac, 6),
+            "reassembly": (er.json().get("integrity_flags") or {}).get("reassembly"),
+        }
+        if router_meta:
+            row_out["router_shard_id"] = router_meta.get("shard_id")
+            row_out["router_domain"] = router_meta.get("domain")
+        rows.append(row_out)
 
     n_ok = sum(1 for r in rows if r.get("ok"))
     n = len(rows)
@@ -165,6 +209,14 @@ def main() -> int:
         "cases": rows[:50],
         "cases_truncated": len(rows) > 50,
     }
+    if sku_context:
+        if sku_context.get("forced_shard_id") and not args.no_force_b2b_shard:
+            sku_context = {
+                **sku_context,
+                "routing_wiring": "forced_shard_id_v1",
+                "routing_note_ko": "SKU --sku 시 b2b_shard_id를 forced_shard_id로 /v2/compress에 전달(승격 승인).",
+            }
+        doc["sku_context"] = sku_context
     out_path = args.out_json.resolve()
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

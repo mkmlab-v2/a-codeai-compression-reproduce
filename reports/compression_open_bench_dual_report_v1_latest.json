@@ -1,0 +1,219 @@
+{
+  "schema": "compression_open_bench_dual_report_v1",
+  "generated_at_utc": "2026-06-11T02:39:25Z",
+  "research_only": true,
+  "hypothesis_tag": "[HYPO]",
+  "send_gate": "HOLD",
+  "ready_for_external_send": false,
+  "positioning_ref": "docs/final/artifacts/mkm_b2b_compression_positioning_external_v1_latest.json",
+  "forbidden_headline": [
+    "Claim 47.5% on open-bench without citing this corpus label and measured raw %",
+    "SKU PoC % as Track A SLA",
+    "repair_v2 uplift as core model proof"
+  ],
+  "track_a_reference_only": {
+    "global_token_saving_rate": null,
+    "avg_reconstruction_fidelity_jaccard": null,
+    "note": "Frozen Track A 40-case bench — NOT a guarantee on open-bench corpora"
+  },
+  "corpora_and_skus": [
+    {
+      "label": "golden40_public_safe_stateless",
+      "sku_id": "compression_api_golden40_public_safe",
+      "path": "reports/customer_compression_stateless_poc_golden40_public_safe_v1_latest.json",
+      "present": true,
+      "case_count": 40,
+      "forced_shard_id": null,
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.0,
+        "mean_jaccard_proxy": 1.0,
+        "saving_pct_display": 0.0
+      },
+      "repair_v2": {
+        "mean_token_saving_rate_proxy": 0.0,
+        "mean_jaccard_proxy": 1.0,
+        "repair_applied_count": 0,
+        "note": "stateless PoC — repair layer often identical to raw"
+      },
+      "delta": {
+        "alignment_pass_rate_delta_repair_v2_minus_raw": 0.0,
+        "token_saving_rate_delta_repair_v2_minus_raw": 0.0
+      },
+      "non_zero_saving": false
+    },
+    {
+      "label": "golden40_public_safe_routed",
+      "sku_id": "MKM-CHAT-D1",
+      "path": "reports/customer_compression_stateless_poc_golden40_public_safe_routed_v1_latest.json",
+      "present": true,
+      "case_count": 40,
+      "forced_shard_id": "zone_d_ssot_b2b_v1",
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.093617,
+        "mean_jaccard_proxy": 0.897361,
+        "saving_pct_display": 9.36
+      },
+      "repair_v2": {
+        "mean_token_saving_rate_proxy": 0.093617,
+        "mean_jaccard_proxy": 0.897361,
+        "repair_applied_count": 0,
+        "note": "stateless PoC — repair layer often identical to raw"
+      },
+      "delta": {
+        "alignment_pass_rate_delta_repair_v2_minus_raw": 0.0,
+        "token_saving_rate_delta_repair_v2_minus_raw": 0.0
+      },
+      "non_zero_saving": true
+    },
+    {
+      "label": "open_structured",
+      "sku_id": "compression_api_open_structured",
+      "path": "reports/customer_compression_stateless_poc_open_structured_v1_latest.json",
+      "present": true,
+      "case_count": 128,
+      "forced_shard_id": null,
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.0,
+        "mean_jaccard_proxy": 1.0,
+        "saving_pct_display": 0.0
+      },
+      "repair_v2": {
+        "mean_token_saving_rate_proxy": 0.0,
+        "mean_jaccard_proxy": 1.0,
+        "repair_applied_count": 0,
+        "note": "stateless PoC — repair layer often identical to raw"
+      },
+      "delta": {
+        "alignment_pass_rate_delta_repair_v2_minus_raw": 0.0,
+        "token_saving_rate_delta_repair_v2_minus_raw": 0.0
+      },
+      "non_zero_saving": false
+    },
+    {
+      "label": "open_structured_long",
+      "sku_id": "compression_api_open_structured_long",
+      "path": "reports/customer_compression_stateless_poc_open_structured_long_v1_latest.json",
+      "present": true,
+      "case_count": 48,
+      "forced_shard_id": null,
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.0,
+        "mean_jaccard_proxy": 1.0,
+        "saving_pct_display": 0.0
+      },
+      "repair_v2": {
+        "mean_token_saving_rate_proxy": 0.0,
+        "mean_jaccard_proxy": 1.0,
+        "repair_applied_count": 0,
+        "note": "stateless PoC — repair layer often identical to raw"
+      },
+      "delta": {
+        "alignment_pass_rate_delta_repair_v2_minus_raw": 0.0,
+        "token_saving_rate_delta_repair_v2_minus_raw": 0.0
+      },
+      "non_zero_saving": false
+    },
+    {
+      "label": "sku_MKm_SCM_A1",
+      "sku_id": "MKM-SCM-A1",
+      "path": "reports/customer_compression_stateless_poc_scm_a1_v1_latest.json",
+      "present": true,
+      "case_count": 10,
+      "forced_shard_id": "zone_a_scm_b2b_v1",
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.083333,
+        "mean_jaccard_proxy": 0.916667,
+        "saving_pct_display": 8.33
+      },
+      "repair_v2": {
+        "mean_token_saving_rate_proxy": 0.083333,
+        "mean_jaccard_proxy": 0.916667,
+        "repair_applied_count": 0,
+        "note": "stateless PoC — repair layer often identical to raw"
+      },
+      "delta": {
+        "alignment_pass_rate_delta_repair_v2_minus_raw": 0.0,
+        "token_saving_rate_delta_repair_v2_minus_raw": 0.0
+      },
+      "non_zero_saving": true
+    },
+    {
+      "label": "sku_MKm_CHAT_D1",
+      "sku_id": "MKM-CHAT-D1",
+      "path": "reports/customer_compression_stateless_poc_chat_d1_v1_latest.json",
+      "present": true,
+      "case_count": 10,
+      "forced_shard_id": "zone_d_ssot_b2b_v1",
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.113248,
+        "mean_jaccard_proxy": 0.886752,
+        "saving_pct_display": 11.32
+      },
+      "repair_v2": {
+        "mean_token_saving_rate_proxy": 0.113248,
+        "mean_jaccard_proxy": 0.886752,
+        "repair_applied_count": 0,
+        "note": "stateless PoC — repair layer often identical to raw"
+      },
+      "delta": {
+        "alignment_pass_rate_delta_repair_v2_minus_raw": 0.0,
+        "token_saving_rate_delta_repair_v2_minus_raw": 0.0
+      },
+      "non_zero_saving": true
+    },
+    {
+      "label": "sku_MKm_FIN_E1",
+      "sku_id": "MKM-FIN-E1",
+      "path": "reports/customer_compression_stateless_poc_fin_e1_v1_latest.json",
+      "present": true,
+      "case_count": 10,
+      "forced_shard_id": "zone_e_finance_b2b_v1",
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.095404,
+        "mean_jaccard_proxy": 0.905556,
+        "saving_pct_display": 9.54
+      },
+      "repair_v2": {
+        "mean_token_saving_rate_proxy": 0.095404,
+        "mean_jaccard_proxy": 0.905556,
+        "repair_applied_count": 0,
+        "note": "stateless PoC — repair layer often identical to raw"
+      },
+      "delta": {
+        "alignment_pass_rate_delta_repair_v2_minus_raw": 0.0,
+        "token_saving_rate_delta_repair_v2_minus_raw": 0.0
+      },
+      "non_zero_saving": true
+    },
+    {
+      "label": "sku_MKm_MED_G1",
+      "sku_id": "MKM-MED-G1",
+      "path": "reports/customer_compression_stateless_poc_med_g1_v1_latest.json",
+      "present": true,
+      "case_count": 10,
+      "forced_shard_id": "zone_g_health_b2b_v1",
+      "raw": {
+        "mean_token_saving_rate_proxy": 0.083333,
+        "mean_jaccard_proxy": 0.916667,
+        "saving_pct_display": 8.33
+      },
+      "repair_v2": {
+        "mean_token_saving_rate_proxy": 0.083333,
+        "mean_jaccard_proxy": 0.916667,
+        "repair_applied_count": 0,
+        "note": "stateless PoC — repair layer often identical to raw"
+      },
+      "delta": {
+        "alignment_pass_rate_delta_repair_v2_minus_raw": 0.0,
+        "token_saving_rate_delta_repair_v2_minus_raw": 0.0
+      },
+      "non_zero_saving": true
+    }
+  ],
+  "summary": {
+    "reports_present": 8,
+    "reports_non_zero_saving": 5,
+    "any_non_zero": true
+  },
+  "allowed_headline_template_ko": "공개·마스킹 코퍼스 {label} N={case_count}건 조건에서 raw 절감 {saving_pct}% · Jaccard {jaccard} (Track A 47.5%와 동일 보장 아님)"
+}

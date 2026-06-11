@@ -1,6 +1,6 @@
 {
   "schema": "compression_evidence_lv1_chain_v1",
-  "generated_at_utc": "2026-06-10T17:27:56Z",
+  "generated_at_utc": "2026-06-11T02:48:43Z",
   "proof_sprint_level": "lv3",
   "chain_ok": true,
   "steps": [
@@ -88,7 +88,7 @@
         "--relax-pass-gate"
       ],
       "exit_code": 0,
-      "stdout_tail": "Wrote C:\\workspace\\exports\\a-codeai-public-reproduce-v2\\reports\\customer_compression_stateless_poc_golden40_public_safe_v1_latest.json\ncases=40 passed_jaccard=10 mean_saving_proxy=0.0000 mean_jaccard=1.0000\n",
+      "stdout_tail": "Wrote C:\\workspace\\exports\\a-codeai-public-reproduce-v2\\reports\\customer_compression_stateless_poc_golden40_public_safe_v1_latest.json\ncases=40 passed_jaccard=40 mean_saving_proxy=0.0000 mean_jaccard=1.0000\n",
       "stderr_tail": "C:\\Python311\\Lib\\site-packages\\pydantic\\_internal\\_fields.py:198: UserWarning: Field name \"schema\" in \"MkmLexiconWireEncodeResponse\" shadows an attribute in parent \"BaseModel\"\n  warnings.warn(\nC:\\Python311\\Lib\\site-packages\\pydantic\\_internal\\_fields.py:198: UserWarning: Field name \"schema\" in \"MkmLexiconWireDecodeResponse\" shadows an attribute in parent \"BaseModel\"\n  warnings.warn(\nC:\\Python311\\Lib\\site-packages\\pydantic\\_internal\\_fields.py:198: UserWarning: Field name \"schema\" in \"MkmWireReplayResponse\" shadows an attribute in parent \"BaseModel\"\n  warnings.warn(\n"
     },
     {
@@ -98,7 +98,7 @@
         "scripts/build_compression_public_evidence_pack_v0_index_v1.py"
       ],
       "exit_code": 0,
-      "stdout_tail": "{\"ok\": true, \"output\": \"C:\\\\workspace\\\\exports\\\\a-codeai-public-reproduce-v2\\\\docs\\\\final\\\\artifacts\\\\compression_public_evidence_pack_v0_index_latest.json\", \"generated_at_utc\": \"2026-06-10T17:27:56Z\", \"tenant_poc_at\": null}\n",
+      "stdout_tail": "{\"ok\": true, \"output\": \"C:\\\\workspace\\\\exports\\\\a-codeai-public-reproduce-v2\\\\docs\\\\final\\\\artifacts\\\\compression_public_evidence_pack_v0_index_latest.json\", \"generated_at_utc\": \"2026-06-11T02:48:43Z\", \"tenant_poc_at\": null}\n",
       "stderr_tail": ""
     },
     {
@@ -138,7 +138,7 @@
         "scripts/build_a_codeai_public_bench_landing_payload_v1.py"
       ],
       "exit_code": 0,
-      "stdout_tail": "{\"ok\": true, \"output\": \"C:\\\\workspace\\\\exports\\\\a-codeai-public-reproduce-v2\\\\docs\\\\final\\\\artifacts\\\\a_codeai_public_bench_landing_payload_v1_latest.json\", \"public_sku_count\": 3, \"send_gate\": \"HOLD\"}\n",
+      "stdout_tail": "{\"ok\": true, \"output\": \"C:\\\\workspace\\\\exports\\\\a-codeai-public-reproduce-v2\\\\docs\\\\final\\\\artifacts\\\\a_codeai_public_bench_landing_payload_v1_latest.json\", \"public_sku_count\": 4, \"send_gate\": \"HOLD\"}\n",
       "stderr_tail": ""
     }
   ],

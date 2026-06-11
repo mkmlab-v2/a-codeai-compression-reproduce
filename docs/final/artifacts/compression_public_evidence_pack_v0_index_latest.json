@@ -1,6 +1,6 @@
 {
   "schema": "compression_public_evidence_pack_v0_index_v1",
-  "generated_at_utc": "2026-06-10T17:27:56Z",
+  "generated_at_utc": "2026-06-11T02:48:43Z",
   "w0_ssot": {
     "corpus_path": "data/compression/stateless_poc_smoke_v1.jsonl",
     "corpus_sha256": null,
@@ -17,7 +17,7 @@
     "ready_internal_pointer": "reports/compression_enterprise_summary_readiness_v1_latest.json"
   },
   "lv1_open_corpus_bench": {
-    "poc_generated_at_utc": "2026-06-10T17:27:53Z",
+    "poc_generated_at_utc": "2026-06-11T02:48:40Z",
     "case_count": 128,
     "cases_passed_jaccard_floor": "128/128",
     "mean_token_saving_rate_proxy": 0.0,
@@ -25,7 +25,7 @@
     "poc_exit_ok": true
   },
   "lv1_open_corpus_bench_long": {
-    "poc_generated_at_utc": "2026-06-10T17:27:54Z",
+    "poc_generated_at_utc": "2026-06-11T02:48:41Z",
     "case_count": 48,
     "cases_passed_jaccard_floor": "48/48",
     "mean_token_saving_rate_proxy": 0.0,
@@ -35,7 +35,7 @@
     "level": "Lv.2",
     "proof_sprint_chain": "scripts/run_compression_evidence_lv1_chain_v1.py",
     "reproduce_pack_path": "docs/final/artifacts/compression_public_reproduce_pack_v1_latest.json",
-    "chain_ok": true,
+    "chain_ok": null,
     "send_gate": "HOLD",
     "handoff_reduction_percent": null,
     "open_long_mean_saving_proxy": 0.0

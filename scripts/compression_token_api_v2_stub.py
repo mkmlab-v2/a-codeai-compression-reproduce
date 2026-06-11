@@ -46,7 +46,7 @@ from scripts.compression_v2_routing_profile_v1 import (  # noqa: E402
     routing_profile_eval_kwargs,
     routing_profile_kwargs,
 )
-from scripts.core.domain_router import DomainSpecificRouter  # noqa: E402
+from scripts.core.domain_router import DomainSpecificRouter, ShardRoute  # noqa: E402
 from scripts.core.master_codebook_lexicon_v1_bridge import (  # noqa: E402
     lexicon_atom_sequence_for_text,
     resolve_latest_codebook_path,
@@ -102,6 +102,7 @@ class CompressRequestV2(BaseModel):
     graph_wire_selective_bridge: bool = False
     routing_profile: RoutingProfile = "track_a_promoted"
     stateless_packet: bool = False
+    forced_shard_id: str | None = None
 
 
 class CompressionPacket(BaseModel):
@@ -231,6 +232,13 @@ def _apply_v2_trust_restoration(
     return raw, raw, ratio_out, jac_after, True
 
 
+def _resolve_router_route(text: str, forced_shard_id: str | None) -> ShardRoute:
+    sid = str(forced_shard_id or "").strip()
+    if sid:
+        return _router.route_from_shard_id(sid)
+    return _router.route(text)
+
+
 def _run_evaluate_for_packet(
     text: str,
     loss_profile: LossProfile,
@@ -240,6 +248,7 @@ def _run_evaluate_for_packet(
     client_request_id: str | None = None,
     routing_profile: RoutingProfile = "track_a_promoted",
     compression_profile: CompressionProfile = "economy",
+    force_shard_id: str | None = None,
 ) -> dict[str, Any]:
     """Run evaluate_report and return payload for Trust Packet fields."""
     prof_kw = profile_evaluate_report_kwargs_v2(
@@ -297,6 +306,7 @@ def _run_evaluate_for_packet(
         emit_semantic_pointer=emit_semantic_pointer,
         graph_wire_selective_bridge=graph_wire_selective_bridge,
         case_graph_wire_influence=case_wire,
+        force_shard_id=str(force_shard_id).strip() or None,
         **eval_extra,
     )
     elapsed_ms = round((perf_counter() - t0) * 1000.0, 3)
@@ -466,7 +476,15 @@ def _expand_codebook_only(pkt: CompressionPacket) -> tuple[str, dict[str, Any]]:
             flags["source"] = "hybrid_codec_v0_payload"
             return restored, flags
 
-    route = _router.route(pkt.compressed_text)
+    rm = pkt.router_meta if isinstance(pkt.router_meta, dict) else {}
+    rm_sid = str(rm.get("shard_id") or "").strip()
+    if rm_sid:
+        try:
+            route = _router.route_from_shard_id(rm_sid)
+        except ValueError:
+            route = _router.route(pkt.compressed_text)
+    else:
+        route = _router.route(pkt.compressed_text)
     flags["shard_id"] = route.shard_id
     flags["domain"] = route.domain
     flags["hangul_principle"] = route.hangul_principle
@@ -535,7 +553,13 @@ def health() -> dict[str, Any]:
 
 @app.post("/v2/compress", response_model=CompressResponseV2)
 def compress_v2(body: CompressRequestV2) -> CompressResponseV2:
-    route = _router.route(body.text)
+    forced_sid = str(body.forced_shard_id or "").strip() or None
+    try:
+        route = _resolve_router_route(body.text, forced_sid)
+    except ValueError as exc:
+        from fastapi import HTTPException
+
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
     flags: dict[str, Any] = {
         "stub_v2": True,
         "hangul_principle": route.hangul_principle,
@@ -543,6 +567,9 @@ def compress_v2(body: CompressRequestV2) -> CompressResponseV2:
         **profile_meta(body.compression_profile),
         **_build_tracka_profile_payload(include_legacy_flat_keys=False),
     }
+    if forced_sid:
+        flags["forced_shard_id"] = forced_sid
+        flags["forced_shard_promoted_b2b"] = forced_sid.endswith("_b2b_v1")
     if body.stateless_packet:
         flags["stateless_packet"] = True
     try:
@@ -591,6 +618,7 @@ def compress_v2(body: CompressRequestV2) -> CompressResponseV2:
             client_request_id=body.client_request_id,
             routing_profile=body.routing_profile,
             compression_profile=body.compression_profile,
+            force_shard_id=forced_sid,
         )
         flags["evaluate_report_ms"] = ev.get("elapsed_ms")
         flags["routing_profile"] = body.routing_profile

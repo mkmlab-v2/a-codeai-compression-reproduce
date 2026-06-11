@@ -18,6 +18,7 @@ PUBLIC_SKU_IDS = (
     "compression_api_open_structured",
     "compression_api_open_structured_long",
     "compression_api_golden40_public_safe",
+    "compression_api_golden40_public_safe_routed",
 )
 INTERNAL_SKU_IDS = (
     "compression_api_track_a_reference",
@@ -60,6 +61,10 @@ def _sku_row(sku_id: str, sku: dict[str, Any], *, public: bool) -> dict[str, Any
         "allowed_headline": sku.get("allowed_headline"),
         "forbidden_headline": sku.get("forbidden_headline"),
     }
+    if sku.get("external_sku"):
+        row["external_sku"] = sku.get("external_sku")
+    if sku.get("forced_shard_id"):
+        row["forced_shard_id"] = sku.get("forced_shard_id")
     if sku_id == "compression_api_track_a_reference":
         row["global_token_saving_rate"] = sku.get("global_token_saving_rate")
         row["avg_jaccard"] = sku.get("avg_jaccard")

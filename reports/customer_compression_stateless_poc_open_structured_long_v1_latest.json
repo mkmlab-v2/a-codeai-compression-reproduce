@@ -1,6 +1,6 @@
 {
   "schema": "customer_compression_stateless_poc_v1",
-  "generated_at_utc": "2026-06-10T17:27:54Z",
+  "generated_at_utc": "2026-06-11T02:48:41Z",
   "research_only": true,
   "boundary_ack": "Per-customer JSONL only; not Golden 40 or Track A 47.5% claim.",
   "input_jsonl": "C:/workspace/exports/a-codeai-public-reproduce-v2/data/compression/stateless_poc_open_structured_long_v1.jsonl",
@@ -25,7 +25,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-001",
@@ -35,7 +37,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-002",
@@ -45,7 +49,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-003",
@@ -55,7 +61,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-004",
@@ -65,7 +73,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-005",
@@ -75,7 +85,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-006",
@@ -85,7 +97,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-007",
@@ -95,7 +109,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-008",
@@ -105,7 +121,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-009",
@@ -115,7 +133,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-010",
@@ -125,7 +145,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-011",
@@ -135,7 +157,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-012",
@@ -145,7 +169,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-013",
@@ -155,7 +181,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-014",
@@ -165,7 +193,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-015",
@@ -175,7 +205,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-016",
@@ -185,7 +217,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-017",
@@ -195,7 +229,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-018",
@@ -205,7 +241,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-019",
@@ -215,7 +253,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-020",
@@ -225,7 +265,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-021",
@@ -235,7 +277,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-022",
@@ -245,7 +289,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-023",
@@ -255,7 +301,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-024",
@@ -265,7 +313,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-025",
@@ -275,7 +325,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-026",
@@ -285,7 +337,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-027",
@@ -295,7 +349,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-028",
@@ -305,7 +361,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-029",
@@ -315,7 +373,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-030",
@@ -325,7 +385,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-031",
@@ -335,7 +397,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-032",
@@ -345,7 +409,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-033",
@@ -355,7 +421,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-034",
@@ -365,7 +433,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-035",
@@ -375,7 +445,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-036",
@@ -385,7 +457,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-037",
@@ -395,7 +469,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-038",
@@ -405,7 +481,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-039",
@@ -415,7 +493,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-040",
@@ -425,7 +505,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-041",
@@ -435,7 +517,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-042",
@@ -445,7 +529,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-043",
@@ -455,7 +541,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-044",
@@ -465,7 +553,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-045",
@@ -475,7 +565,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-046",
@@ -485,7 +577,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     },
     {
       "id": "open-long-047",
@@ -495,7 +589,9 @@
       "token_out_proxy": 1,
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
-      "reassembly": "codebook_only"
+      "reassembly": "codebook_only",
+      "router_shard_id": "zone_f_code",
+      "router_domain": "code"
     }
   ],
   "cases_truncated": false

@@ -1,12 +1,12 @@
 {
   "schema": "a_codeai_public_bench_landing_payload_v1",
-  "generated_at_utc": "2026-06-10T17:27:56Z",
+  "generated_at_utc": "2026-06-11T02:48:43Z",
   "source_bundle": "docs/final/artifacts/a_codeai_public_reproduce_bundle_v1_latest.json",
-  "git_head": "6f09dcc8e225",
+  "git_head": "fee78d2c36ff",
   "send_gate": "HOLD",
   "ready_for_external_send": false,
   "launch_decision": "READY_FOR_PUBLIC_OPEN_BENCH",
-  "launch_pass_count": 8,
+  "launch_pass_count": 9,
   "one_command_reproduce": "py scripts/run_compression_evidence_lv1_chain_v1.py",
   "reproduce_commands": [
     "py scripts/run_compression_evidence_lv1_chain_v1.py",
@@ -53,7 +53,7 @@
       {
         "sku_id": "compression_api_golden40_public_safe",
         "public_display": true,
-        "role": "public_safe_reproduce_subset",
+        "role": "public_safe_reproduce_subset_stateless",
         "corpus_path": "data/compression/stateless_poc_golden40_public_safe_v1.jsonl",
         "corpus_sha256": "b933a560d6b3e1b2fd735b84ea4968edc9bfca4f3f282e01c4bbe9580a89ab01",
         "case_count": 40,
@@ -61,8 +61,24 @@
         "mean_jaccard_proxy": 1.0,
         "saving_display": "0.00%",
         "jaccard_display": "1.0000",
-        "allowed_headline": "40-case EN ops eval excerpt — per-corpus measured proxy only",
+        "allowed_headline": "40-case EN ops eval excerpt — stateless PoC (no forced_shard); per-corpus measured only",
         "forbidden_headline": "Equate to customer SLA or global 47% guarantee"
+      },
+      {
+        "sku_id": "compression_api_golden40_public_safe_routed",
+        "public_display": true,
+        "role": "public_safe_reproduce_subset_forced_shard",
+        "corpus_path": "data/compression/stateless_poc_golden40_public_safe_v1.jsonl",
+        "corpus_sha256": "b933a560d6b3e1b2fd735b84ea4968edc9bfca4f3f282e01c4bbe9580a89ab01",
+        "case_count": 40,
+        "mean_token_saving_rate_proxy": 0.093617,
+        "mean_jaccard_proxy": 0.897361,
+        "saving_display": "9.36%",
+        "jaccard_display": "0.8974",
+        "allowed_headline": "Open golden40 N=40 · MKM-CHAT-D1 forced_shard — raw measured proxy only (not production Track A SLA)",
+        "forbidden_headline": "Merge with stateless 0% or Track A 47.5% in one headline",
+        "external_sku": "MKM-CHAT-D1",
+        "forced_shard_id": "zone_d_ssot_b2b_v1"
       }
     ],
     "internal_skus_do_not_cite": [
@@ -104,13 +120,13 @@
         "corpus_path": null,
         "corpus_sha256": null,
         "case_count": null,
-        "mean_token_saving_rate_proxy": 0.976265,
+        "mean_token_saving_rate_proxy": 0.0,
         "mean_jaccard_proxy": null,
-        "saving_display": "97.63%",
+        "saving_display": "0.00%",
         "jaccard_display": "1.0000",
         "allowed_headline": null,
         "forbidden_headline": null,
-        "status": "rehearsal_measured_not_customer_dollar"
+        "status": "sandbox_stub_measured"
       }
     ],
     "fail_comp_004": [

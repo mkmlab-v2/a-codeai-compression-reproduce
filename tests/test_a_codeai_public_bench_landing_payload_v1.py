@@ -39,10 +39,14 @@ def test_build_bench_landing_payload(ensure_bundle: None) -> None:
     assert doc.get("send_gate") == "HOLD"
     assert doc.get("ready_for_external_send") is False
     public = doc.get("sections", {}).get("public_skus") or []
-    assert len(public) == 3
+    assert len(public) == 4
     for row in public:
         assert row.get("corpus_sha256")
         assert row.get("forbidden_headline")
+    routed = next((r for r in public if r.get("sku_id") == "compression_api_golden40_public_safe_routed"), None)
+    if routed and isinstance(routed.get("mean_token_saving_rate_proxy"), (int, float)):
+        assert float(routed["mean_token_saving_rate_proxy"]) > 0.0
+        assert routed.get("external_sku") == "MKM-CHAT-D1"
 
 
 def test_materialize_export_dry_run(ensure_bundle: None) -> None:

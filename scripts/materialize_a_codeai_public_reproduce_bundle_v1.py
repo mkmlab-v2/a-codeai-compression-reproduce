@@ -149,7 +149,17 @@ def materialize(
 
     if out_dir.exists() and not dry_run:
         try:
-            shutil.rmtree(out_dir)
+            git_dir = out_dir / ".git"
+            if git_dir.exists():
+                for child in out_dir.iterdir():
+                    if child.name == ".git":
+                        continue
+                    if child.is_dir():
+                        shutil.rmtree(child)
+                    else:
+                        child.unlink()
+            else:
+                shutil.rmtree(out_dir)
         except OSError:
             # Windows file-lock: fall back to in-place overwrite of tracked paths.
             pass
@@ -167,13 +177,39 @@ def materialize(
             continue
         copied.append(_copy_file(src, out_dir / rel_norm, dry_run=dry_run))
 
+    routed_note = ""
+    dual_path = out_dir / "reports/compression_open_bench_dual_report_v1_latest.json"
+    if dual_path.is_file():
+        try:
+            dual = json.loads(dual_path.read_text(encoding="utf-8"))
+            for row in dual.get("corpora_and_skus") or []:
+                if row.get("label") == "golden40_public_safe_routed" and row.get("non_zero_saving"):
+                    raw = row.get("raw") or {}
+                    routed_note = (
+                        "\n## Measured open-bench headline (per-corpus · `[HYPO]` · SEND_GATE HOLD)\n\n"
+                        f"- **golden40_public_safe_routed** · MKM-CHAT-D1 · N={row.get('case_count')}\n"
+                        f"- raw token saving: **{raw.get('saving_pct_display')}%** · "
+                        f"Jaccard **{raw.get('mean_jaccard_proxy')}**\n"
+                        "- Not equivalent to frozen Track A 47.5% SLA.\n"
+                        "- Stateless golden40 on same corpus may read 0% — cite routing SKU separately.\n\n"
+                    )
+                    break
+        except (json.JSONDecodeError, OSError):
+            routed_note = ""
+
     readme = (
         "# A-CODEAI public reproduce export (slim)\n\n"
-        "SEND_GATE: HOLD — do not use as customer case study or merged marketing headline.\n\n"
+        "SEND_GATE: HOLD — do not use as customer case study or merged marketing headline.\n"
+        "`research_only` · B→A auto-merge prohibited.\n\n"
+        f"{routed_note}"
         "## One command (from repo root)\n\n"
         "```bash\n"
         "pip install -r requirements-public-reproduce.txt\n"
         "python3 scripts/run_compression_evidence_lv1_chain_v1.py --skip-handoff\n"
+        "```\n\n"
+        "Optional open-bench chain (includes golden40 routed PoC):\n\n"
+        "```bash\n"
+        "python3 scripts/run_compression_open_bench_chain_v1.py --skip-expand\n"
         "```\n\n"
         "FAIL-COMP-004: per-SKU metrics only; never merge Track A / handoff / prospect %.\n"
     )

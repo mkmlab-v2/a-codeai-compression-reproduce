@@ -1,6 +1,6 @@
 {
   "schema": "compression_proof_project_closure_v1",
-  "generated_at_utc": "2026-06-10T17:27:57Z",
+  "generated_at_utc": "2026-06-11T02:48:43Z",
   "proof_sprint_level": "lv3",
   "agent_automation_complete": true,
   "chain_ok": true,
@@ -22,10 +22,10 @@
   "human_gated_remainder": [
     {
       "id": "pilot_roi_customer_dollar",
-      "status": "rehearsal_measured_not_customer_dollar",
+      "status": "sandbox_stub_measured",
       "measured_proxy": {
-        "case_count": 25,
-        "mean_token_saving_rate_proxy": 0.976265,
+        "case_count": 40,
+        "mean_token_saving_rate_proxy": 0.0,
         "mean_jaccard_proxy": 1.0,
         "metering_global_saving_rate": 0.47619,
         "events_in_band_40_50": 3

@@ -1,0 +1,33 @@
+{
+  "schema": "compression_open_bench_public_routing_v1",
+  "generated_at_utc": "2026-06-11T02:45:00Z",
+  "research_only": true,
+  "hypothesis_tag": "[HYPO]",
+  "send_gate": "HOLD",
+  "routing_wiring": "forced_shard_id via --sku (C_forced_shard_id_v1)",
+  "external_demo_primary": {
+    "corpus": "golden40_public_safe",
+    "sku": "MKM-CHAT-D1",
+    "forced_shard_id": "zone_d_ssot_b2b_v1",
+    "rationale_ko": "영문 SSOT·governance 프로즈 — CHAT-D1 b2b shard와 정합",
+    "report": "reports/customer_compression_stateless_poc_golden40_public_safe_routed_v1_latest.json"
+  },
+  "corpus_routing_table": [
+    {
+      "corpus": "golden40_public_safe",
+      "stateless_report": "reports/customer_compression_stateless_poc_golden40_public_safe_v1_latest.json",
+      "routed_sku": "MKM-CHAT-D1",
+      "routed_report": "reports/customer_compression_stateless_poc_golden40_public_safe_routed_v1_latest.json"
+    },
+    {
+      "corpus": "open_structured",
+      "note_ko": "JSON-heavy — forced_shard 시에도 0% 절감 가능(정직 한계). SKU PoC(산업 10건)로 대외 수치 병행.",
+      "routed_sku_attempted": "MKM-CHAT-D1",
+      "routed_report": "reports/customer_compression_stateless_poc_open_structured_routed_v1_latest.json"
+    }
+  ],
+  "forbidden_headline": [
+    "Track A 47.5% on open-bench without corpus-specific measurement",
+    "JSON corpus 0%를 엔진 실패로 단정"
+  ]
+}
