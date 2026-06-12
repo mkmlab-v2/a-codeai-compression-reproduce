@@ -51,6 +51,7 @@ pydantic>=2.0
 httpx>=0.24
 tiktoken>=0.5
 jsonschema>=4.0
+pytest>=7.0
 """
 
 LEAK_SCAN_SUFFIXES = {".json", ".jsonl", ".md", ".env", ".yaml", ".yml", ".toml"}
@@ -79,8 +80,16 @@ def _resolve_closure_paths(manifest: dict[str, Any]) -> list[str]:
     entries = manifest.get("entry_scripts") or []
     if not entries:
         return []
+    cmd = [
+        PY,
+        "scripts/resolve_a_codeai_public_reproduce_export_closure_v1.py",
+        "--out-json",
+        "reports/tmp_export_closure_v1.json",
+    ]
+    for rel in entries:
+        cmd.extend(["--entry", str(rel).replace("\\", "/")])
     proc = subprocess.run(
-        [PY, "scripts/resolve_a_codeai_public_reproduce_export_closure_v1.py", "--out-json", "reports/tmp_export_closure_v1.json"],
+        cmd,
         cwd=str(ROOT),
         capture_output=True,
         text=True,
