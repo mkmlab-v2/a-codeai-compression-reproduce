@@ -1,6 +1,6 @@
 {
   "schema": "compression_public_evidence_pack_v0_index_v1",
-  "generated_at_utc": "2026-06-12T03:02:55Z",
+  "generated_at_utc": "2026-06-12T03:04:26Z",
   "w0_ssot": {
     "corpus_path": "data/compression/stateless_poc_smoke_v1.jsonl",
     "corpus_sha256": null,
@@ -17,7 +17,7 @@
     "ready_internal_pointer": "reports/compression_enterprise_summary_readiness_v1_latest.json"
   },
   "lv1_open_corpus_bench": {
-    "poc_generated_at_utc": "2026-06-12T03:02:52Z",
+    "poc_generated_at_utc": "2026-06-12T03:04:23Z",
     "case_count": 128,
     "cases_passed_jaccard_floor": "128/128",
     "mean_token_saving_rate_proxy": 0.0,
@@ -25,7 +25,7 @@
     "poc_exit_ok": true
   },
   "lv1_open_corpus_bench_long": {
-    "poc_generated_at_utc": "2026-06-12T03:02:53Z",
+    "poc_generated_at_utc": "2026-06-12T03:04:25Z",
     "case_count": 48,
     "cases_passed_jaccard_floor": "48/48",
     "mean_token_saving_rate_proxy": 0.0,

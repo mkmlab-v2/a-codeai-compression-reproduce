@@ -39,6 +39,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Install test deps
+        run: |
+          if [ -f requirements-public-reproduce.txt ]; then
+            pip install -q -r requirements-public-reproduce.txt
+          else
+            pip install -q 'pytest>=7.0' 'jsonschema>=4.0'
+          fi
       - name: Pytest contributor validator + manifest check
         run: |
           python3 -m pytest \
