@@ -1,6 +1,6 @@
 {
   "schema": "compression_b2b_legal_send_signoff_v1",
-  "generated_at_utc": "2026-06-11T15:57:48Z",
+  "generated_at_utc": "2026-06-11T22:49:55Z",
   "commander_signoff": true,
   "counsel_signoff": false,
   "rq009_alignment": "counsel_required_for_external_send",
@@ -8,6 +8,6 @@
   "ready_for_external_send": false,
   "ready_for_internal_rehearsal_materials": true,
   "pilot_roi_report": "docs/final/artifacts/compression_b2b_pilot_roi_report_v1_latest.json",
-  "note": "commander internal drawer review complete 2026-06-11; WTT counsel ZIP 32+copy scan+deck reviewed; counsel_signoff false; SEND HOLD per SOLO_SELF_AUDIT_20260607",
+  "note": "commander internal WTT counsel review approved 2026-06-12; deck wtt_stress_certified_deck_v1_latest.md; external SEND HOLD SOLO_SELF_AUDIT",
   "boundary_ack": "Commander chat pre-approval does not replace counsel for press/case-study SEND. Dollar/KRW ROI remains null until customer-masked corpus + audit."
 }

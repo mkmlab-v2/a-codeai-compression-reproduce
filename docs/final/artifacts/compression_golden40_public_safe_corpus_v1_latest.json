@@ -1,0 +1,11 @@
+{
+  "schema": "compression_golden40_public_safe_corpus_v1",
+  "generated_at_utc": "2026-06-12T02:56:03Z",
+  "research_only": true,
+  "source_eval_input": "docs/final/artifacts/MULTILENS_PERFORMANCE_EVAL_INPUT_V2.json",
+  "corpus_path": "data/compression/stateless_poc_golden40_public_safe_v1.jsonl",
+  "sha256": "b933a560d6b3e1b2fd735b84ea4968edc9bfca4f3f282e01c4bbe9580a89ab01",
+  "case_count": 40,
+  "ok": true,
+  "boundary_ack": "Synthetic EN ops bench excerpts only; internal regression reference — not customer SLA or press headline."
+}
