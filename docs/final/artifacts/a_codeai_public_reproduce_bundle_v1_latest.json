@@ -1,7 +1,7 @@
 {
   "schema": "a_codeai_public_reproduce_bundle_v1",
-  "generated_at_utc": "2026-06-12T03:07:42Z",
-  "git_head": "52f634da929e",
+  "generated_at_utc": "2026-06-12T23:59:36Z",
+  "git_head": "66ddfb616ee6",
   "send_gate": "HOLD",
   "ready_for_external_send": false,
   "launch_decision": "READY_FOR_PUBLIC_OPEN_BENCH",
@@ -13,7 +13,7 @@
       "corpus_sha256": "a56f8d4e18dddd14e6c5bd77ae7cabf2066741abc5134e03587416a79ae24330",
       "metrics": {
         "report_path": "reports/customer_compression_stateless_poc_open_structured_v1_latest.json",
-        "generated_at_utc": "2026-06-12T03:07:38Z",
+        "generated_at_utc": "2026-06-12T23:59:31Z",
         "case_count": 128,
         "cases_passed_jaccard_floor": 128,
         "mean_token_saving_rate_proxy": 0.0,
@@ -28,7 +28,7 @@
       "corpus_sha256": "c9dab78892227b2912adfe8a86e425a3a118c58cef1c00572daa62e12e3ec9d2",
       "metrics": {
         "report_path": "reports/customer_compression_stateless_poc_open_structured_long_v1_latest.json",
-        "generated_at_utc": "2026-06-12T03:07:40Z",
+        "generated_at_utc": "2026-06-12T23:59:33Z",
         "case_count": 48,
         "cases_passed_jaccard_floor": 48,
         "mean_token_saving_rate_proxy": 0.0,
@@ -43,7 +43,7 @@
       "corpus_sha256": "b933a560d6b3e1b2fd735b84ea4968edc9bfca4f3f282e01c4bbe9580a89ab01",
       "metrics": {
         "report_path": "reports/customer_compression_stateless_poc_golden40_public_safe_v1_latest.json",
-        "generated_at_utc": "2026-06-12T03:07:41Z",
+        "generated_at_utc": "2026-06-12T23:59:35Z",
         "case_count": 40,
         "cases_passed_jaccard_floor": 40,
         "mean_token_saving_rate_proxy": 0.0,
@@ -104,23 +104,23 @@
             "events_in_band_40_50": 3
           }
         },
-        "monthly_tokens_in_proxy": 318000,
-        "monthly_tokens_saved_proxy": 63000,
-        "monthly_savings_usd": 0.16,
-        "monthly_savings_krw": 216,
+        "monthly_tokens_in_proxy": 186000,
+        "monthly_tokens_saved_proxy": 46000,
+        "monthly_savings_usd": 0.12,
+        "monthly_savings_krw": 162,
         "boundary_ack": "Token proxy + list prices — not a billing commitment; counsel + contract clauses required."
       },
       "customer_krw_roi": {
-        "monthly_savings_krw": 216,
+        "monthly_savings_krw": 162,
         "status": "customer_measured"
       },
-      "prospect_corpus_cases": 30,
+      "prospect_corpus_cases": 25,
       "status": "pilot_intake_measured",
       "report_path": "docs/final/artifacts/compression_b2b_pilot_roi_report_v1_latest.json",
       "measured_proxy": {
-        "case_count": 30,
-        "mean_token_saving_rate_proxy": 0.193753,
-        "mean_jaccard_proxy": 0.815162,
+        "case_count": 25,
+        "mean_token_saving_rate_proxy": 0.247183,
+        "mean_jaccard_proxy": 0.792717,
         "metering_global_saving_rate": 0.47619,
         "events_in_band_40_50": 3
       },

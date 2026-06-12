@@ -35,3 +35,7 @@ FAIL-COMP-004: per-SKU metrics only; never merge Track A / handoff / prospect %.
 ## Community contributions (contributor_provided · SEND_GATE HOLD)
 
 See `CONTRIBUTING_OPEN_BENCH.md` — masked JSONL under `data/*/contributions/`; `contributor_provided=true`, `customer_provided=false`; no Track A / 47.5% headline.
+
+## License
+
+Apache License 2.0 — see [LICENSE](LICENSE). Open-bench reproduce only; SEND_GATE HOLD unchanged.
