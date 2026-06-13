@@ -32,6 +32,11 @@ python3 scripts/run_compression_open_bench_chain_v1.py --skip-expand
 
 FAIL-COMP-004: per-SKU metrics only; never merge Track A / handoff / prospect %.
 
+## Enterprise pre-audit intake (web form · separate funnel)
+
+- Tier-0 **free pre-audit** queue (masked JSONL sample review): [app.jema-ai.com/enterprise/apply](https://app.jema-ai.com/enterprise/apply)
+- Not auto-approval, not SLA or Track A headline guarantee; open-bench metrics above are not a submission outcome.
+
 ## Community contributions (contributor_provided · SEND_GATE HOLD)
 
 See `CONTRIBUTING_OPEN_BENCH.md` — masked JSONL under `data/*/contributions/`; `contributor_provided=true`, `customer_provided=false`; no Track A / 47.5% headline.

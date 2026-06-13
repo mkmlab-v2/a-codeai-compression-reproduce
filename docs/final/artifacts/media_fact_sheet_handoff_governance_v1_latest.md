@@ -1,7 +1,7 @@
 ---
 schema: media_fact_sheet_handoff_governance_v1
 sku_id: handoff_governance
-generated_at_utc: 2026-06-12T23:59:36Z
+generated_at_utc: 2026-06-11T05:59:47Z
 labels: [DRAFT, internal_only, research_only, publish_allowed=false]
 ready_for_external_send: false
 send_gate: HOLD
@@ -25,10 +25,10 @@ fail_comp_004: do_not_merge_with_compression_api
 
 | 지표 | 값 | 조건·범위 |
 |------|-----|-----------|
-| Inject OFF | **— tokens** | top-3 ops 노드 · essence+must_keep only |
+| Inject OFF | **141 tokens** | top-3 ops 노드 · essence+must_keep only |
 | Inject ON (slice) | **1,706 tokens** | `--include-slice --slice-max-chars 1200` |
 | Full anchor paste (회피 대상) | **27,539 tokens** | 동일 top-3 full slice paste |
-| Reduction vs full | **—** | **indexed slices only** · lab weekly ops |
+| Reduction vs full | **~99.5%** | **indexed slices only** · lab weekly ops |
 | must_keep gate | exit **0** | 주간 벤치 기준 |
 
 **증거:** `reports/mkm_ops_memory_index_token_bench_v1_latest.json`  

@@ -258,6 +258,13 @@ def _resolve_router_route(text: str, forced_shard_id: str | None) -> ShardRoute:
     return _router.route(text)
 
 
+def _normalize_optional_shard_id(shard_id: str | None) -> str | None:
+    if shard_id is None:
+        return None
+    sid = str(shard_id).strip()
+    return sid or None
+
+
 def _run_evaluate_for_packet(
     text: str,
     loss_profile: LossProfile,
@@ -293,7 +300,7 @@ def _run_evaluate_for_packet(
             general_cap = sensitive_cap = hangul_cap = short_context_max_saving_rate
         if short_context_disable_min_saving_floor:
             try:
-                route_pre = _resolve_router_route(text, str(force_shard_id).strip() or None)
+                route_pre = _resolve_router_route(text, _normalize_optional_shard_id(force_shard_id))
                 domain_floor_overrides = {route_pre.domain: 0.0}
             except ValueError:
                 domain_floor_overrides = {"ssot": 0.0}
@@ -346,7 +353,7 @@ def _run_evaluate_for_packet(
         emit_semantic_pointer=emit_semantic_pointer,
         graph_wire_selective_bridge=graph_wire_selective_bridge,
         case_graph_wire_influence=case_wire,
-        force_shard_id=str(force_shard_id).strip() or None,
+        force_shard_id=_normalize_optional_shard_id(force_shard_id),
         domain_min_saving_floor_overrides=domain_floor_overrides,
         **eval_extra,
     )
