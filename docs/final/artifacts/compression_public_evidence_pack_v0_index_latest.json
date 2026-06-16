@@ -1,0 +1,20 @@
+{
+  "schema": "compression_public_evidence_pack_v0_index_v1",
+  "generated_at_utc": "2026-06-16T20:41:05Z",
+  "w0_ssot": {
+    "corpus_path": "data/compression/stateless_poc_smoke_v1.jsonl",
+    "corpus_sha256": null,
+    "poc_report_path": "reports/customer_compression_stateless_poc_v1_latest.json"
+  },
+  "tenant_poc": {
+    "tenant_id": "virtual-tenant-poc-01",
+    "corpus_path": "data/compression/stateless_poc_enterprise_50_v1.jsonl",
+    "corpus_sha256": null,
+    "poc_report_path": "reports/customer_compression_stateless_poc_enterprise_50_v1_latest.json",
+    "metrics_guardrail": {}
+  },
+  "governance": {
+    "ready_internal_pointer": "reports/compression_enterprise_summary_readiness_v1_latest.json"
+  },
+  "index_refresh_script": "scripts/build_compression_public_evidence_pack_v0_index_v1.py"
+}

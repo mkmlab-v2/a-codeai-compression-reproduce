@@ -1,7 +1,7 @@
 {
   "schema": "compression_b2b_pilot_roi_report_v1",
-  "generated_at_utc": "2026-06-12T04:45:03Z",
-  "tenant_id": "wtt-premium-cs-auto-local-v1",
+  "generated_at_utc": "2026-06-16T20:40:49Z",
+  "tenant_id": "wtt-premium-cs-customer-v1",
   "status": "pilot_intake_measured",
   "send_gate": "HOLD",
   "ready_for_external_send": false,
@@ -9,61 +9,41 @@
   "counsel_signoff": false,
   "virtual_tenant": false,
   "routing": {
-    "sku": "MKM-CHAT-D1",
+    "sku": null,
     "compression_profile": "economy",
-    "must_keep_overlay_json": "docs/final/artifacts/tenant_wtt-premium-cs-auto-local-v1_must_keep_overlay_v1.json",
+    "must_keep_overlay_json": "docs/final/artifacts/tenant_wtt-premium-cs-customer-v1_must_keep_overlay_v1.json",
     "graph_wire_selective_bridge": false,
     "short_context_token_threshold": 30,
     "short_context_max_saving_rate": 0.3
   },
-  "intake_path": "reports/compression_b2b_prospect_poc_corpus_wtt-premium-cs-auto-local-v1_v1.json",
-  "corpus_path": "data/compression/stateless_poc_prospect_wtt-premium-cs-auto-local-v1_v1.jsonl",
-  "poc_report_path": "reports/customer_compression_stateless_poc_wtt-premium-cs-auto-local-v1_v1_latest.json",
-  "metering_appendix_path": "docs/final/artifacts/compression_b2b_pilot_metering_appendix_wtt-premium-cs-auto-local-v1_latest.json",
+  "intake_path": "reports/compression_b2b_prospect_poc_corpus_wtt-premium-cs-customer-v1_v1.json",
+  "corpus_path": "data/compression/stateless_poc_prospect_wtt-premium-cs-customer-v1_v1.jsonl",
+  "poc_report_path": "reports/customer_compression_stateless_poc_wtt-premium-cs-customer-v1_v1_latest.json",
+  "metering_appendix_path": "docs/final/artifacts/compression_b2b_pilot_metering_appendix_wtt-premium-cs-customer-v1_latest.json",
   "measured_proxy": {
-    "case_count": 25,
-    "mean_token_saving_rate_proxy": 0.247183,
-    "mean_jaccard_proxy": 0.792717,
+    "case_count": 30,
+    "mean_token_saving_rate_proxy": 0.190364,
+    "mean_jaccard_proxy": 0.833378,
     "metering_global_saving_rate": 0.47619,
     "events_in_band_40_50": 3
   },
-  "customer_dollar_roi": {
-    "status": "customer_measured",
-    "assumptions": {
-      "input_usd_per_1m_tokens": 2.5,
-      "output_usd_per_1m_tokens": 10.0,
-      "krw_per_usd": 1350.0,
-      "monthly_volume_multiplier": 1000.0,
-      "metering_cross_check": {
-        "global_saving_rate": 0.47619,
-        "events_in_band_40_50": 3
-      }
-    },
-    "monthly_tokens_in_proxy": 186000,
-    "monthly_tokens_saved_proxy": 46000,
-    "monthly_savings_usd": 0.12,
-    "monthly_savings_krw": 162,
-    "boundary_ack": "Token proxy + list prices — not a billing commitment; counsel + contract clauses required."
-  },
-  "customer_krw_roi": {
-    "monthly_savings_krw": 162,
-    "status": "customer_measured"
-  },
+  "customer_dollar_roi": null,
+  "customer_krw_roi": null,
   "forbidden_as_headline": [
     "Do not cite rehearsal stub as named customer case study",
     "Do not merge with Golden 40 or handoff 99% headlines"
   ],
   "raw_repair_dual_report": {
     "raw": {
-      "mean_token_saving_rate_proxy": 0.247183,
-      "mean_jaccard_proxy": 0.792717,
-      "rows": 25
+      "mean_token_saving_rate_proxy": 0.190364,
+      "mean_jaccard_proxy": 0.833378,
+      "rows": 30
     },
     "repair_v2": {
-      "mean_token_saving_rate_proxy": 0.247183,
-      "mean_jaccard_proxy": 0.792717,
+      "mean_token_saving_rate_proxy": 0.190364,
+      "mean_jaccard_proxy": 0.833378,
       "repair_applied_count": 0,
-      "rows": 25,
+      "rows": 30,
       "note": "stateless_packet harness — no repair processor in this PoC path"
     },
     "delta": {
@@ -71,6 +51,5 @@
       "token_saving_rate_delta_repair_v2_minus_raw": 0.0
     }
   },
-  "boundary_ack": "Customer-masked JSONL pilot — 1:1 ROI proxy only; counsel sign-off required before ready_for_external_send; SEND_GATE HOLD.",
-  "roi_status": "customer_measured"
+  "boundary_ack": "Customer-masked JSONL pilot — 1:1 ROI proxy only; counsel sign-off required before ready_for_external_send; SEND_GATE HOLD."
 }

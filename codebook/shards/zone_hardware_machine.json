@@ -1,0 +1,39 @@
+{
+  "shard_id": "zone_hardware_machine",
+  "domain": "hardware_machine_log",
+  "routing_keywords": [
+    "pcie",
+    "numa",
+    "gpu",
+    "nvidia-smi",
+    "backpressure",
+    "traceback",
+    "systemd",
+    "latency_p95",
+    "bandwidth_gbps",
+    "fallback_triggered",
+    "router_shard_id",
+    "oov_ratio"
+  ],
+  "must_keep_hard_terms": [
+    "error",
+    "status",
+    "code",
+    "traceback"
+  ],
+  "must_keep_soft_terms": [
+    "pcie",
+    "numa",
+    "gpu",
+    "backpressure",
+    "latency_p95"
+  ],
+  "guard_tokens": [
+    "FAILURE",
+    "WARN",
+    "ERROR"
+  ],
+  "hangul_principle": false,
+  "research_only": true,
+  "send_gate": "HOLD"
+}

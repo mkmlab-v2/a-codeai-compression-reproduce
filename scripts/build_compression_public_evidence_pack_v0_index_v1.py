@@ -19,13 +19,6 @@ READINESS = ROOT / "reports/compression_enterprise_summary_readiness_v1_latest.j
 METERING_APPENDIX = ROOT / "docs/final/artifacts/compression_b2b_pilot_metering_appendix_latest.json"
 W0_CORPUS = ROOT / "data/compression/stateless_poc_smoke_v1.jsonl"
 TENANT_CORPUS = ROOT / "data/compression/stateless_poc_enterprise_50_v1.jsonl"
-LAUNCH_CHECKLIST = ROOT / "docs/final/artifacts/a_codeai_public_benchmark_launch_checklist_v1.json"
-REPRODUCE_PACK = ROOT / "docs/final/artifacts/compression_public_reproduce_pack_v1_latest.json"
-INDUSTRY_BUNDLE = ROOT / "reports/compression_b2b_sku_industry_poc_bundle_v1_latest.json"
-INDUSTRY_CHAIN = ROOT / "reports/compression_b2b_evidence_v1_industry_chain_v1_latest.json"
-OPEN_POC = ROOT / "reports/customer_compression_stateless_poc_open_structured_v1_latest.json"
-OPEN_LONG_POC = ROOT / "reports/customer_compression_stateless_poc_open_structured_long_v1_latest.json"
-HANDOFF_BENCH = ROOT / "reports/mkm_ops_memory_index_token_bench_v1_latest.json"
 
 
 def _utc_now() -> str:
@@ -109,88 +102,12 @@ def build() -> dict[str, Any]:
     if readiness.get("ready_for_internal_oem_draft") is not None:
         gov["ready_for_internal_oem_draft"] = readiness.get("ready_for_internal_oem_draft")
 
-    launch = _load_json(LAUNCH_CHECKLIST) or {}
-    launch_summary = launch.get("summary") or {}
-    launch_decision = launch_summary.get("decision")
-
-    artifact_index = []
-    for item in base.get("artifact_index") or base.get("artifacts") or []:
-        row = dict(item)
-        if row.get("role") == "a_codeai_launch_checklist" and launch_decision:
-            row["decision"] = launch_decision
-            row["pass_count"] = launch_summary.get("pass_count")
-            row["total"] = launch_summary.get("total")
-        artifact_index.append(row)
-
-    open_sum = _poc_summary(_load_json(OPEN_POC))
-    open_long_sum = _poc_summary(_load_json(OPEN_LONG_POC))
-    handoff = _load_json(HANDOFF_BENCH) or {}
-    reproduce = _load_json(REPRODUCE_PACK) or {}
-    industry_bundle = _load_json(INDUSTRY_BUNDLE) or {}
-    industry_chain = _load_json(INDUSTRY_CHAIN) or {}
-
-    lv3_industry = dict(base.get("lv3_industry_b2b") or {})
-    if industry_bundle:
-        lv3_industry.update(
-            {
-                "bundle_ok": industry_bundle.get("bundle_ok"),
-                "compression_profile_default": industry_bundle.get("compression_profile_default"),
-                "rows_per_sku": industry_bundle.get("rows_per_sku"),
-                "must_keep_overlay": industry_bundle.get("must_keep_overlay"),
-                "sku_count": len(industry_bundle.get("steps") or []),
-            }
-        )
-    if industry_chain:
-        lv3_industry["chain_ok"] = industry_chain.get("chain_ok")
-        lv3_industry["chain_path"] = INDUSTRY_CHAIN.relative_to(ROOT).as_posix()
-    if reproduce.get("lv3_industry_b2b"):
-        lv3_industry["reproduce_mount"] = reproduce["lv3_industry_b2b"]
-
-    lv1_open = dict(base.get("lv1_open_corpus_bench") or {})
-    if open_sum:
-        lv1_open.update({k: v for k, v in open_sum.items() if v is not None})
-        lv1_open["poc_exit_ok"] = True
-
-    lv1_open_long = dict(base.get("lv1_open_corpus_bench_long") or {})
-    if open_long_sum:
-        lv1_open_long.update({k: v for k, v in open_long_sum.items() if v is not None})
-
-    chain_log = _load_json(ROOT / "reports/compression_evidence_lv1_chain_v1_latest.json") or {}
-    chain_ok = reproduce.get("chain_ok")
-    if chain_ok is None:
-        chain_ok = chain_log.get("chain_ok")
-
-    lv2 = {
-        "level": "Lv.2",
-        "proof_sprint_chain": "scripts/run_compression_evidence_lv1_chain_v1.py",
-        "reproduce_pack_path": REPRODUCE_PACK.relative_to(ROOT).as_posix(),
-        "chain_ok": chain_ok,
-        "send_gate": reproduce.get("send_gate", "HOLD"),
-        "handoff_reduction_percent": (handoff.get("delta_vs_full_slices") or {}).get(
-            "reduction_percent"
-        ),
-        "open_long_mean_saving_proxy": open_long_sum.get("mean_token_saving_rate_proxy"),
-    }
-
     out = dict(base)
     out["schema"] = "compression_public_evidence_pack_v0_index_v1"
     out["generated_at_utc"] = _utc_now()
     out["w0_ssot"] = w0_ssot
     out["tenant_poc"] = tenant_poc
     out["governance"] = gov
-    if artifact_index:
-        out["artifact_index"] = artifact_index
-    if lv1_open:
-        out["lv1_open_corpus_bench"] = lv1_open
-    if lv1_open_long:
-        out["lv1_open_corpus_bench_long"] = lv1_open_long
-    if lv3_industry:
-        out["lv3_industry_b2b"] = lv3_industry
-    out["lv2_proof_sprint"] = lv2
-    out["stage"] = "v0_index_lv3_proof_sprint_mounted"
-    out["proof_project_closure"] = (
-        ROOT / "docs/final/artifacts/compression_proof_project_closure_v1_latest.json"
-    ).relative_to(ROOT).as_posix()
     out["index_refresh_script"] = "scripts/build_compression_public_evidence_pack_v0_index_v1.py"
     return out
 
