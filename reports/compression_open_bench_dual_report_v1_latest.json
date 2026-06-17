@@ -1,6 +1,6 @@
 {
   "schema": "compression_open_bench_dual_report_v1",
-  "generated_at_utc": "2026-06-11T09:52:54Z",
+  "generated_at_utc": "2026-06-17T04:52:29Z",
   "research_only": true,
   "hypothesis_tag": "[HYPO]",
   "send_gate": "HOLD",
@@ -26,13 +26,13 @@
       "case_count": 40,
       "forced_shard_id": null,
       "raw": {
-        "mean_token_saving_rate_proxy": 0.0,
-        "mean_jaccard_proxy": 1.0,
-        "saving_pct_display": 0.0
+        "mean_token_saving_rate_proxy": 0.079263,
+        "mean_jaccard_proxy": 0.899125,
+        "saving_pct_display": 7.93
       },
       "repair_v2": {
-        "mean_token_saving_rate_proxy": 0.0,
-        "mean_jaccard_proxy": 1.0,
+        "mean_token_saving_rate_proxy": 0.079263,
+        "mean_jaccard_proxy": 0.899125,
         "repair_applied_count": 0,
         "note": "stateless PoC — repair layer often identical to raw"
       },
@@ -40,7 +40,7 @@
         "alignment_pass_rate_delta_repair_v2_minus_raw": 0.0,
         "token_saving_rate_delta_repair_v2_minus_raw": 0.0
       },
-      "non_zero_saving": false
+      "non_zero_saving": true
     },
     {
       "label": "golden40_public_safe_routed",
@@ -75,12 +75,12 @@
       "forced_shard_id": null,
       "raw": {
         "mean_token_saving_rate_proxy": 0.0,
-        "mean_jaccard_proxy": 1.0,
+        "mean_jaccard_proxy": 0.790282,
         "saving_pct_display": 0.0
       },
       "repair_v2": {
         "mean_token_saving_rate_proxy": 0.0,
-        "mean_jaccard_proxy": 1.0,
+        "mean_jaccard_proxy": 0.790282,
         "repair_applied_count": 0,
         "note": "stateless PoC — repair layer often identical to raw"
       },
@@ -213,7 +213,7 @@
   ],
   "summary": {
     "reports_present": 8,
-    "reports_non_zero_saving": 5,
+    "reports_non_zero_saving": 6,
     "any_non_zero": true
   },
   "allowed_headline_template_ko": "공개·마스킹 코퍼스 {label} N={case_count}건 조건에서 raw 절감 {saving_pct}% · Jaccard {jaccard} (Track A 47.5%와 동일 보장 아님)",

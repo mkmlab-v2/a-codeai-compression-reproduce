@@ -1,34 +1,22 @@
 {
   "schema": "customer_compression_stateless_poc_v1",
-  "generated_at_utc": "2026-06-11T09:52:52Z",
+  "generated_at_utc": "2026-06-17T04:48:27Z",
   "research_only": true,
   "boundary_ack": "Per-customer JSONL only; not Golden 40 or Track A 47.5% claim.",
   "input_jsonl": "C:/workspace/data/compression/stateless_poc_golden40_public_safe_v1.jsonl",
   "loss_profile": "semantic_general",
   "compression_profile": "economy",
-  "graph_wire_selective_bridge": false,
   "case_count": 40,
   "cases_passed": 10,
   "cases_passed_jaccard_floor": 10,
   "jaccard_floor": 0.73,
   "pass_criterion": "jaccard_floor",
+  "relax_pass_gate": true,
   "aggregate": {
     "mean_token_saving_rate_proxy": 0.093617,
-    "mean_jaccard_proxy": 0.897361,
-    "mean_token_saving_rate_proxy_all_cases": 0.388646,
-    "mean_jaccard_proxy_all_cases": 0.606351
-  },
-  "must_keep_overlay": {
-    "applied": false,
-    "term_count": 0,
-    "overlay_path": null
-  },
-  "short_context_policy": {
-    "token_threshold": null,
-    "max_saving_rate": null
+    "mean_jaccard_proxy": 0.897361
   },
   "parse_or_api_failures": 0,
-  "relax_pass_gate": true,
   "cases": [
     {
       "id": "cmp2_001",
@@ -39,8 +27,7 @@
       "token_saving_rate_proxy": 0.052632,
       "jaccard_proxy": 0.857143,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_002",
@@ -51,8 +38,7 @@
       "token_saving_rate_proxy": 0.117647,
       "jaccard_proxy": 0.882353,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_003",
@@ -63,8 +49,7 @@
       "token_saving_rate_proxy": 0.230769,
       "jaccard_proxy": 0.714286,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_004",
@@ -75,8 +60,7 @@
       "token_saving_rate_proxy": 0.133333,
       "jaccard_proxy": 0.866667,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_005",
@@ -87,8 +71,7 @@
       "token_saving_rate_proxy": 0.214286,
       "jaccard_proxy": 0.785714,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_006",
@@ -99,8 +82,7 @@
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_007",
@@ -111,8 +93,7 @@
       "token_saving_rate_proxy": 0.285714,
       "jaccard_proxy": 0.714286,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_008",
@@ -123,8 +104,7 @@
       "token_saving_rate_proxy": 0.230769,
       "jaccard_proxy": 0.714286,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_009",
@@ -135,8 +115,7 @@
       "token_saving_rate_proxy": 0.1875,
       "jaccard_proxy": 0.8125,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_010",
@@ -147,8 +126,7 @@
       "token_saving_rate_proxy": 0.230769,
       "jaccard_proxy": 0.769231,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_011",
@@ -159,8 +137,7 @@
       "token_saving_rate_proxy": 0.5,
       "jaccard_proxy": 0.5,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_012",
@@ -171,8 +148,7 @@
       "token_saving_rate_proxy": 0.5,
       "jaccard_proxy": 0.5,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_013",
@@ -183,8 +159,7 @@
       "token_saving_rate_proxy": 0.529412,
       "jaccard_proxy": 0.470588,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_014",
@@ -195,8 +170,7 @@
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_015",
@@ -207,8 +181,7 @@
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_016",
@@ -219,8 +192,7 @@
       "token_saving_rate_proxy": 0.533333,
       "jaccard_proxy": 0.466667,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_017",
@@ -231,8 +203,7 @@
       "token_saving_rate_proxy": 0.529412,
       "jaccard_proxy": 0.470588,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_018",
@@ -243,8 +214,7 @@
       "token_saving_rate_proxy": 0.5,
       "jaccard_proxy": 0.5,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_019",
@@ -255,8 +225,7 @@
       "token_saving_rate_proxy": 0.529412,
       "jaccard_proxy": 0.470588,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_020",
@@ -267,8 +236,7 @@
       "token_saving_rate_proxy": 0.5,
       "jaccard_proxy": 0.5,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_021",
@@ -279,8 +247,7 @@
       "token_saving_rate_proxy": 0.526316,
       "jaccard_proxy": 0.473684,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_022",
@@ -291,8 +258,7 @@
       "token_saving_rate_proxy": 0.529412,
       "jaccard_proxy": 0.470588,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_023",
@@ -303,8 +269,7 @@
       "token_saving_rate_proxy": 0.466667,
       "jaccard_proxy": 0.533333,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_024",
@@ -315,8 +280,7 @@
       "token_saving_rate_proxy": 0.5,
       "jaccard_proxy": 0.5,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_025",
@@ -327,8 +291,7 @@
       "token_saving_rate_proxy": 0.5,
       "jaccard_proxy": 0.5,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_026",
@@ -339,8 +302,7 @@
       "token_saving_rate_proxy": 0.529412,
       "jaccard_proxy": 0.470588,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_027",
@@ -351,8 +313,7 @@
       "token_saving_rate_proxy": 0.5,
       "jaccard_proxy": 0.5,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_028",
@@ -363,8 +324,7 @@
       "token_saving_rate_proxy": 0.0,
       "jaccard_proxy": 1.0,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_029",
@@ -375,8 +335,7 @@
       "token_saving_rate_proxy": 0.5,
       "jaccard_proxy": 0.5,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_030",
@@ -387,8 +346,7 @@
       "token_saving_rate_proxy": 0.533333,
       "jaccard_proxy": 0.466667,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_031",
@@ -399,8 +357,7 @@
       "token_saving_rate_proxy": 0.526316,
       "jaccard_proxy": 0.473684,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_032",
@@ -411,8 +368,7 @@
       "token_saving_rate_proxy": 0.529412,
       "jaccard_proxy": 0.470588,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_033",
@@ -423,8 +379,7 @@
       "token_saving_rate_proxy": 0.533333,
       "jaccard_proxy": 0.466667,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_034",
@@ -435,8 +390,7 @@
       "token_saving_rate_proxy": 0.533333,
       "jaccard_proxy": 0.466667,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_035",
@@ -447,8 +401,7 @@
       "token_saving_rate_proxy": 0.5,
       "jaccard_proxy": 0.5,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_036",
@@ -459,8 +412,7 @@
       "token_saving_rate_proxy": 0.533333,
       "jaccard_proxy": 0.466667,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_037",
@@ -471,8 +423,7 @@
       "token_saving_rate_proxy": 0.5,
       "jaccard_proxy": 0.5,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_038",
@@ -483,8 +434,7 @@
       "token_saving_rate_proxy": 0.473684,
       "jaccard_proxy": 0.526316,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_039",
@@ -495,8 +445,7 @@
       "token_saving_rate_proxy": 0.526316,
       "jaccard_proxy": 0.473684,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     },
     {
       "id": "cmp2_040",
@@ -507,14 +456,13 @@
       "token_saving_rate_proxy": 0.5,
       "jaccard_proxy": 0.5,
       "reassembly": "codebook_only",
-      "router_shard_id": "zone_d_ssot_b2b_v1",
-      "router_domain": "chatbot_b2b"
+      "router_shard_id": "zone_d_ssot_b2b_v1"
     }
   ],
   "cases_truncated": false,
   "sku_context": {
     "routing_wiring": "forced_shard_id_v1",
-    "routing_note_ko": "SKU --sku 시 b2b_shard_id를 forced_shard_id로 /v2/compress에 전달(승격 승인).",
+    "routing_note_ko": "PoC /v2/compress에 forced_shard_id 전달 — B2B off-the-shelf SKU 샤드 고정.",
     "research_only": true,
     "spec_path": "C:/workspace/docs/final/artifacts/compression_b2b_off_the_shelf_shard_sku_v1.json",
     "external_sku": "MKM-CHAT-D1",

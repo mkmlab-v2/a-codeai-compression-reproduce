@@ -1,7 +1,7 @@
 {
   "schema": "compression_b2b_pilot_roi_report_v1",
-  "generated_at_utc": "2026-06-16T21:55:09Z",
-  "tenant_id": "mkm-internal-dogfood-v4-cursor",
+  "generated_at_utc": "2026-06-17T04:49:05Z",
+  "tenant_id": "public-open-web-v1",
   "status": "pilot_intake_measured",
   "send_gate": "HOLD",
   "ready_for_external_send": false,
@@ -11,19 +11,19 @@
   "routing": {
     "sku": "MKM-CHAT-D1",
     "compression_profile": "economy",
-    "must_keep_overlay_json": "docs/final/artifacts/tenant_mkm-internal-dogfood-v4-cursor_must_keep_overlay_v1.json",
+    "must_keep_overlay_json": "docs/final/artifacts/tenant_public-open-web-v1_must_keep_overlay_v1.json",
     "graph_wire_selective_bridge": false,
     "short_context_token_threshold": null,
     "short_context_max_saving_rate": null
   },
-  "intake_path": "reports/compression_b2b_prospect_poc_corpus_mkm-internal-dogfood-v4-cursor_v1.json",
-  "corpus_path": "data/compression/stateless_poc_prospect_mkm-internal-dogfood-v4-cursor_v1.jsonl",
-  "poc_report_path": "reports/customer_compression_stateless_poc_mkm-internal-dogfood-v4-cursor_v1_latest.json",
-  "metering_appendix_path": "docs/final/artifacts/compression_b2b_pilot_metering_appendix_mkm-internal-dogfood-v4-cursor_latest.json",
+  "intake_path": "reports/compression_b2b_prospect_poc_corpus_public-open-web-v1_v1.json",
+  "corpus_path": "data/compression/stateless_poc_prospect_public-open-web-v1_v1.jsonl",
+  "poc_report_path": "reports/customer_compression_stateless_poc_public-open-web-v1_v1_latest.json",
+  "metering_appendix_path": "docs/final/artifacts/compression_b2b_pilot_metering_appendix_public-open-web-v1_latest.json",
   "measured_proxy": {
-    "case_count": 24,
-    "mean_token_saving_rate_proxy": 0.0,
-    "mean_jaccard_proxy": 0.0,
+    "case_count": 30,
+    "mean_token_saving_rate_proxy": 0.157479,
+    "mean_jaccard_proxy": 0.865584,
     "metering_global_saving_rate": 0.47619,
     "events_in_band_40_50": 3
   },
@@ -39,14 +39,14 @@
         "events_in_band_40_50": 3
       }
     },
-    "monthly_tokens_in_proxy": 9600000,
-    "monthly_tokens_saved_proxy": 0,
-    "monthly_savings_usd": 0.0,
-    "monthly_savings_krw": 0,
+    "monthly_tokens_in_proxy": 1743000,
+    "monthly_tokens_saved_proxy": 365000,
+    "monthly_savings_usd": 0.91,
+    "monthly_savings_krw": 1228,
     "boundary_ack": "Token proxy + list prices — not a billing commitment; counsel + contract clauses required."
   },
   "customer_krw_roi": {
-    "monthly_savings_krw": 0,
+    "monthly_savings_krw": 1228,
     "status": "customer_measured"
   },
   "forbidden_as_headline": [
@@ -55,15 +55,15 @@
   ],
   "raw_repair_dual_report": {
     "raw": {
-      "mean_token_saving_rate_proxy": 0.0,
-      "mean_jaccard_proxy": 0.0,
-      "rows": 24
+      "mean_token_saving_rate_proxy": 0.157479,
+      "mean_jaccard_proxy": 0.865584,
+      "rows": 30
     },
     "repair_v2": {
-      "mean_token_saving_rate_proxy": 0.0,
-      "mean_jaccard_proxy": 0.0,
+      "mean_token_saving_rate_proxy": 0.157479,
+      "mean_jaccard_proxy": 0.865584,
       "repair_applied_count": 0,
-      "rows": 24,
+      "rows": 30,
       "note": "stateless_packet harness — no repair processor in this PoC path"
     },
     "delta": {
@@ -71,6 +71,6 @@
       "token_saving_rate_delta_repair_v2_minus_raw": 0.0
     }
   },
-  "boundary_ack": "Customer-masked JSONL pilot — 1:1 ROI proxy only; counsel sign-off required before ready_for_external_send; SEND_GATE HOLD.",
+  "boundary_ack": "Public-open API/RSS pilot — NOT customer corpus; SEND_GATE HOLD.",
   "roi_status": "customer_measured"
 }

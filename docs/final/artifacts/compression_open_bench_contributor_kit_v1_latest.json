@@ -23,6 +23,13 @@
       "manifest_check": "py scripts/check_compression_contributions_manifest_v1.py [--pr-strict] [--validate-reference]",
       "validate": "py scripts/validate_compression_contributor_jsonl_v1.py --jsonl <PATH> --min-rows 10",
       "bench_chain": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Invoke-CompressionContributorBenchChain_v1.ps1 -ContributorJsonl <PATH>",
+      "overlay_policy": "docs/final/artifacts/compression_open_bench_overlay_policy_v1_latest.json",
+      "open_bench_poc_defaults": {
+        "extract_must_keep_if_missing": true,
+        "short_context_token_threshold": 30,
+        "short_context_max_saving_rate": 0.30,
+        "note_ko": "overlay 없으면 community seed saving 0% 정상 — 정책 SSOT 참조"
+      },
       "promotion_candidate": "docs/final/artifacts/compression_contributor_promotion_candidate_v1_latest.json",
       "human_apply_bridge": "py scripts/apply_compression_contributor_track_a_promotion_v1.py --human-approve-promotion --reviewer commander",
       "multilens_codec_apply_separate": "py scripts/apply_multilens_ultra_compression_track_a_promotion_v1.py --human-approve-promotion"
