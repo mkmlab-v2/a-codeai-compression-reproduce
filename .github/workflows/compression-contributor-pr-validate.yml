@@ -48,7 +48,6 @@ jobs:
           python3 -m pytest \
             tests/test_validate_compression_contributor_jsonl_v1.py \
             tests/test_check_compression_contributions_manifest_v1.py \
-            -k "not test_empty_manifest_passes" \
             -q --tb=short
       - name: Manifest + reference deny-valve example
         run: |
