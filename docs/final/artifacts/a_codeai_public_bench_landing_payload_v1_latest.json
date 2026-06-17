@@ -1,8 +1,8 @@
 {
   "schema": "a_codeai_public_bench_landing_payload_v1",
-  "generated_at_utc": "2026-06-17T07:50:44Z",
+  "generated_at_utc": "2026-06-17T08:21:34Z",
   "source_bundle": "docs/final/artifacts/a_codeai_public_reproduce_bundle_v1_latest.json",
-  "git_head": "5494e41bcce3",
+  "git_head": "75d87850a37f",
   "send_gate": "HOLD",
   "ready_for_external_send": false,
   "launch_decision": "READY_FOR_PUBLIC_OPEN_BENCH",
@@ -92,12 +92,12 @@
         "case_count": null,
         "mean_token_saving_rate_proxy": null,
         "mean_jaccard_proxy": null,
-        "saving_display": "47.12%",
-        "jaccard_display": "0.8893",
+        "saving_display": "47.54%",
+        "jaccard_display": "0.8905",
         "allowed_headline": null,
         "forbidden_headline": "Customer SLA or press guarantee",
-        "global_token_saving_rate": 0.47116736990154706,
-        "avg_jaccard": 0.8893218363593751
+        "global_token_saving_rate": 0.47538677918424754,
+        "avg_jaccard": 0.8904921794966301
       },
       {
         "sku_id": "handoff_governance",

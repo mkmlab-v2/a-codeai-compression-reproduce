@@ -35,8 +35,6 @@
     "tiktoken_o200k_available": true,
     "tiktoken_o200k_unavailable_reason": null,
     "emit_semantic_pointer": false,
-    "graph_wire_selective_bridge": false,
-    "case_graph_wire_influence_count": 0,
     "experimental_decoder_fidelity_for_baseline": false,
     "enable_router_blend_candidate": false,
     "domain_min_saving_floor_overrides": null,
@@ -58,9 +56,9 @@
       "schema": "semantic_pointer_v1",
       "enabled": false
     },
-    "global_token_saving_rate": 0.47116736990154706,
-    "avg_reconstruction_fidelity_jaccard": 0.8893218363593751,
-    "min_reconstruction_fidelity_jaccard": 0.6875,
+    "global_token_saving_rate": 0.47538677918424754,
+    "avg_reconstruction_fidelity_jaccard": 0.8904921794966301,
+    "min_reconstruction_fidelity_jaccard": 0.7142857142857143,
     "low_fidelity_case_count_lt_0_5": 0,
     "avg_sensitive_integrity": 1.0,
     "min_sensitive_integrity": 1.0,
@@ -68,7 +66,6 @@
     "cases": [
       {
         "id": "cmp2_001",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 25,
         "compressed_tokens": 19,
         "token_saving_rate": 0.24,
@@ -83,11 +80,9 @@
           "domain": "timing",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
             "hit_count": 13,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
             "hits_sample": [
               "and",
               "but",
@@ -141,8 +136,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -176,8 +171,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -189,11 +184,9 @@
               "domain": "timing",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
                 "hit_count": 13,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
                 "hits_sample": [
                   "and",
                   "but",
@@ -219,26 +212,23 @@
       },
       {
         "id": "cmp2_002",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 19,
-        "compressed_tokens": 16,
-        "token_saving_rate": 0.1578947368421053,
-        "compression_ratio": 0.8421052631578947,
-        "reconstruction_fidelity_jaccard": 0.9411764705882353,
+        "compressed_tokens": 15,
+        "token_saving_rate": 0.21052631578947367,
+        "compression_ratio": 0.7894736842105263,
+        "reconstruction_fidelity_jaccard": 0.8823529411764706,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "direct witness is so the gate requires manual ENTRY_16 unresolved evidence policy review strict traceability with",
-        "reconstructed_text_effective": "ENTRY_16 direct witness is unresolved so the gate requires manual policy review with strict evidence traceability",
+        "compressed_text_effective": "direct witness is so the gate manual proxy ENTRY_16 unresolved evidence policy review strict with",
+        "reconstructed_text_effective": "ENTRY_16 direct witness is unresolved so the gate manual proxy policy review with strict evidence",
         "route": {
           "shard_id": "zone_d_ssot",
           "domain": "ssot",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 11,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 12,
             "hits_sample": [
               "direct",
               "evidence",
@@ -246,6 +236,7 @@
               "is",
               "manual",
               "policy",
+              "proxy",
               "so",
               "strict",
               "the",
@@ -261,11 +252,11 @@
           "error_message": "16-state runtime adapter disabled (Phase A noop)."
         },
         "o200k_raw_tokens": 22,
-        "o200k_compressed_tokens": 19,
-        "o200k_token_saving_rate": 0.13636363636363635,
+        "o200k_compressed_tokens": 17,
+        "o200k_token_saving_rate": 0.2272727272727273,
         "o200k_tokens_before": 22,
-        "o200k_tokens_after": 19,
-        "o200k_saving_rate": 0.13636363636363635,
+        "o200k_tokens_after": 17,
+        "o200k_saving_rate": 0.2272727272727273,
         "gematria_metadata": {
           "raw_combined_sum": 0,
           "compressed_combined_sum": 0,
@@ -290,8 +281,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -325,8 +316,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -338,11 +329,9 @@
               "domain": "ssot",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 11,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 12,
                 "hits_sample": [
                   "direct",
                   "evidence",
@@ -350,6 +339,7 @@
                   "is",
                   "manual",
                   "policy",
+                  "proxy",
                   "so",
                   "strict",
                   "the",
@@ -366,26 +356,23 @@
       },
       {
         "id": "cmp2_003",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 17,
-        "compressed_tokens": 11,
-        "token_saving_rate": 0.3529411764705882,
-        "compression_ratio": 0.6470588235294118,
-        "reconstruction_fidelity_jaccard": 0.7857142857142857,
+        "compressed_tokens": 10,
+        "token_saving_rate": 0.4117647058823529,
+        "compression_ratio": 0.5882352941176471,
+        "reconstruction_fidelity_jaccard": 0.7142857142857143,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "should token while safety caveats track boundary Compression reduce footprint notes",
-        "reconstructed_text_effective": "Compression should reduce token footprint while safety caveats track boundary notes",
+        "compressed_text_effective": "should token while safety track boundary Compression reduce footprint preserving",
+        "reconstructed_text_effective": "Compression should reduce token footprint while preserving safety track boundary",
         "route": {
           "shard_id": "zone_d_ssot",
           "domain": "ssot",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
             "hit_count": 6,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
             "hits_sample": [
               "boundary",
               "safety",
@@ -403,11 +390,11 @@
           "error_message": "16-state runtime adapter disabled (Phase A noop)."
         },
         "o200k_raw_tokens": 17,
-        "o200k_compressed_tokens": 12,
-        "o200k_token_saving_rate": 0.2941176470588235,
+        "o200k_compressed_tokens": 10,
+        "o200k_token_saving_rate": 0.4117647058823529,
         "o200k_tokens_before": 17,
-        "o200k_tokens_after": 12,
-        "o200k_saving_rate": 0.2941176470588235,
+        "o200k_tokens_after": 10,
+        "o200k_saving_rate": 0.4117647058823529,
         "gematria_metadata": {
           "raw_combined_sum": 0,
           "compressed_combined_sum": 0,
@@ -432,8 +419,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -467,8 +454,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -480,11 +467,9 @@
               "domain": "ssot",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
                 "hit_count": 6,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
                 "hits_sample": [
                   "boundary",
                   "safety",
@@ -503,35 +488,456 @@
       },
       {
         "id": "cmp2_004",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 16,
-        "compressed_tokens": 12,
-        "token_saving_rate": 0.25,
-        "compression_ratio": 0.75,
-        "reconstruction_fidelity_jaccard": 0.8,
+        "compressed_tokens": 13,
+        "token_saving_rate": 0.1875,
+        "compression_ratio": 0.8125,
+        "reconstruction_fidelity_jaccard": 0.8666666666666667,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "A strong report source so that future references artifacts can every reproduce",
-        "reconstructed_text_effective": "A strong report references source artifacts so that future can reproduce every",
+        "compressed_text_effective": "A strong report references source artifacts so explicitly that can claim every future",
+        "reconstructed_text_effective": "A strong report references source artifacts explicitly so that future can every claim",
         "route": {
           "shard_id": "zone_d_ssot",
           "domain": "ssot",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 8,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 11,
             "hits_sample": [
+              "artifacts",
               "can",
+              "claim",
               "every",
               "future",
+              "references",
               "report",
               "so",
               "source",
               "strong",
               "that"
+            ]
+          }
+        },
+        "state16": {
+          "state_id": null,
+          "confidence": null,
+          "error_code": "STATE16_NOT_ENABLED",
+          "error_message": "16-state runtime adapter disabled (Phase A noop)."
+        },
+        "o200k_raw_tokens": 16,
+        "o200k_compressed_tokens": 13,
+        "o200k_token_saving_rate": 0.1875,
+        "o200k_tokens_before": 16,
+        "o200k_tokens_after": 13,
+        "o200k_saving_rate": 0.1875,
+        "gematria_metadata": {
+          "raw_combined_sum": 0,
+          "compressed_combined_sum": 0,
+          "reconstructed_combined_sum": 0,
+          "raw_hebrew_sum": 0,
+          "raw_greek_sum": 0,
+          "compressed_hebrew_sum": 0,
+          "compressed_greek_sum": 0,
+          "reconstructed_hebrew_sum": 0,
+          "reconstructed_greek_sum": 0,
+          "raw_hebrew_chars": 0,
+          "raw_greek_chars": 0,
+          "compressed_hebrew_chars": 0,
+          "compressed_greek_chars": 0,
+          "reconstructed_hebrew_chars": 0,
+          "reconstructed_greek_chars": 0
+        },
+        "gematria_4d_bridge": {
+          "vector_4d": {
+            "S": 0.245,
+            "L": 0.245,
+            "K": 0.245,
+            "M": 0.265
+          },
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
+          "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
+        },
+        "gematria_4d_bridge_policy_applied": false,
+        "cee_core": {
+          "schema": "cee_logic_core_v1",
+          "case_id": "cmp2_004",
+          "corpus_type": "canonical",
+          "gematria_metadata": {
+            "raw_combined_sum": 0,
+            "compressed_combined_sum": 0,
+            "reconstructed_combined_sum": 0,
+            "raw_hebrew_sum": 0,
+            "raw_greek_sum": 0,
+            "compressed_hebrew_sum": 0,
+            "compressed_greek_sum": 0,
+            "reconstructed_hebrew_sum": 0,
+            "reconstructed_greek_sum": 0,
+            "raw_hebrew_chars": 0,
+            "raw_greek_chars": 0,
+            "compressed_hebrew_chars": 0,
+            "compressed_greek_chars": 0,
+            "reconstructed_hebrew_chars": 0,
+            "reconstructed_greek_chars": 0
+          },
+          "vector_4d": {
+            "S": 0.245,
+            "L": 0.245,
+            "K": 0.245,
+            "M": 0.265
+          },
+          "vector_sum": 1.0,
+          "sep_target": 0.25,
+          "lambda_deviation": 0.007500000000000007,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
+          "metadata_post_it": {
+            "lane": "A-track",
+            "balance_band": "near_sep_0_25",
+            "note": "numeric-bias-reduced (not hallucination-free)"
+          },
+          "metadata": {
+            "route": {
+              "shard_id": "zone_d_ssot",
+              "domain": "ssot",
+              "master_codebook_lexicon_v1": {
+                "status": "ok",
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 11,
+                "hits_sample": [
+                  "artifacts",
+                  "can",
+                  "claim",
+                  "every",
+                  "future",
+                  "references",
+                  "report",
+                  "so",
+                  "source",
+                  "strong",
+                  "that"
+                ]
+              }
+            },
+            "mode": "experimental",
+            "strategy": "A",
+            "intensity": "extreme"
+          }
+        }
+      },
+      {
+        "id": "cmp2_005",
+        "raw_tokens": 15,
+        "compressed_tokens": 10,
+        "token_saving_rate": 0.33333333333333337,
+        "compression_ratio": 0.6666666666666666,
+        "reconstruction_fidelity_jaccard": 0.7142857142857143,
+        "sensitive_integrity": 1.0,
+        "sensitive_leak": false,
+        "compressed_text_effective": "noise should not monthly governance unless evidence Weekly are confirmed",
+        "reconstructed_text_effective": "Weekly noise should not monthly governance unless evidence are confirmed",
+        "route": {
+          "shard_id": "zone_d_ssot",
+          "domain": "ssot",
+          "master_codebook_lexicon_v1": {
+            "status": "ok",
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 9,
+            "hits_sample": [
+              "are",
+              "confirmed",
+              "evidence",
+              "governance",
+              "monthly",
+              "noise",
+              "not",
+              "should",
+              "unless"
+            ]
+          }
+        },
+        "state16": {
+          "state_id": null,
+          "confidence": null,
+          "error_code": "STATE16_NOT_ENABLED",
+          "error_message": "16-state runtime adapter disabled (Phase A noop)."
+        },
+        "o200k_raw_tokens": 15,
+        "o200k_compressed_tokens": 10,
+        "o200k_token_saving_rate": 0.33333333333333337,
+        "o200k_tokens_before": 15,
+        "o200k_tokens_after": 10,
+        "o200k_saving_rate": 0.33333333333333337,
+        "gematria_metadata": {
+          "raw_combined_sum": 0,
+          "compressed_combined_sum": 0,
+          "reconstructed_combined_sum": 0,
+          "raw_hebrew_sum": 0,
+          "raw_greek_sum": 0,
+          "compressed_hebrew_sum": 0,
+          "compressed_greek_sum": 0,
+          "reconstructed_hebrew_sum": 0,
+          "reconstructed_greek_sum": 0,
+          "raw_hebrew_chars": 0,
+          "raw_greek_chars": 0,
+          "compressed_hebrew_chars": 0,
+          "compressed_greek_chars": 0,
+          "reconstructed_hebrew_chars": 0,
+          "reconstructed_greek_chars": 0
+        },
+        "gematria_4d_bridge": {
+          "vector_4d": {
+            "S": 0.245,
+            "L": 0.245,
+            "K": 0.245,
+            "M": 0.265
+          },
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
+          "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
+        },
+        "gematria_4d_bridge_policy_applied": false,
+        "cee_core": {
+          "schema": "cee_logic_core_v1",
+          "case_id": "cmp2_005",
+          "corpus_type": "canonical",
+          "gematria_metadata": {
+            "raw_combined_sum": 0,
+            "compressed_combined_sum": 0,
+            "reconstructed_combined_sum": 0,
+            "raw_hebrew_sum": 0,
+            "raw_greek_sum": 0,
+            "compressed_hebrew_sum": 0,
+            "compressed_greek_sum": 0,
+            "reconstructed_hebrew_sum": 0,
+            "reconstructed_greek_sum": 0,
+            "raw_hebrew_chars": 0,
+            "raw_greek_chars": 0,
+            "compressed_hebrew_chars": 0,
+            "compressed_greek_chars": 0,
+            "reconstructed_hebrew_chars": 0,
+            "reconstructed_greek_chars": 0
+          },
+          "vector_4d": {
+            "S": 0.245,
+            "L": 0.245,
+            "K": 0.245,
+            "M": 0.265
+          },
+          "vector_sum": 1.0,
+          "sep_target": 0.25,
+          "lambda_deviation": 0.007500000000000007,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
+          "metadata_post_it": {
+            "lane": "A-track",
+            "balance_band": "near_sep_0_25",
+            "note": "numeric-bias-reduced (not hallucination-free)"
+          },
+          "metadata": {
+            "route": {
+              "shard_id": "zone_d_ssot",
+              "domain": "ssot",
+              "master_codebook_lexicon_v1": {
+                "status": "ok",
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 9,
+                "hits_sample": [
+                  "are",
+                  "confirmed",
+                  "evidence",
+                  "governance",
+                  "monthly",
+                  "noise",
+                  "not",
+                  "should",
+                  "unless"
+                ]
+              }
+            },
+            "mode": "experimental",
+            "strategy": "A",
+            "intensity": "extreme"
+          }
+        }
+      },
+      {
+        "id": "cmp2_006",
+        "raw_tokens": 18,
+        "compressed_tokens": 15,
+        "token_saving_rate": 0.16666666666666663,
+        "compression_ratio": 0.8333333333333334,
+        "reconstruction_fidelity_jaccard": 0.9375,
+        "sensitive_integrity": 1.0,
+        "sensitive_leak": false,
+        "compressed_text_effective": "Proxy can support manual review but they must anchors as be direct evidence never witness",
+        "reconstructed_text_effective": "Proxy anchors can support manual review but they must never be as direct witness evidence",
+        "route": {
+          "shard_id": "zone_d_ssot",
+          "domain": "ssot",
+          "master_codebook_lexicon_v1": {
+            "status": "ok",
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 13,
+            "hits_sample": [
+              "as",
+              "be",
+              "but",
+              "can",
+              "direct",
+              "evidence",
+              "manual",
+              "must",
+              "never",
+              "proxy",
+              "support",
+              "they",
+              "witness"
+            ]
+          }
+        },
+        "state16": {
+          "state_id": null,
+          "confidence": null,
+          "error_code": "STATE16_NOT_ENABLED",
+          "error_message": "16-state runtime adapter disabled (Phase A noop)."
+        },
+        "o200k_raw_tokens": 19,
+        "o200k_compressed_tokens": 15,
+        "o200k_token_saving_rate": 0.21052631578947367,
+        "o200k_tokens_before": 19,
+        "o200k_tokens_after": 15,
+        "o200k_saving_rate": 0.21052631578947367,
+        "gematria_metadata": {
+          "raw_combined_sum": 0,
+          "compressed_combined_sum": 0,
+          "reconstructed_combined_sum": 0,
+          "raw_hebrew_sum": 0,
+          "raw_greek_sum": 0,
+          "compressed_hebrew_sum": 0,
+          "compressed_greek_sum": 0,
+          "reconstructed_hebrew_sum": 0,
+          "reconstructed_greek_sum": 0,
+          "raw_hebrew_chars": 0,
+          "raw_greek_chars": 0,
+          "compressed_hebrew_chars": 0,
+          "compressed_greek_chars": 0,
+          "reconstructed_hebrew_chars": 0,
+          "reconstructed_greek_chars": 0
+        },
+        "gematria_4d_bridge": {
+          "vector_4d": {
+            "S": 0.245,
+            "L": 0.245,
+            "K": 0.245,
+            "M": 0.265
+          },
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
+          "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
+        },
+        "gematria_4d_bridge_policy_applied": false,
+        "cee_core": {
+          "schema": "cee_logic_core_v1",
+          "case_id": "cmp2_006",
+          "corpus_type": "canonical",
+          "gematria_metadata": {
+            "raw_combined_sum": 0,
+            "compressed_combined_sum": 0,
+            "reconstructed_combined_sum": 0,
+            "raw_hebrew_sum": 0,
+            "raw_greek_sum": 0,
+            "compressed_hebrew_sum": 0,
+            "compressed_greek_sum": 0,
+            "reconstructed_hebrew_sum": 0,
+            "reconstructed_greek_sum": 0,
+            "raw_hebrew_chars": 0,
+            "raw_greek_chars": 0,
+            "compressed_hebrew_chars": 0,
+            "compressed_greek_chars": 0,
+            "reconstructed_hebrew_chars": 0,
+            "reconstructed_greek_chars": 0
+          },
+          "vector_4d": {
+            "S": 0.245,
+            "L": 0.245,
+            "K": 0.245,
+            "M": 0.265
+          },
+          "vector_sum": 1.0,
+          "sep_target": 0.25,
+          "lambda_deviation": 0.007500000000000007,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
+          "metadata_post_it": {
+            "lane": "A-track",
+            "balance_band": "near_sep_0_25",
+            "note": "numeric-bias-reduced (not hallucination-free)"
+          },
+          "metadata": {
+            "route": {
+              "shard_id": "zone_d_ssot",
+              "domain": "ssot",
+              "master_codebook_lexicon_v1": {
+                "status": "ok",
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 13,
+                "hits_sample": [
+                  "as",
+                  "be",
+                  "but",
+                  "can",
+                  "direct",
+                  "evidence",
+                  "manual",
+                  "must",
+                  "never",
+                  "proxy",
+                  "support",
+                  "they",
+                  "witness"
+                ]
+              }
+            },
+            "mode": "experimental",
+            "strategy": "A",
+            "intensity": "extreme"
+          }
+        }
+      },
+      {
+        "id": "cmp2_007",
+        "raw_tokens": 15,
+        "compressed_tokens": 11,
+        "token_saving_rate": 0.2666666666666667,
+        "compression_ratio": 0.7333333333333333,
+        "reconstruction_fidelity_jaccard": 0.7857142857142857,
+        "sensitive_integrity": 1.0,
+        "sensitive_leak": false,
+        "compressed_text_effective": "Interpretation quality as state beyond bootstrap in improves rows accumulate the",
+        "reconstructed_text_effective": "Interpretation quality improves as state rows accumulate beyond bootstrap in the",
+        "route": {
+          "shard_id": "zone_b_timing",
+          "domain": "timing",
+          "master_codebook_lexicon_v1": {
+            "status": "ok",
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 6,
+            "hits_sample": [
+              "as",
+              "beyond",
+              "in",
+              "interpretation",
+              "state",
+              "the"
             ]
           }
         },
@@ -571,437 +977,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
-          "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
-        },
-        "gematria_4d_bridge_policy_applied": false,
-        "cee_core": {
-          "schema": "cee_logic_core_v1",
-          "case_id": "cmp2_004",
-          "corpus_type": "canonical",
-          "gematria_metadata": {
-            "raw_combined_sum": 0,
-            "compressed_combined_sum": 0,
-            "reconstructed_combined_sum": 0,
-            "raw_hebrew_sum": 0,
-            "raw_greek_sum": 0,
-            "compressed_hebrew_sum": 0,
-            "compressed_greek_sum": 0,
-            "reconstructed_hebrew_sum": 0,
-            "reconstructed_greek_sum": 0,
-            "raw_hebrew_chars": 0,
-            "raw_greek_chars": 0,
-            "compressed_hebrew_chars": 0,
-            "compressed_greek_chars": 0,
-            "reconstructed_hebrew_chars": 0,
-            "reconstructed_greek_chars": 0
-          },
-          "vector_4d": {
-            "S": 0.245,
-            "L": 0.245,
-            "K": 0.245,
-            "M": 0.265
-          },
-          "vector_sum": 1.0,
-          "sep_target": 0.25,
-          "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
-          "metadata_post_it": {
-            "lane": "A-track",
-            "balance_band": "near_sep_0_25",
-            "note": "numeric-bias-reduced (not hallucination-free)"
-          },
-          "metadata": {
-            "route": {
-              "shard_id": "zone_d_ssot",
-              "domain": "ssot",
-              "master_codebook_lexicon_v1": {
-                "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 8,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "can",
-                  "every",
-                  "future",
-                  "report",
-                  "so",
-                  "source",
-                  "strong",
-                  "that"
-                ]
-              }
-            },
-            "mode": "experimental",
-            "strategy": "A",
-            "intensity": "extreme"
-          }
-        }
-      },
-      {
-        "id": "cmp2_005",
-        "eval_mode_effective": "experimental",
-        "raw_tokens": 15,
-        "compressed_tokens": 13,
-        "token_saving_rate": 0.1333333333333333,
-        "compression_ratio": 0.8666666666666667,
-        "reconstruction_fidelity_jaccard": 0.9285714285714286,
-        "sensitive_integrity": 1.0,
-        "sensitive_leak": false,
-        "compressed_text_effective": "noise should not override governance cadence unless Weekly are confirmed evidence external updates",
-        "reconstructed_text_effective": "Weekly noise should not override governance cadence unless external evidence updates are confirmed",
-        "route": {
-          "shard_id": "zone_d_ssot",
-          "domain": "ssot",
-          "master_codebook_lexicon_v1": {
-            "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 8,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "are",
-              "confirmed",
-              "evidence",
-              "governance",
-              "noise",
-              "not",
-              "should",
-              "unless"
-            ]
-          }
-        },
-        "state16": {
-          "state_id": null,
-          "confidence": null,
-          "error_code": "STATE16_NOT_ENABLED",
-          "error_message": "16-state runtime adapter disabled (Phase A noop)."
-        },
-        "o200k_raw_tokens": 15,
-        "o200k_compressed_tokens": 13,
-        "o200k_token_saving_rate": 0.1333333333333333,
-        "o200k_tokens_before": 15,
-        "o200k_tokens_after": 13,
-        "o200k_saving_rate": 0.1333333333333333,
-        "gematria_metadata": {
-          "raw_combined_sum": 0,
-          "compressed_combined_sum": 0,
-          "reconstructed_combined_sum": 0,
-          "raw_hebrew_sum": 0,
-          "raw_greek_sum": 0,
-          "compressed_hebrew_sum": 0,
-          "compressed_greek_sum": 0,
-          "reconstructed_hebrew_sum": 0,
-          "reconstructed_greek_sum": 0,
-          "raw_hebrew_chars": 0,
-          "raw_greek_chars": 0,
-          "compressed_hebrew_chars": 0,
-          "compressed_greek_chars": 0,
-          "reconstructed_hebrew_chars": 0,
-          "reconstructed_greek_chars": 0
-        },
-        "gematria_4d_bridge": {
-          "vector_4d": {
-            "S": 0.245,
-            "L": 0.245,
-            "K": 0.245,
-            "M": 0.265
-          },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
-          "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
-        },
-        "gematria_4d_bridge_policy_applied": false,
-        "cee_core": {
-          "schema": "cee_logic_core_v1",
-          "case_id": "cmp2_005",
-          "corpus_type": "canonical",
-          "gematria_metadata": {
-            "raw_combined_sum": 0,
-            "compressed_combined_sum": 0,
-            "reconstructed_combined_sum": 0,
-            "raw_hebrew_sum": 0,
-            "raw_greek_sum": 0,
-            "compressed_hebrew_sum": 0,
-            "compressed_greek_sum": 0,
-            "reconstructed_hebrew_sum": 0,
-            "reconstructed_greek_sum": 0,
-            "raw_hebrew_chars": 0,
-            "raw_greek_chars": 0,
-            "compressed_hebrew_chars": 0,
-            "compressed_greek_chars": 0,
-            "reconstructed_hebrew_chars": 0,
-            "reconstructed_greek_chars": 0
-          },
-          "vector_4d": {
-            "S": 0.245,
-            "L": 0.245,
-            "K": 0.245,
-            "M": 0.265
-          },
-          "vector_sum": 1.0,
-          "sep_target": 0.25,
-          "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
-          "metadata_post_it": {
-            "lane": "A-track",
-            "balance_band": "near_sep_0_25",
-            "note": "numeric-bias-reduced (not hallucination-free)"
-          },
-          "metadata": {
-            "route": {
-              "shard_id": "zone_d_ssot",
-              "domain": "ssot",
-              "master_codebook_lexicon_v1": {
-                "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 8,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "are",
-                  "confirmed",
-                  "evidence",
-                  "governance",
-                  "noise",
-                  "not",
-                  "should",
-                  "unless"
-                ]
-              }
-            },
-            "mode": "experimental",
-            "strategy": "A",
-            "intensity": "extreme"
-          }
-        }
-      },
-      {
-        "id": "cmp2_006",
-        "eval_mode_effective": "experimental",
-        "raw_tokens": 18,
-        "compressed_tokens": 14,
-        "token_saving_rate": 0.2222222222222222,
-        "compression_ratio": 0.7777777777777778,
-        "reconstruction_fidelity_jaccard": 0.875,
-        "sensitive_integrity": 1.0,
-        "sensitive_leak": false,
-        "compressed_text_effective": "can support manual review but they must never Proxy as be direct evidence witness",
-        "reconstructed_text_effective": "Proxy can support manual review but they must never be as direct witness evidence",
-        "route": {
-          "shard_id": "zone_d_ssot",
-          "domain": "ssot",
-          "master_codebook_lexicon_v1": {
-            "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 12,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "as",
-              "be",
-              "but",
-              "can",
-              "direct",
-              "evidence",
-              "manual",
-              "must",
-              "never",
-              "support",
-              "they",
-              "witness"
-            ]
-          }
-        },
-        "state16": {
-          "state_id": null,
-          "confidence": null,
-          "error_code": "STATE16_NOT_ENABLED",
-          "error_message": "16-state runtime adapter disabled (Phase A noop)."
-        },
-        "o200k_raw_tokens": 19,
-        "o200k_compressed_tokens": 14,
-        "o200k_token_saving_rate": 0.26315789473684215,
-        "o200k_tokens_before": 19,
-        "o200k_tokens_after": 14,
-        "o200k_saving_rate": 0.26315789473684215,
-        "gematria_metadata": {
-          "raw_combined_sum": 0,
-          "compressed_combined_sum": 0,
-          "reconstructed_combined_sum": 0,
-          "raw_hebrew_sum": 0,
-          "raw_greek_sum": 0,
-          "compressed_hebrew_sum": 0,
-          "compressed_greek_sum": 0,
-          "reconstructed_hebrew_sum": 0,
-          "reconstructed_greek_sum": 0,
-          "raw_hebrew_chars": 0,
-          "raw_greek_chars": 0,
-          "compressed_hebrew_chars": 0,
-          "compressed_greek_chars": 0,
-          "reconstructed_hebrew_chars": 0,
-          "reconstructed_greek_chars": 0
-        },
-        "gematria_4d_bridge": {
-          "vector_4d": {
-            "S": 0.245,
-            "L": 0.245,
-            "K": 0.245,
-            "M": 0.265
-          },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
-          "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
-        },
-        "gematria_4d_bridge_policy_applied": false,
-        "cee_core": {
-          "schema": "cee_logic_core_v1",
-          "case_id": "cmp2_006",
-          "corpus_type": "canonical",
-          "gematria_metadata": {
-            "raw_combined_sum": 0,
-            "compressed_combined_sum": 0,
-            "reconstructed_combined_sum": 0,
-            "raw_hebrew_sum": 0,
-            "raw_greek_sum": 0,
-            "compressed_hebrew_sum": 0,
-            "compressed_greek_sum": 0,
-            "reconstructed_hebrew_sum": 0,
-            "reconstructed_greek_sum": 0,
-            "raw_hebrew_chars": 0,
-            "raw_greek_chars": 0,
-            "compressed_hebrew_chars": 0,
-            "compressed_greek_chars": 0,
-            "reconstructed_hebrew_chars": 0,
-            "reconstructed_greek_chars": 0
-          },
-          "vector_4d": {
-            "S": 0.245,
-            "L": 0.245,
-            "K": 0.245,
-            "M": 0.265
-          },
-          "vector_sum": 1.0,
-          "sep_target": 0.25,
-          "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
-          "metadata_post_it": {
-            "lane": "A-track",
-            "balance_band": "near_sep_0_25",
-            "note": "numeric-bias-reduced (not hallucination-free)"
-          },
-          "metadata": {
-            "route": {
-              "shard_id": "zone_d_ssot",
-              "domain": "ssot",
-              "master_codebook_lexicon_v1": {
-                "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 12,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "as",
-                  "be",
-                  "but",
-                  "can",
-                  "direct",
-                  "evidence",
-                  "manual",
-                  "must",
-                  "never",
-                  "support",
-                  "they",
-                  "witness"
-                ]
-              }
-            },
-            "mode": "experimental",
-            "strategy": "A",
-            "intensity": "extreme"
-          }
-        }
-      },
-      {
-        "id": "cmp2_007",
-        "eval_mode_effective": "experimental",
-        "raw_tokens": 15,
-        "compressed_tokens": 14,
-        "token_saving_rate": 0.06666666666666665,
-        "compression_ratio": 0.9333333333333333,
-        "reconstruction_fidelity_jaccard": 1.0,
-        "sensitive_integrity": 1.0,
-        "sensitive_leak": false,
-        "compressed_text_effective": "Interpretation quality as state beyond bootstrap thresholds improves rows accumulate in matrix the transition",
-        "reconstructed_text_effective": "Interpretation quality improves as state rows accumulate beyond bootstrap thresholds in the transition matrix",
-        "route": {
-          "shard_id": "zone_b_timing",
-          "domain": "timing",
-          "master_codebook_lexicon_v1": {
-            "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 6,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "as",
-              "beyond",
-              "in",
-              "interpretation",
-              "state",
-              "the"
-            ]
-          }
-        },
-        "state16": {
-          "state_id": null,
-          "confidence": null,
-          "error_code": "STATE16_NOT_ENABLED",
-          "error_message": "16-state runtime adapter disabled (Phase A noop)."
-        },
-        "o200k_raw_tokens": 16,
-        "o200k_compressed_tokens": 15,
-        "o200k_token_saving_rate": 0.0625,
-        "o200k_tokens_before": 16,
-        "o200k_tokens_after": 15,
-        "o200k_saving_rate": 0.0625,
-        "gematria_metadata": {
-          "raw_combined_sum": 0,
-          "compressed_combined_sum": 0,
-          "reconstructed_combined_sum": 0,
-          "raw_hebrew_sum": 0,
-          "raw_greek_sum": 0,
-          "compressed_hebrew_sum": 0,
-          "compressed_greek_sum": 0,
-          "reconstructed_hebrew_sum": 0,
-          "reconstructed_greek_sum": 0,
-          "raw_hebrew_chars": 0,
-          "raw_greek_chars": 0,
-          "compressed_hebrew_chars": 0,
-          "compressed_greek_chars": 0,
-          "reconstructed_hebrew_chars": 0,
-          "reconstructed_greek_chars": 0
-        },
-        "gematria_4d_bridge": {
-          "vector_4d": {
-            "S": 0.245,
-            "L": 0.245,
-            "K": 0.245,
-            "M": 0.265
-          },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -1035,8 +1012,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -1048,11 +1025,9 @@
               "domain": "timing",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
                 "hit_count": 6,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
                 "hits_sample": [
                   "as",
                   "beyond",
@@ -1071,7 +1046,6 @@
       },
       {
         "id": "cmp2_008",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 18,
         "compressed_tokens": 11,
         "token_saving_rate": 0.38888888888888884,
@@ -1079,21 +1053,21 @@
         "reconstruction_fidelity_jaccard": 0.7857142857142857,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "All should Myeongri Bible and Sasang constitution tri lens answers constraints",
-        "reconstructed_text_effective": "All tri lens answers should Myeongri Bible and Sasang constitution constraints",
+        "compressed_text_effective": "All lens should Myeongri Bible alignment and tri answers include Sasang",
+        "reconstructed_text_effective": "All tri lens answers should include Myeongri Bible alignment and Sasang",
         "route": {
           "shard_id": "zone_d_ssot",
           "domain": "ssot",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 3,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 5,
             "hits_sample": [
+              "alignment",
               "all",
               "and",
+              "lens",
               "should"
             ]
           }
@@ -1134,8 +1108,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -1169,8 +1143,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -1182,14 +1156,14 @@
               "domain": "ssot",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 3,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 5,
                 "hits_sample": [
+                  "alignment",
                   "all",
                   "and",
+                  "lens",
                   "should"
                 ]
               }
@@ -1202,34 +1176,36 @@
       },
       {
         "id": "cmp2_009",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 21,
-        "compressed_tokens": 11,
-        "token_saving_rate": 0.47619047619047616,
-        "compression_ratio": 0.5238095238095238,
-        "reconstruction_fidelity_jaccard": 0.6875,
+        "compressed_tokens": 16,
+        "token_saving_rate": 0.23809523809523814,
+        "compression_ratio": 0.7619047619047619,
+        "reconstruction_fidelity_jaccard": 1.0,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "Fact tests protect the from and keep contracts Lock codebook between",
-        "reconstructed_text_effective": "Fact Lock tests protect the codebook from and keep contracts between and",
+        "compressed_text_effective": "Fact Lock tests protect the from and keep codebook drift aligned between CI contracts docs scripts",
+        "reconstructed_text_effective": "Fact Lock tests protect the codebook from drift and keep contracts aligned between docs scripts and CI",
         "route": {
           "shard_id": "zone_d_ssot",
           "domain": "ssot",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 9,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 14,
             "hits_sample": [
+              "aligned",
               "and",
               "between",
+              "ci",
               "contracts",
+              "docs",
               "fact",
               "from",
               "keep",
+              "lock",
               "protect",
+              "scripts",
               "tests",
               "the"
             ]
@@ -1242,11 +1218,11 @@
           "error_message": "16-state runtime adapter disabled (Phase A noop)."
         },
         "o200k_raw_tokens": 22,
-        "o200k_compressed_tokens": 12,
-        "o200k_token_saving_rate": 0.4545454545454546,
+        "o200k_compressed_tokens": 17,
+        "o200k_token_saving_rate": 0.2272727272727273,
         "o200k_tokens_before": 22,
-        "o200k_tokens_after": 12,
-        "o200k_saving_rate": 0.4545454545454546,
+        "o200k_tokens_after": 17,
+        "o200k_saving_rate": 0.2272727272727273,
         "gematria_metadata": {
           "raw_combined_sum": 0,
           "compressed_combined_sum": 0,
@@ -1271,8 +1247,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -1306,8 +1282,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -1319,19 +1295,22 @@
               "domain": "ssot",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 9,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 14,
                 "hits_sample": [
+                  "aligned",
                   "and",
                   "between",
+                  "ci",
                   "contracts",
+                  "docs",
                   "fact",
                   "from",
                   "keep",
+                  "lock",
                   "protect",
+                  "scripts",
                   "tests",
                   "the"
                 ]
@@ -1345,7 +1324,6 @@
       },
       {
         "id": "cmp2_010",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 14,
         "compressed_tokens": 10,
         "token_saving_rate": 0.2857142857142857,
@@ -1353,20 +1331,18 @@
         "reconstruction_fidelity_jaccard": 0.7692307692307693,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "should separate from quality to false Performance reporting operational stability",
-        "reconstructed_text_effective": "Performance reporting should separate operational stability from quality to false",
+        "compressed_text_effective": "should separate from quality to confidence Performance reporting operational stability",
+        "reconstructed_text_effective": "Performance reporting should separate operational stability from quality to confidence",
         "route": {
           "shard_id": "zone_d_ssot",
           "domain": "ssot",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
             "hit_count": 5,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
             "hits_sample": [
-              "false",
+              "confidence",
               "from",
               "separate",
               "should",
@@ -1410,8 +1386,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -1445,8 +1421,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -1458,13 +1434,11 @@
               "domain": "ssot",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
                 "hit_count": 5,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
                 "hits_sample": [
-                  "false",
+                  "confidence",
                   "from",
                   "separate",
                   "should",
@@ -1480,31 +1454,24 @@
       },
       {
         "id": "cmp2_011",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 18,
         "compressed_tokens": 8,
         "token_saving_rate": 0.5555555555555556,
         "compression_ratio": 0.4444444444444444,
-        "reconstruction_fidelity_jaccard": 0.8125,
+        "reconstruction_fidelity_jaccard": 0.9375,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "소양인에게는 열이 위로 수분 보충과 호흡 안정이 운동은",
-        "reconstructed_text_effective": "소양인에게는 열이 위로 치밀 때 수분 보충과 호흡 안정이 먼저이고 무리한 운동은 저녁",
+        "compressed_text_effective": "소양인에게는 열이 위로 보충과 호흡 안정이 운동은 시간에",
+        "reconstructed_text_effective": "소양인에게는 열이 위로 치밀 때 수분 보충과 호흡 안정이 먼저이고 무리한 운동은 저녁 시간에 피해야",
         "route": {
           "shard_id": "zone_g_health",
           "domain": "health",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 3,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "소양인에게는",
-              "수분",
-              "호흡"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -1543,8 +1510,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -1578,8 +1545,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -1591,16 +1558,10 @@
               "domain": "health",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 3,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "소양인에게는",
-                  "수분",
-                  "호흡"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -1611,7 +1572,6 @@
       },
       {
         "id": "cmp2_012",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 17,
         "compressed_tokens": 8,
         "token_saving_rate": 0.5294117647058824,
@@ -1626,14 +1586,10 @@
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "소음인의"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -1672,8 +1628,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -1707,8 +1663,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -1720,14 +1676,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "소음인의"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -1738,7 +1690,6 @@
       },
       {
         "id": "cmp2_013",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 18,
         "compressed_tokens": 8,
         "token_saving_rate": 0.5555555555555556,
@@ -1753,14 +1704,10 @@
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "태음인은"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -1799,8 +1746,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -1834,8 +1781,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -1847,14 +1794,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "태음인은"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -1865,7 +1808,6 @@
       },
       {
         "id": "cmp2_014",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 17,
         "compressed_tokens": 11,
         "token_saving_rate": 0.3529411764705882,
@@ -1880,14 +1822,10 @@
           "domain": "health",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "수면"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -1926,8 +1864,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -1961,8 +1899,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -1974,14 +1912,10 @@
               "domain": "health",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "수면"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -1992,7 +1926,6 @@
       },
       {
         "id": "cmp2_015",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 16,
         "compressed_tokens": 8,
         "token_saving_rate": 0.5,
@@ -2007,14 +1940,10 @@
           "domain": "scm",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "사상의학"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -2053,8 +1982,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -2088,8 +2017,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -2101,14 +2030,10 @@
               "domain": "scm",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "사상의학"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -2119,7 +2044,6 @@
       },
       {
         "id": "cmp2_016",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 17,
         "compressed_tokens": 7,
         "token_saving_rate": 0.5882352941176471,
@@ -2134,16 +2058,10 @@
           "domain": "scm",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 3,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "명리",
-              "사상의학",
-              "체질"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -2182,8 +2100,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -2217,8 +2135,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -2230,16 +2148,10 @@
               "domain": "scm",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 3,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "명리",
-                  "사상의학",
-                  "체질"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -2250,158 +2162,24 @@
       },
       {
         "id": "cmp2_017",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 18,
         "compressed_tokens": 8,
         "token_saving_rate": 0.5555555555555556,
         "compression_ratio": 0.4444444444444444,
-        "reconstruction_fidelity_jaccard": 0.8235294117647058,
+        "reconstruction_fidelity_jaccard": 0.8823529411764706,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "성경 신호가 강하더라도 체질 지표가 임계치를 강도를 회복",
-        "reconstructed_text_effective": "성경 정렬 신호가 강하더라도 체질 부담 지표가 임계치를 넘으면 해석 강도를 낮추고 회복 루틴을",
+        "compressed_text_effective": "성경 신호가 강하더라도 체질 지표가 임계치를 강도를 루틴을",
+        "reconstructed_text_effective": "성경 정렬 신호가 강하더라도 체질 부담 지표가 임계치를 넘으면 해석 강도를 낮추고 회복 루틴을 먼저",
         "route": {
           "shard_id": "zone_a_scm",
           "domain": "scm",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 2,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "체질",
-              "회복"
-            ]
-          }
-        },
-        "state16": {
-          "state_id": null,
-          "confidence": null,
-          "error_code": "STATE16_NOT_ENABLED",
-          "error_message": "16-state runtime adapter disabled (Phase A noop)."
-        },
-        "o200k_raw_tokens": 40,
-        "o200k_compressed_tokens": 21,
-        "o200k_token_saving_rate": 0.475,
-        "o200k_tokens_before": 40,
-        "o200k_tokens_after": 21,
-        "o200k_saving_rate": 0.475,
-        "gematria_metadata": {
-          "raw_combined_sum": 0,
-          "compressed_combined_sum": 0,
-          "reconstructed_combined_sum": 0,
-          "raw_hebrew_sum": 0,
-          "raw_greek_sum": 0,
-          "compressed_hebrew_sum": 0,
-          "compressed_greek_sum": 0,
-          "reconstructed_hebrew_sum": 0,
-          "reconstructed_greek_sum": 0,
-          "raw_hebrew_chars": 0,
-          "raw_greek_chars": 0,
-          "compressed_hebrew_chars": 0,
-          "compressed_greek_chars": 0,
-          "reconstructed_hebrew_chars": 0,
-          "reconstructed_greek_chars": 0
-        },
-        "gematria_4d_bridge": {
-          "vector_4d": {
-            "S": 0.245,
-            "L": 0.245,
-            "K": 0.245,
-            "M": 0.265
-          },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
-          "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
-        },
-        "gematria_4d_bridge_policy_applied": false,
-        "cee_core": {
-          "schema": "cee_logic_core_v1",
-          "case_id": "cmp2_017",
-          "corpus_type": "canonical",
-          "gematria_metadata": {
-            "raw_combined_sum": 0,
-            "compressed_combined_sum": 0,
-            "reconstructed_combined_sum": 0,
-            "raw_hebrew_sum": 0,
-            "raw_greek_sum": 0,
-            "compressed_hebrew_sum": 0,
-            "compressed_greek_sum": 0,
-            "reconstructed_hebrew_sum": 0,
-            "reconstructed_greek_sum": 0,
-            "raw_hebrew_chars": 0,
-            "raw_greek_chars": 0,
-            "compressed_hebrew_chars": 0,
-            "compressed_greek_chars": 0,
-            "reconstructed_hebrew_chars": 0,
-            "reconstructed_greek_chars": 0
-          },
-          "vector_4d": {
-            "S": 0.245,
-            "L": 0.245,
-            "K": 0.245,
-            "M": 0.265
-          },
-          "vector_sum": 1.0,
-          "sep_target": 0.25,
-          "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
-          "metadata_post_it": {
-            "lane": "A-track",
-            "balance_band": "near_sep_0_25",
-            "note": "numeric-bias-reduced (not hallucination-free)"
-          },
-          "metadata": {
-            "route": {
-              "shard_id": "zone_a_scm",
-              "domain": "scm",
-              "master_codebook_lexicon_v1": {
-                "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 2,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "체질",
-                  "회복"
-                ]
-              }
-            },
-            "mode": "experimental",
-            "strategy": "A",
-            "intensity": "extreme"
-          }
-        }
-      },
-      {
-        "id": "cmp2_018",
-        "eval_mode_effective": "experimental",
-        "raw_tokens": 17,
-        "compressed_tokens": 8,
-        "token_saving_rate": 0.5294117647058824,
-        "compression_ratio": 0.47058823529411764,
-        "reconstruction_fidelity_jaccard": 0.875,
-        "sensitive_integrity": 1.0,
-        "sensitive_leak": false,
-        "compressed_text_effective": "소양인의 패턴은 카페인과 수면 부족이 증폭되므로 제한과 취침",
-        "reconstructed_text_effective": "소양인의 과열 패턴은 카페인과 수면 부족이 겹칠 때 증폭되므로 오후 카페인 제한과 취침 루틴",
-        "route": {
-          "shard_id": "zone_g_health",
-          "domain": "health",
-          "master_codebook_lexicon_v1": {
-            "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "수면"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -2440,8 +2218,126 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
+          "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
+        },
+        "gematria_4d_bridge_policy_applied": false,
+        "cee_core": {
+          "schema": "cee_logic_core_v1",
+          "case_id": "cmp2_017",
+          "corpus_type": "canonical",
+          "gematria_metadata": {
+            "raw_combined_sum": 0,
+            "compressed_combined_sum": 0,
+            "reconstructed_combined_sum": 0,
+            "raw_hebrew_sum": 0,
+            "raw_greek_sum": 0,
+            "compressed_hebrew_sum": 0,
+            "compressed_greek_sum": 0,
+            "reconstructed_hebrew_sum": 0,
+            "reconstructed_greek_sum": 0,
+            "raw_hebrew_chars": 0,
+            "raw_greek_chars": 0,
+            "compressed_hebrew_chars": 0,
+            "compressed_greek_chars": 0,
+            "reconstructed_hebrew_chars": 0,
+            "reconstructed_greek_chars": 0
+          },
+          "vector_4d": {
+            "S": 0.245,
+            "L": 0.245,
+            "K": 0.245,
+            "M": 0.265
+          },
+          "vector_sum": 1.0,
+          "sep_target": 0.25,
+          "lambda_deviation": 0.007500000000000007,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
+          "metadata_post_it": {
+            "lane": "A-track",
+            "balance_band": "near_sep_0_25",
+            "note": "numeric-bias-reduced (not hallucination-free)"
+          },
+          "metadata": {
+            "route": {
+              "shard_id": "zone_a_scm",
+              "domain": "scm",
+              "master_codebook_lexicon_v1": {
+                "status": "ok",
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
+              }
+            },
+            "mode": "experimental",
+            "strategy": "A",
+            "intensity": "extreme"
+          }
+        }
+      },
+      {
+        "id": "cmp2_018",
+        "raw_tokens": 17,
+        "compressed_tokens": 8,
+        "token_saving_rate": 0.5294117647058824,
+        "compression_ratio": 0.47058823529411764,
+        "reconstruction_fidelity_jaccard": 0.875,
+        "sensitive_integrity": 1.0,
+        "sensitive_leak": false,
+        "compressed_text_effective": "소양인의 패턴은 카페인과 수면 부족이 증폭되므로 제한과 취침",
+        "reconstructed_text_effective": "소양인의 과열 패턴은 카페인과 수면 부족이 겹칠 때 증폭되므로 오후 카페인 제한과 취침 루틴",
+        "route": {
+          "shard_id": "zone_g_health",
+          "domain": "health",
+          "master_codebook_lexicon_v1": {
+            "status": "ok",
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
+          }
+        },
+        "state16": {
+          "state_id": null,
+          "confidence": null,
+          "error_code": "STATE16_NOT_ENABLED",
+          "error_message": "16-state runtime adapter disabled (Phase A noop)."
+        },
+        "o200k_raw_tokens": 40,
+        "o200k_compressed_tokens": 22,
+        "o200k_token_saving_rate": 0.44999999999999996,
+        "o200k_tokens_before": 40,
+        "o200k_tokens_after": 22,
+        "o200k_saving_rate": 0.44999999999999996,
+        "gematria_metadata": {
+          "raw_combined_sum": 0,
+          "compressed_combined_sum": 0,
+          "reconstructed_combined_sum": 0,
+          "raw_hebrew_sum": 0,
+          "raw_greek_sum": 0,
+          "compressed_hebrew_sum": 0,
+          "compressed_greek_sum": 0,
+          "reconstructed_hebrew_sum": 0,
+          "reconstructed_greek_sum": 0,
+          "raw_hebrew_chars": 0,
+          "raw_greek_chars": 0,
+          "compressed_hebrew_chars": 0,
+          "compressed_greek_chars": 0,
+          "reconstructed_hebrew_chars": 0,
+          "reconstructed_greek_chars": 0
+        },
+        "gematria_4d_bridge": {
+          "vector_4d": {
+            "S": 0.245,
+            "L": 0.245,
+            "K": 0.245,
+            "M": 0.265
+          },
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -2475,8 +2371,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -2488,14 +2384,10 @@
               "domain": "health",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "수면"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -2506,7 +2398,6 @@
       },
       {
         "id": "cmp2_019",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 18,
         "compressed_tokens": 8,
         "token_saving_rate": 0.5555555555555556,
@@ -2521,14 +2412,10 @@
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "소음인의"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -2567,8 +2454,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -2602,8 +2489,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -2615,14 +2502,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "소음인의"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -2633,7 +2516,6 @@
       },
       {
         "id": "cmp2_020",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 17,
         "compressed_tokens": 8,
         "token_saving_rate": 0.5294117647058824,
@@ -2648,14 +2530,10 @@
           "domain": "health",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "호흡"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -2694,8 +2572,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -2729,8 +2607,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -2742,14 +2620,10 @@
               "domain": "health",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "호흡"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -2760,7 +2634,6 @@
       },
       {
         "id": "cmp2_021",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 20,
         "compressed_tokens": 9,
         "token_saving_rate": 0.55,
@@ -2768,21 +2641,17 @@
         "reconstruction_fidelity_jaccard": 1.0,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "태양인의 저하는 수분 부족과 노출이 두드러지므로 사이에 휴식을 한다",
+        "compressed_text_effective": "태양인의 저하는 부족과 노출이 두드러지므로 사이에 휴식을 한다 집중",
         "reconstructed_text_effective": "태양인의 집중 저하는 수분 부족과 과도한 화면 노출이 동반될 때 두드러지므로 작업 블록 사이에 눈 휴식을 반드시 넣어야 한다",
         "route": {
           "shard_id": "zone_c_hangul",
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "수분"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -2792,11 +2661,11 @@
           "error_message": "16-state runtime adapter disabled (Phase A noop)."
         },
         "o200k_raw_tokens": 40,
-        "o200k_compressed_tokens": 22,
-        "o200k_token_saving_rate": 0.44999999999999996,
+        "o200k_compressed_tokens": 21,
+        "o200k_token_saving_rate": 0.475,
         "o200k_tokens_before": 40,
-        "o200k_tokens_after": 22,
-        "o200k_saving_rate": 0.44999999999999996,
+        "o200k_tokens_after": 21,
+        "o200k_saving_rate": 0.475,
         "gematria_metadata": {
           "raw_combined_sum": 0,
           "compressed_combined_sum": 0,
@@ -2821,8 +2690,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -2856,8 +2725,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -2869,14 +2738,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "수분"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -2887,7 +2752,6 @@
       },
       {
         "id": "cmp2_022",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 20,
         "compressed_tokens": 8,
         "token_saving_rate": 0.6,
@@ -2902,14 +2766,10 @@
           "domain": "scm",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "체질"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -2948,8 +2808,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -2983,8 +2843,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -2996,14 +2856,10 @@
               "domain": "scm",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "체질"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -3014,30 +2870,24 @@
       },
       {
         "id": "cmp2_023",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 16,
-        "compressed_tokens": 9,
-        "token_saving_rate": 0.4375,
-        "compression_ratio": 0.5625,
+        "compressed_tokens": 8,
+        "token_saving_rate": 0.5,
+        "compression_ratio": 0.5,
         "reconstruction_fidelity_jaccard": 0.9333333333333333,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "사상의학 문맥에서 숫자와 단위는 축을 바꾸는 요소이므로 손실되면 압축",
+        "compressed_text_effective": "사상의학 문맥에서 숫자와 단위는 축을 바꾸는 요소이므로 손실되면",
         "reconstructed_text_effective": "사상의학 문맥에서 숫자와 단위는 의미 축을 바꾸는 핵심 요소이므로 압축 과정에서 절대 손실되면 안",
         "route": {
           "shard_id": "zone_a_scm",
           "domain": "scm",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 2,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "사상의학",
-              "압축"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -3047,11 +2897,11 @@
           "error_message": "16-state runtime adapter disabled (Phase A noop)."
         },
         "o200k_raw_tokens": 36,
-        "o200k_compressed_tokens": 26,
-        "o200k_token_saving_rate": 0.2777777777777778,
+        "o200k_compressed_tokens": 24,
+        "o200k_token_saving_rate": 0.33333333333333337,
         "o200k_tokens_before": 36,
-        "o200k_tokens_after": 26,
-        "o200k_saving_rate": 0.2777777777777778,
+        "o200k_tokens_after": 24,
+        "o200k_saving_rate": 0.33333333333333337,
         "gematria_metadata": {
           "raw_combined_sum": 0,
           "compressed_combined_sum": 0,
@@ -3076,8 +2926,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -3111,8 +2961,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -3124,15 +2974,10 @@
               "domain": "scm",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 2,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "사상의학",
-                  "압축"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -3143,7 +2988,6 @@
       },
       {
         "id": "cmp2_024",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 18,
         "compressed_tokens": 8,
         "token_saving_rate": 0.5555555555555556,
@@ -3151,21 +2995,17 @@
         "reconstruction_fidelity_jaccard": 1.0,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "고유명사와 체질명은 하나로도 해석이 복원 단계에서 검사를 한다",
+        "compressed_text_effective": "고유명사와 체질명은 하나로도 해석이 단계에서 검사를 한다 복원",
         "reconstructed_text_effective": "고유명사와 체질명은 오탈자 하나로도 해석이 바뀔 수 있어 복원 단계에서 원문 대조 검사를 반드시 수행해야 한다",
         "route": {
           "shard_id": "zone_c_hangul",
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "복원"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -3204,8 +3044,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -3239,8 +3079,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -3252,14 +3092,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "복원"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -3270,7 +3106,6 @@
       },
       {
         "id": "cmp2_025",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 18,
         "compressed_tokens": 8,
         "token_saving_rate": 0.5555555555555556,
@@ -3278,21 +3113,17 @@
         "reconstruction_fidelity_jaccard": 0.875,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "도메인에서는 절약률보다 복원 안정성을 정책을 한다 민감 임계치",
+        "compressed_text_effective": "도메인에서는 절약률보다 안정성을 정책을 한다 민감 복원 임계치",
         "reconstructed_text_effective": "민감 도메인에서는 토큰 절약률보다 복원 안정성을 우선해야 하며 임계치 위반 롤백 정책을 적용해야 한다",
         "route": {
           "shard_id": "zone_c_hangul",
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "복원"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -3331,8 +3162,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -3366,8 +3197,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -3379,14 +3210,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "복원"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -3397,30 +3224,24 @@
       },
       {
         "id": "cmp2_026",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 18,
         "compressed_tokens": 8,
         "token_saving_rate": 0.5555555555555556,
         "compression_ratio": 0.4444444444444444,
-        "reconstruction_fidelity_jaccard": 0.8823529411764706,
+        "reconstruction_fidelity_jaccard": 1.0,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "사전이 압축 결과가 일시적으로 보여도 복원 실패가 있다",
-        "reconstructed_text_effective": "변환 사전이 비어 있으면 압축 결과가 일시적으로 좋아 보여도 실제 복원 실패가 누적될 수 있다",
+        "compressed_text_effective": "사전이 압축 결과가 일시적으로 보여도 실패가 있다 체질별",
+        "reconstructed_text_effective": "체질별 금칙 변환 사전이 비어 있으면 압축 결과가 일시적으로 좋아 보여도 실제 복원 실패가 누적될 수 있다",
         "route": {
           "shard_id": "zone_c_hangul",
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 2,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "복원",
-              "압축"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -3430,11 +3251,11 @@
           "error_message": "16-state runtime adapter disabled (Phase A noop)."
         },
         "o200k_raw_tokens": 35,
-        "o200k_compressed_tokens": 17,
-        "o200k_token_saving_rate": 0.5142857142857142,
+        "o200k_compressed_tokens": 18,
+        "o200k_token_saving_rate": 0.48571428571428577,
         "o200k_tokens_before": 35,
-        "o200k_tokens_after": 17,
-        "o200k_saving_rate": 0.5142857142857142,
+        "o200k_tokens_after": 18,
+        "o200k_saving_rate": 0.48571428571428577,
         "gematria_metadata": {
           "raw_combined_sum": 0,
           "compressed_combined_sum": 0,
@@ -3459,8 +3280,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -3494,8 +3315,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -3507,15 +3328,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 2,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "복원",
-                  "압축"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -3526,7 +3342,6 @@
       },
       {
         "id": "cmp2_027",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 15,
         "compressed_tokens": 7,
         "token_saving_rate": 0.5333333333333333,
@@ -3541,14 +3356,10 @@
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "한글"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -3587,8 +3398,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -3622,8 +3433,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -3635,14 +3446,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "한글"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -3653,30 +3460,24 @@
       },
       {
         "id": "cmp2_028",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 17,
-        "compressed_tokens": 9,
-        "token_saving_rate": 0.47058823529411764,
-        "compression_ratio": 0.5294117647058824,
-        "reconstruction_fidelity_jaccard": 0.8,
+        "compressed_tokens": 8,
+        "token_saving_rate": 0.5294117647058824,
+        "compression_ratio": 0.47058823529411764,
+        "reconstruction_fidelity_jaccard": 0.7333333333333333,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "사상의학 설명문은 짧은 기능어가 맥락을 지탱하므로 압축에서는 안전하다 조사",
-        "reconstructed_text_effective": "사상의학 설명문은 짧은 기능어가 맥락을 지탱하므로 극단 압축에서는 조사 보존 편이 안전하다",
+        "compressed_text_effective": "사상의학 설명문은 짧은 기능어가 맥락을 지탱하므로 압축에서는 안전하다",
+        "reconstructed_text_effective": "사상의학 설명문은 짧은 기능어가 맥락을 지탱하므로 극단 압축에서는 조사 편이 안전하다",
         "route": {
           "shard_id": "zone_a_scm",
           "domain": "scm",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 2,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "사상의학",
-              "조사"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -3686,11 +3487,11 @@
           "error_message": "16-state runtime adapter disabled (Phase A noop)."
         },
         "o200k_raw_tokens": 43,
-        "o200k_compressed_tokens": 27,
-        "o200k_token_saving_rate": 0.37209302325581395,
+        "o200k_compressed_tokens": 26,
+        "o200k_token_saving_rate": 0.39534883720930236,
         "o200k_tokens_before": 43,
-        "o200k_tokens_after": 27,
-        "o200k_saving_rate": 0.37209302325581395,
+        "o200k_tokens_after": 26,
+        "o200k_saving_rate": 0.39534883720930236,
         "gematria_metadata": {
           "raw_combined_sum": 0,
           "compressed_combined_sum": 0,
@@ -3715,8 +3516,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -3750,8 +3551,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -3763,15 +3564,10 @@
               "domain": "scm",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 2,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "사상의학",
-                  "조사"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -3782,7 +3578,6 @@
       },
       {
         "id": "cmp2_029",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 15,
         "compressed_tokens": 7,
         "token_saving_rate": 0.5333333333333333,
@@ -3797,14 +3592,10 @@
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "사상의학을"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -3843,8 +3634,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -3878,8 +3669,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -3891,14 +3682,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "사상의학을"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -3909,7 +3696,6 @@
       },
       {
         "id": "cmp2_030",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 16,
         "compressed_tokens": 7,
         "token_saving_rate": 0.5625,
@@ -3924,14 +3710,10 @@
           "domain": "scm",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "체질"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -3970,8 +3752,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -4005,8 +3787,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -4018,14 +3800,10 @@
               "domain": "scm",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "체질"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -4036,7 +3814,6 @@
       },
       {
         "id": "cmp2_031",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 21,
         "compressed_tokens": 9,
         "token_saving_rate": 0.5714285714285714,
@@ -4051,15 +3828,10 @@
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 2,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "압축",
-              "조사"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -4098,8 +3870,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -4133,8 +3905,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -4146,15 +3918,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 2,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "압축",
-                  "조사"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -4165,7 +3932,6 @@
       },
       {
         "id": "cmp2_032",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 19,
         "compressed_tokens": 8,
         "token_saving_rate": 0.5789473684210527,
@@ -4173,23 +3939,17 @@
         "reconstruction_fidelity_jaccard": 1.0,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "한글 창제 규칙은 복원 안전망으로 도메인에는 손실을 한다",
+        "compressed_text_effective": "한글 창제 규칙은 안전망으로 도메인에는 손실을 한다 보존",
         "reconstructed_text_effective": "한글 창제 원리 기반 보존 규칙은 복원 안전망으로 쓰되 일반 도메인에는 가변 적용하여 절약률 손실을 통제해야 한다",
         "route": {
           "shard_id": "zone_c_hangul",
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 3,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "복원",
-              "창제",
-              "한글"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -4228,8 +3988,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -4263,8 +4023,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -4276,16 +4036,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 3,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "복원",
-                  "창제",
-                  "한글"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -4296,7 +4050,6 @@
       },
       {
         "id": "cmp2_033",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 18,
         "compressed_tokens": 7,
         "token_saving_rate": 0.6111111111111112,
@@ -4311,15 +4064,10 @@
           "domain": "scm",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 2,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "사상의학",
-              "증상"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -4358,8 +4106,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -4393,8 +4141,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -4406,15 +4154,10 @@
               "domain": "scm",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 2,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "사상의학",
-                  "증상"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -4425,30 +4168,24 @@
       },
       {
         "id": "cmp2_034",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 17,
         "compressed_tokens": 7,
         "token_saving_rate": 0.5882352941176471,
         "compression_ratio": 0.4117647058823529,
-        "reconstruction_fidelity_jaccard": 0.9333333333333333,
+        "reconstruction_fidelity_jaccard": 0.8,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "복원 지표만으로 않으므로 조사 누락률과 보존률을 추가로",
-        "reconstructed_text_effective": "복원 점검 시 자카드 지표만으로 충분하지 않으므로 조사 누락률과 문장 기능어 보존률을 추가로 관찰해야",
+        "compressed_text_effective": "지표만으로 않으므로 조사 누락률과 보존률을 추가로 한다",
+        "reconstructed_text_effective": "자카드 지표만으로 충분하지 않으므로 조사 누락률과 문장 기능어 보존률을 추가로 관찰해야 한다",
         "route": {
           "shard_id": "zone_c_hangul",
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 2,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "복원",
-              "조사"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -4458,11 +4195,11 @@
           "error_message": "16-state runtime adapter disabled (Phase A noop)."
         },
         "o200k_raw_tokens": 38,
-        "o200k_compressed_tokens": 20,
-        "o200k_token_saving_rate": 0.4736842105263158,
+        "o200k_compressed_tokens": 19,
+        "o200k_token_saving_rate": 0.5,
         "o200k_tokens_before": 38,
-        "o200k_tokens_after": 20,
-        "o200k_saving_rate": 0.4736842105263158,
+        "o200k_tokens_after": 19,
+        "o200k_saving_rate": 0.5,
         "gematria_metadata": {
           "raw_combined_sum": 0,
           "compressed_combined_sum": 0,
@@ -4487,8 +4224,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -4522,8 +4259,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -4535,15 +4272,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 2,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "복원",
-                  "조사"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -4554,7 +4286,6 @@
       },
       {
         "id": "cmp2_035",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 20,
         "compressed_tokens": 9,
         "token_saving_rate": 0.55,
@@ -4569,14 +4300,10 @@
           "domain": "scm",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "체질"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -4615,8 +4342,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -4650,8 +4377,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -4663,14 +4390,10 @@
               "domain": "scm",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "체질"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -4681,7 +4404,6 @@
       },
       {
         "id": "cmp2_036",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 16,
         "compressed_tokens": 7,
         "token_saving_rate": 0.5625,
@@ -4696,14 +4418,10 @@
           "domain": "scm",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 1,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "사상의학"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -4742,8 +4460,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -4777,8 +4495,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -4790,14 +4508,10 @@
               "domain": "scm",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 1,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "사상의학"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -4808,7 +4522,6 @@
       },
       {
         "id": "cmp2_037",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 18,
         "compressed_tokens": 9,
         "token_saving_rate": 0.5,
@@ -4816,22 +4529,17 @@
         "reconstruction_fidelity_jaccard": 1.0,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "체질 제약이 사용자에게는 목표보다 복원 정확도 임계치를 만족시키는 안전하다",
+        "compressed_text_effective": "체질 제약이 사용자에게는 목표보다 정확도 임계치를 만족시키는 정책이 안전하다",
         "reconstructed_text_effective": "체질 제약이 큰 사용자에게는 절약률 50 고정 목표보다 복원 정확도 임계치를 먼저 만족시키는 정책이 더 안전하다",
         "route": {
           "shard_id": "zone_a_scm",
           "domain": "scm",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 2,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "복원",
-              "체질"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -4870,8 +4578,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -4905,8 +4613,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -4918,15 +4626,10 @@
               "domain": "scm",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 2,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "복원",
-                  "체질"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -4937,7 +4640,6 @@
       },
       {
         "id": "cmp2_038",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 20,
         "compressed_tokens": 10,
         "token_saving_rate": 0.5,
@@ -4952,16 +4654,10 @@
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 3,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "대비",
-              "조사",
-              "한글"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -5000,8 +4696,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -5035,8 +4731,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -5048,16 +4744,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 3,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "대비",
-                  "조사",
-                  "한글"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -5068,7 +4758,6 @@
       },
       {
         "id": "cmp2_039",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 20,
         "compressed_tokens": 9,
         "token_saving_rate": 0.55,
@@ -5076,22 +4765,17 @@
         "reconstruction_fidelity_jaccard": 1.0,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "복원 로그에는 대비 목록을 없이도 지점을 찾을 있다 파이프라인",
+        "compressed_text_effective": "로그에는 대비 목록을 없이도 지점을 찾을 있다 복원 파이프라인",
         "reconstructed_text_effective": "복원 파이프라인 감사 로그에는 원문 대비 누락 토큰 목록을 남겨야 재학습 없이도 규칙 수정 지점을 빠르게 찾을 수 있다",
         "route": {
           "shard_id": "zone_c_hangul",
           "domain": "hangul",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 2,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "대비",
-              "복원"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -5130,8 +4814,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -5165,8 +4849,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -5178,15 +4862,10 @@
               "domain": "hangul",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 2,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "대비",
-                  "복원"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -5197,30 +4876,24 @@
       },
       {
         "id": "cmp2_040",
-        "eval_mode_effective": "experimental",
         "raw_tokens": 18,
         "compressed_tokens": 8,
         "token_saving_rate": 0.5555555555555556,
         "compression_ratio": 0.4444444444444444,
-        "reconstruction_fidelity_jaccard": 0.875,
+        "reconstruction_fidelity_jaccard": 0.9375,
         "sensitive_integrity": 1.0,
         "sensitive_leak": false,
-        "compressed_text_effective": "운영에서는 도메인과 사상의학 도메인의 압축 캡을 모델이라도 계층으로",
-        "reconstructed_text_effective": "최종 운영에서는 일반 도메인과 사상의학 도메인의 압축 캡을 분리해 동일 모델이라도 정책 계층으로 위험을",
+        "compressed_text_effective": "운영에서는 도메인과 사상의학 도메인의 캡을 모델이라도 계층으로 위험을",
+        "reconstructed_text_effective": "최종 운영에서는 일반 도메인과 사상의학 도메인의 압축 캡을 분리해 동일 모델이라도 정책 계층으로 위험을 제어해야",
         "route": {
           "shard_id": "zone_a_scm",
           "domain": "scm",
           "master_codebook_lexicon_v1": {
             "status": "ok",
-            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-            "lexicon_term_count": 41700,
-            "hit_count": 2,
-            "min_token_len": 2,
-            "include_cjk_bigrams": false,
-            "hits_sample": [
-              "사상의학",
-              "압축"
-            ]
+            "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+            "lexicon_term_count": 41775,
+            "hit_count": 0,
+            "hits_sample": []
           }
         },
         "state16": {
@@ -5259,8 +4932,8 @@
             "K": 0.245,
             "M": 0.265
           },
-          "state16": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state16": 1,
+          "distance_to_state16": 0.01732050807568879,
           "probe_path": "C:/workspace/data/myeongni/16_STATE_MASTER_PROBE_v1.json"
         },
         "gematria_4d_bridge_policy_applied": false,
@@ -5294,8 +4967,8 @@
           "vector_sum": 1.0,
           "sep_target": 0.25,
           "lambda_deviation": 0.007500000000000007,
-          "state_id": 3,
-          "distance_to_state16": 0.010000000000000009,
+          "state_id": 1,
+          "distance_to_state16": 0.01732050807568879,
           "metadata_post_it": {
             "lane": "A-track",
             "balance_band": "near_sep_0_25",
@@ -5307,15 +4980,10 @@
               "domain": "scm",
               "master_codebook_lexicon_v1": {
                 "status": "ok",
-                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41708_rows_latest.json",
-                "lexicon_term_count": 41700,
-                "hit_count": 2,
-                "min_token_len": 2,
-                "include_cjk_bigrams": false,
-                "hits_sample": [
-                  "사상의학",
-                  "압축"
-                ]
+                "path": "C:\\workspace\\reports\\constitution\\btrack_pilot\\master_codebook_lexicon_v1_41775_rows_latest.json",
+                "lexicon_term_count": 41775,
+                "hit_count": 0,
+                "hits_sample": []
               }
             },
             "mode": "experimental",
@@ -5330,13 +4998,13 @@
       "available": true,
       "reason_unavailable": null,
       "tokens_raw_total": 1343,
-      "tokens_compressed_total": 766,
-      "global_token_saving_rate": 0.4296351451973194
+      "tokens_compressed_total": 760,
+      "global_token_saving_rate": 0.4341027550260611
     },
-    "o200k_token_saving_rate": 0.4296351451973194,
-    "o200k_saving_rate": 0.4296351451973194,
+    "o200k_token_saving_rate": 0.4341027550260611,
+    "o200k_saving_rate": 0.4341027550260611,
     "o200k_tokens_before": 1343,
-    "o200k_tokens_after": 766
+    "o200k_tokens_after": 760
   },
   "fusion_metrics": {
     "case_count": 10,
@@ -5410,15 +5078,13 @@
     "compression_ok": true,
     "fusion_ok": true,
     "ultra_saving_50_ok": false,
-    "ultra_saving_policy_ok": true,
-    "ultra_saving_policy_min": 0.47,
+    "ultra_saving_policy_ok": false,
+    "ultra_saving_policy_min": 0.49,
     "jaccard_drop_pp": 0.0,
     "jaccard_guardrail_ok": true,
     "sensitive_integrity_ok": true,
     "sensitive_integrity_avg_floor": 0.999,
-    "note": "Heuristic B-track gate; not an A-track trading performance metric. sensitive_integrity_ok requires zero required-lemma leaks per case (not avg-only).",
-    "track_a_promoted_policy_floor_aligned": true,
-    "legacy_eval_policy_min": 0.49
+    "note": "Heuristic B-track gate; not an A-track trading performance metric. sensitive_integrity_ok requires zero required-lemma leaks per case (not avg-only)."
   },
   "cee_shadow_summary": {
     "enabled": true,
@@ -5427,7 +5093,7 @@
     "max_lambda_deviation": 0.007500000000000007,
     "min_lambda_deviation": 0.007500000000000007,
     "state16_distribution": {
-      "3": 40
+      "1": 40
     },
     "balance_band_distribution": {
       "near_sep_0_25": 40
@@ -5439,29 +5105,10 @@
   },
   "active_profile": {
     "sla_track": "universal",
-    "from_decision": "docs/final/artifacts/MULTILENS_ULTRA_COMPRESSION_DECISION_V1.json",
-    "strategy": "A",
-    "intensity": "extreme",
-    "general_max_saving_rate": 0.35,
-    "sensitive_max_saving_rate": 0.3,
-    "hangul_max_saving_rate": 0.6,
-    "apply_gematria_4d_bridge_policy": false,
-    "apply_gematria_4d_bridge_policy_env": false,
-    "bridge_policy_domain_allowlist": null,
-    "domain_relaxed_max_saving_overrides": {
-      "ssot": 0.45
-    },
-    "domain_relaxed_max_saving_case_allowlist": [
-      "cmp2_002",
-      "cmp2_004",
-      "cmp2_005",
-      "cmp2_006",
-      "cmp2_009"
-    ],
-    "domain_relaxed_max_saving_exclude_case_ids": null,
-    "promotion_signoff_applied": {
-      "path": "docs/final/artifacts/multilens_ultra_compression_track_a_promotion_signoff_v1_latest.json",
-      "selected_variant_id": "ssot_cap_0.45_top5_allowlist_plus_shard_loss_pattern_tune_v1"
-    }
+    "selected_variant_id": "ssot_cap_0.45_top5_allowlist",
+    "must_apply_via": "scripts/apply_multilens_ultra_compression_track_a_promotion_v1.py",
+    "promoted_from_candidate_at_utc": "2026-06-17T08:21:09.796748Z",
+    "promoted_variant_id": "ssot_cap_0.45_top5_allowlist",
+    "promotion_signoff": "docs/final/artifacts/multilens_ultra_compression_track_a_promotion_signoff_v1_latest.json"
   }
 }
