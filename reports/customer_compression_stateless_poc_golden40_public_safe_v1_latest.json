@@ -1,6 +1,6 @@
 {
   "schema": "customer_compression_stateless_poc_v1",
-  "generated_at_utc": "2026-06-17T04:52:40Z",
+  "generated_at_utc": "2026-06-17T06:17:08Z",
   "research_only": true,
   "boundary_ack": "Per-customer JSONL only; not Golden 40 or Track A 47.5% claim.",
   "input_jsonl": "C:/workspace/exports/a-codeai-public-reproduce-v2/data/compression/stateless_poc_golden40_public_safe_v1.jsonl",
