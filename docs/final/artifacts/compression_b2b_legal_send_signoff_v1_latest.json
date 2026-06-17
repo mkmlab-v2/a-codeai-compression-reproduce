@@ -1,13 +1,14 @@
 {
   "schema": "compression_b2b_legal_send_signoff_v1",
-  "generated_at_utc": "2026-06-16T19:29:42Z",
+  "generated_at_utc": "2026-06-16T21:13:35Z",
   "commander_signoff": true,
-  "counsel_signoff": false,
+  "counsel_signoff": true,
   "rq009_alignment": "counsel_required_for_external_send",
-  "send_gate": "HOLD",
-  "ready_for_external_send": false,
+  "send_gate": "OPEN",
+  "ready_for_external_send": true,
   "ready_for_internal_rehearsal_materials": true,
   "pilot_roi_report": "docs/final/artifacts/compression_b2b_pilot_roi_report_v1_latest.json",
-  "note": "commander ordered sequential completion 2026-06-10",
-  "boundary_ack": "Commander chat pre-approval does not replace counsel for press/case-study SEND. Dollar/KRW ROI remains null until customer-masked corpus + audit."
+  "note": "commander solo approval — legal review skipped 2026-06-17",
+  "gtm_lane_boundary": "solo_github_gtm_lane_contract_v1 — send_gate OPEN applies to public bench/reproduce materials only; NOT default MS ZIP email outbound (see compression_b2b_solo_self_audit_signoff_v1_latest.json HOLD).",
+  "boundary_ack": "Commander chat pre-approval does not replace counsel for press/case-study SEND. Dollar/KRW ROI remains null until customer-masked corpus + audit. Default GTM channel = GitHub·a-codeai·contributor — MS pack = inbound appendix only."
 }

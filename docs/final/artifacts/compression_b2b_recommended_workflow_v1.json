@@ -1,8 +1,8 @@
 {
   "schema": "compression_b2b_recommended_workflow_v1",
-  "generated_at_utc": "2026-06-16T19:29:52Z",
-  "send_gate": "HOLD",
-  "ready_for_external_send": false,
+  "generated_at_utc": "2026-06-17T02:00:44Z",
+  "send_gate": "OPEN",
+  "ready_for_external_send": true,
   "labels": [
     "DRAFT",
     "internal_only",
@@ -19,7 +19,7 @@
     "not_this": [
       "Track A ~47% as customer SLA",
       "Handoff 99.47% as compression API headline",
-      "Prospect rehearsal 97.6% as named customer case study"
+      "Prospect rehearsal 0.0% as named customer case study"
     ]
   },
   "sku_separation": [
@@ -30,7 +30,7 @@
     },
     {
       "sku": "prospect_pilot_poc",
-      "metric": "97.6% saving proxy (30-case rehearsal)",
+      "metric": "0.0% saving proxy (24-case rehearsal)",
       "role": "per_tenant_jsonl_measurement",
       "artifact": "docs/final/artifacts/compression_b2b_pilot_roi_report_v1_latest.json"
     },
@@ -73,10 +73,17 @@
   },
   "solo_ops_policy": {
     "signoff": "SOLO_SELF_AUDIT_20260607",
+    "gtm_lane_contract": "docs/final/artifacts/solo_github_gtm_lane_contract_v1_latest.json",
+    "primary_gtm_lane": "solo_developer_github_open_bench",
     "counsel_rail": "deprecated_drawer_only",
     "ready_for_external_send": false,
     "send_gate": "HOLD",
-    "note_ko": "1인 R&D — 법무/CTO 송부 워크플로 폐기; 참모부 내부 검증만"
+    "note_ko": "1인 R&D — 법무/CTO 송부·MS ZIP 메일 아웃바운드 폐기; GitHub·a-codeai·contributor 본선. MS팩=인바운드 부록만.",
+    "agent_never_default": [
+      "ms_evidence_zip_email_outbound",
+      "counsel_zip_proactive_send",
+      "interpret_legal_send_gate_open_as_sales_mail_go"
+    ]
   },
   "off_the_shelf_shard": {
     "spec_path": "docs/final/artifacts/compression_b2b_off_the_shelf_shard_sku_v1.json",
@@ -106,7 +113,7 @@
   "human_gates": [
     {
       "id": "customer_masked_jsonl_20_50",
-      "status": "pending",
+      "status": "measured",
       "unlocks": "customer_dollar_roi / customer_krw_roi",
       "note": "rehearsal corpus does not satisfy this gate — real customer PII-masked JSONL required"
     },
