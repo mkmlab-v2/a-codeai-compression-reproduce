@@ -1,0 +1,98 @@
+{
+  "schema": "wtt_premium_cs_cross_lane_status_v1",
+  "version": "1.0.0",
+  "generated_at_utc": "2026-06-17T14:22:49Z",
+  "hypothesis_class": "HYPO",
+  "track": "B",
+  "research_only": true,
+  "send_gate": "HOLD",
+  "icp": "premium_cs",
+  "wtt_lane": {
+    "tenant_id": "wtt-customer-live-v1",
+    "intake_jsonl": "C:/workspace/data/wtt/intake/wtt-customer-live-v1.jsonl",
+    "session_count": 30,
+    "human_n30_gate_met": true,
+    "human_sessions_collected": 30,
+    "fsm_state_counts": {
+      "cooldown": 7,
+      "normal": 21,
+      "elevated": 2
+    },
+    "curated_pilot_disclaimer": "research_only masked curation — not recruited third-party panel"
+  },
+  "compression_lane": {
+    "tenant_id": "wtt-premium-cs-compression-v1",
+    "bridge_jsonl": "C:/workspace/data/compression/examples/wtt_premium_cs_compression_bridge_v1.jsonl",
+    "bridge_row_count": 30,
+    "bridge_export_meta": "data/compression/wtt_premium_cs_customer_live_bridge_v1.jsonl",
+    "poc_case_count": 30,
+    "poc_cases_passed": 21,
+    "mean_jaccard_proxy_all_cases": 0.752822,
+    "mean_token_saving_rate_proxy_all_cases": 0.198674,
+    "roi_status": "customer_measured",
+    "lane_isolated": true
+  },
+  "customer_provided_wtt_lane": {
+    "tenant_id": "wtt-premium-cs-customer-live-v1",
+    "intake_jsonl": "C:/workspace/data/wtt/intake/wtt-premium-cs-customer-live-v1.jsonl",
+    "session_count": 50,
+    "fsm_state_counts": {
+      "cooldown": 7,
+      "normal": 21,
+      "elevated": 2
+    },
+    "pilot_intake_ok": true,
+    "lane_isolated": true
+  },
+  "customer_provided_compression_lane": {
+    "tenant_id": "wtt-premium-cs-customer-v1",
+    "wtt_jsonl": "C:/workspace/data/wtt/intake/wtt-premium-cs-customer-live-v1.jsonl",
+    "session_count": 50,
+    "btrack_poc_options": {
+      "hypothesis_tag": "[HYPO]",
+      "research_only": true,
+      "strip_role_prefixes": true,
+      "short_context_token_threshold": 30,
+      "short_context_max_saving_rate": 0.3
+    },
+    "poc_case_count": 50,
+    "poc_cases_passed": 38,
+    "pass_rate": 0.76,
+    "mean_jaccard_proxy_all_cases": null,
+    "mean_token_saving_rate_proxy_all_cases": null,
+    "short_context_policy": null,
+    "ablation_best_arm": "economy_shortcap_30_030",
+    "ablation_path": "C:/workspace/reports/wtt_cs_pilot_compression_ablation_v1_latest.json",
+    "one_click_btrack": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Run-CompressionCustomerPilotIntake_v1.ps1 -TenantId wtt-premium-cs-customer-v1 -CustomerJsonl data/wtt/intake/wtt-premium-cs-customer-live-v1.jsonl -MaxCases 30 -MinCases 30 -RelaxPassGate -BtrackCsShortContext",
+    "lane_isolated": true,
+    "not_track_a_headline": true,
+    "n30_target_sessions": 30,
+    "n30_gate_met": true,
+    "n30_blocker": null
+  },
+  "operator_panel_separate": {
+    "not_eligible_for_send": true,
+    "note": "operator_panel 30/30 is dogfood only — never merge with customer lane headlines"
+  },
+  "readiness_blockers": [],
+  "artifacts": {
+    "human_n30": "C:/workspace/reports/wtt_human_n30_gate_v1_latest.json",
+    "customer_fsm": "C:/workspace/reports/wtt_tenant_fsm_batch_wtt-customer-live-v1_v1_latest.json",
+    "wtt_intake": "C:/workspace/data/wtt/intake/wtt-customer-live-v1.jsonl",
+    "bridge_export": "C:/workspace/reports/wtt_compression_bridge_export_v1_latest.json",
+    "bridge_jsonl": "C:/workspace/data/compression/examples/wtt_premium_cs_compression_bridge_v1.jsonl",
+    "compression_poc": "C:/workspace/reports/customer_compression_stateless_poc_wtt-premium-cs-compression-v1_v1_latest.json",
+    "compression_roi": "C:/workspace/docs/final/artifacts/compression_b2b_pilot_roi_report_v1_latest.json",
+    "readiness": "C:/workspace/reports/wtt_customer_intake_readiness_v1_latest.json",
+    "stress_deck": "C:/workspace/reports/wtt_stress_certified_deck_v1_latest.md",
+    "customer_provided_wtt": "C:/workspace/data/wtt/intake/wtt-premium-cs-customer-live-v1.jsonl",
+    "customer_provided_wtt_fsm": "C:/workspace/reports/wtt_tenant_fsm_batch_wtt-premium-cs-customer-live-v1_v1_latest.json",
+    "customer_provided_wtt_intake": "C:/workspace/reports/wtt_pilot_intake_wtt-premium-cs-customer-live-v1_v1.json",
+    "customer_provided_poc": "C:/workspace/reports/customer_compression_stateless_poc_wtt-premium-cs-customer-v1_v1_latest.json",
+    "customer_provided_intake": "C:/workspace/reports/compression_b2b_prospect_poc_corpus_wtt-premium-cs-customer-v1_v1.json",
+    "cs_ablation": "C:/workspace/reports/wtt_cs_pilot_compression_ablation_v1_latest.json"
+  },
+  "one_click_closure": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/Invoke-WttPremiumCsClosure_v1.ps1",
+  "note_ko": "WTT human_n30와 compression ROI는 격벽 유지. SEND·Track A·대외 SLA 주장 금지.",
+  "ok": true
+}
