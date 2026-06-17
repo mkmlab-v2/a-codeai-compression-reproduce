@@ -1,7 +1,7 @@
 ---
 schema: media_fact_sheet_handoff_governance_v1
 sku_id: handoff_governance
-generated_at_utc: 2026-06-17T07:30:31Z
+generated_at_utc: 2026-06-17T07:38:41Z
 labels: [DRAFT, internal_only, research_only, publish_allowed=false]
 ready_for_external_send: false
 send_gate: HOLD

@@ -1,6 +1,6 @@
 {
   "schema": "compression_golden40_public_safe_corpus_v1",
-  "generated_at_utc": "2026-06-17T07:30:23Z",
+  "generated_at_utc": "2026-06-17T07:38:33Z",
   "research_only": true,
   "source_eval_input": "docs/final/artifacts/MULTILENS_PERFORMANCE_EVAL_INPUT_V2.json",
   "corpus_path": "data/compression/stateless_poc_golden40_public_safe_v1.jsonl",
