@@ -17,6 +17,16 @@ SEND_GATE: HOLD — do not use as customer case study or merged marketing headli
 - CHAT-D1 **literal** on golden40: **15.21%** · Jaccard **0.840645**
 - See `reports/compression_open_bench_research_sweep_v1_latest.json`
 
+
+## Customer-provided pilot (internal lane only · `customer_provided`)
+
+- **wtt-premium-cs-customer-v1** · N=50 · pass 38/50
+- raw token saving: **21.80%** · Jaccard **0.805646**
+- Separate from Track A active ~47.5% and contributor open-bench.
+- Rows 031-050 may be `[HYPO]` pilot derivations — not a new live customer upload.
+- Reproduce expand: `python3 scripts/expand_wtt_premium_cs_customer_live_n50_v1.py --write`
+- Artifact: `reports/customer_compression_stateless_poc_wtt-premium-cs-customer-v1_v1_latest.json`
+
 ## One command (from repo root)
 
 ```bash
