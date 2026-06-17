@@ -1,6 +1,6 @@
 {
   "schema": "compression_evidence_lv1_chain_v1",
-  "generated_at_utc": "2026-06-17T06:17:10Z",
+  "generated_at_utc": "2026-06-17T07:30:32Z",
   "proof_sprint_level": "lv3",
   "chain_ok": true,
   "steps": [
@@ -98,7 +98,7 @@
         "scripts/build_compression_public_evidence_pack_v0_index_v1.py"
       ],
       "exit_code": 0,
-      "stdout_tail": "{\"ok\": true, \"output\": \"C:\\\\workspace\\\\exports\\\\a-codeai-public-reproduce-v2\\\\docs\\\\final\\\\artifacts\\\\compression_public_evidence_pack_v0_index_latest.json\", \"generated_at_utc\": \"2026-06-17T06:17:09Z\", \"tenant_poc_at\": null}\n",
+      "stdout_tail": "{\"ok\": true, \"output\": \"C:\\\\workspace\\\\exports\\\\a-codeai-public-reproduce-v2\\\\docs\\\\final\\\\artifacts\\\\compression_public_evidence_pack_v0_index_latest.json\", \"generated_at_utc\": \"2026-06-17T07:30:31Z\", \"tenant_poc_at\": null}\n",
       "stderr_tail": ""
     },
     {
