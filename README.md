@@ -40,6 +40,17 @@ Optional open-bench chain (includes golden40 routed PoC):
 python3 scripts/run_compression_open_bench_chain_v1.py --skip-expand
 ```
 
+## 10-minute onboard smoke (visitor + contributor validate)
+
+```bash
+pip install -r requirements-public-reproduce.txt
+python3 scripts/run_compression_open_bench_onboard_smoke_v1.py
+```
+
+Windows: `powershell -File scripts/Invoke-CompressionOpenBenchOnboardSmoke_v1.ps1`
+
+Does not run commander mirror push or default customer n50 path. Contribute via PR — see `CONTRIBUTING_OPEN_BENCH.md`.
+
 FAIL-COMP-004: per-SKU metrics only; never merge Track A / handoff / prospect %.
 
 ## Enterprise pre-audit intake (web form · separate funnel)
