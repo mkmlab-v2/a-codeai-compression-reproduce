@@ -1,6 +1,6 @@
 {
   "schema": "compression_open_bench_dual_report_v1",
-  "generated_at_utc": "2026-06-17T06:16:43Z",
+  "generated_at_utc": "2026-06-17T11:26:19Z",
   "research_only": true,
   "hypothesis_tag": "[HYPO]",
   "send_gate": "HOLD",
@@ -243,5 +243,10 @@
       "illustrative_annual_save_krw": 1123404000,
       "disclaimer_ko": "가정·시나리오 — 실고객 ROI 아님"
     }
-  ]
+  ],
+  "logos_audit_smoke_appendix": {
+    "artifact": "docs/final/artifacts/compression_open_bench_logos_audit_smoke_v1_latest.json",
+    "citation_valid_themes": 12,
+    "forbidden_headline_merge": true
+  }
 }
