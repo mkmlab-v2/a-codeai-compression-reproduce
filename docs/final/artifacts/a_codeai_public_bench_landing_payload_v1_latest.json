@@ -1,8 +1,8 @@
 {
   "schema": "a_codeai_public_bench_landing_payload_v1",
-  "generated_at_utc": "2026-06-17T08:21:34Z",
+  "generated_at_utc": "2026-06-17T09:26:55Z",
   "source_bundle": "docs/final/artifacts/a_codeai_public_reproduce_bundle_v1_latest.json",
-  "git_head": "75d87850a37f",
+  "git_head": "f857fb0a4e19",
   "send_gate": "HOLD",
   "ready_for_external_send": false,
   "launch_decision": "READY_FOR_PUBLIC_OPEN_BENCH",
