@@ -1,67 +1,15 @@
-# A-CODEAI public reproduce export (slim)
+# ⚠️ Deprecated & Archived
 
-SEND_GATE: HOLD — do not use as customer case study or merged marketing headline.
-`research_only` · B→A auto-merge prohibited.
+This repository (`a-codeai-compression-reproduce`) was an isolated **compression open-bench research lane** (`research_only` · `SEND_GATE: HOLD`). It is **archived** and no longer maintained.
 
+**Successor (neuro-symbolic integrity PoC):** [**mkm-universal-root**](https://github.com/mkmlab-v2/mkm-universal-root) — clone → ~20s zero-dependency fixture smoke · dual-plane raw metrics on a 500-pair bench · `collapsed_combined_score: null` by design.
 
-## Measured open-bench headline (per-corpus · `[HYPO]` · SEND_GATE HOLD)
+**Not claimed:** GPT-4 replacement · production SLA · live trading · fake-news firewall.
 
-- **golden40_public_safe_routed** · MKM-CHAT-D1 · N=40
-- raw token saving: **9.36%** · Jaccard **0.897361**
-- Not equivalent to frozen Track A 47.5% SLA.
-- Stateless golden40 on same corpus may read 0% — cite routing SKU separately.
+---
 
+## Historical context
 
-## B-track research (internal scenario only · not external headline)
+This repo previously published the A-CODEAI slim compression reproduce export (masked JSONL open-bench). Pre-archive README and artifacts remain in git history on the `main` branch.
 
-- CHAT-D1 **literal** on golden40: **15.21%** · Jaccard **0.840645**
-- See `reports/compression_open_bench_research_sweep_v1_latest.json`
-
-
-## Customer-provided pilot (internal lane only · `customer_provided`)
-
-- **wtt-premium-cs-customer-v1** · N=50 · pass 38/50
-- raw token saving: **21.80%** · Jaccard **0.805646**
-- Separate from Track A active ~47.5% and contributor open-bench.
-- Rows 031-050 may be `[HYPO]` pilot derivations — not a new live customer upload.
-- Reproduce expand: `python3 scripts/expand_wtt_premium_cs_customer_live_n50_v1.py --write`
-- Artifact: `reports/customer_compression_stateless_poc_wtt-premium-cs-customer-v1_v1_latest.json`
-
-## One command (from repo root)
-
-```bash
-pip install -r requirements-public-reproduce.txt
-python3 scripts/run_compression_evidence_lv1_chain_v1.py --skip-handoff
-```
-
-Optional open-bench chain (includes golden40 routed PoC):
-
-```bash
-python3 scripts/run_compression_open_bench_chain_v1.py --skip-expand
-```
-
-## 10-minute onboard smoke (visitor + contributor validate)
-
-```bash
-pip install -r requirements-public-reproduce.txt
-python3 scripts/run_compression_open_bench_onboard_smoke_v1.py
-```
-
-Windows: `powershell -File scripts/Invoke-CompressionOpenBenchOnboardSmoke_v1.ps1`
-
-Does not run commander mirror push or default customer n50 path. Contribute via PR — see `CONTRIBUTING_OPEN_BENCH.md`.
-
-FAIL-COMP-004: per-SKU metrics only; never merge Track A / handoff / prospect %.
-
-## Enterprise pre-audit intake (web form · separate funnel)
-
-- Tier-0 **free pre-audit** queue (masked JSONL sample review): [app.jema-ai.com/enterprise/apply](https://app.jema-ai.com/enterprise/apply)
-- Not auto-approval, not SLA or Track A headline guarantee; open-bench metrics above are not a submission outcome.
-
-## Community contributions (contributor_provided · SEND_GATE HOLD)
-
-See `CONTRIBUTING_OPEN_BENCH.md` — masked JSONL under `data/*/contributions/`; `contributor_provided=true`, `customer_provided=false`; no Track A / 47.5% headline.
-
-## License
-
-Apache License 2.0 — see [LICENSE](LICENSE). Open-bench reproduce only; SEND_GATE HOLD unchanged.
+License: MIT (unchanged).
